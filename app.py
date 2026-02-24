@@ -258,8 +258,10 @@ if data_loaded:
     if len(model_df) < 5:
         st.warning("Not enough data points for this country to compute reliable feature importance.")
     else:
-        X_c = model_df[feature_cols]
-        y_c = model_df['stunting_rate']
+        # Only keep feature cols that actually exist and have no nulls for this country
+        valid_features = [f for f in feature_cols if f in model_df.columns and model_df[f].notna().all()]
+        X_c = model_df[valid_features].dropna()
+        y_c = model_df.loc[X_c.index, 'stunting_rate']
 
         rf_c = RandomForestRegressor(
             n_estimators=200, max_depth=10,
@@ -269,7 +271,7 @@ if data_loaded:
         rf_c.fit(X_c, y_c)
 
         imp_df = pd.DataFrame({
-            'feature': feature_cols,
+            'feature': valid_features,
             'importance': rf_c.feature_importances_
         }).sort_values('importance', ascending=False).head(15)
 
@@ -339,7 +341,7 @@ if data_loaded:
         # ── Category breakdown pie ────────────────────────────
         st.markdown('<div class="section-title">Category Breakdown</div>', unsafe_allow_html=True)
 
-        all_imp = pd.DataFrame({'feature': feature_cols, 'importance': rf_c.feature_importances_})
+        all_imp = pd.DataFrame({'feature': valid_features, 'importance': rf_c.feature_importances_})
         cats = {'Economic & Social': 0, 'Crop Metrics': 0, 'Climate': 0, 'Other': 0}
         for _, row in all_imp.iterrows():
             cat_name, _, _ = categorize(row['feature'])
