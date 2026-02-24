@@ -4,18 +4,15 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
 from sklearn.ensemble import RandomForestRegressor
-from sklearn.preprocessing import StandardScaler
 import warnings
 warnings.filterwarnings('ignore')
 
-# ── Page config ──────────────────────────────────────────────
 st.set_page_config(
     page_title="Child Stunting Predictor | Sub-Saharan Africa",
     page_icon="🌍",
     layout="wide",
 )
 
-# ── Custom CSS ────────────────────────────────────────────────
 st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap');
@@ -25,7 +22,6 @@ html, body, [class*="css"] {
     background-color: #0f1117;
     color: #e8e4dc;
 }
-
 .main-header {
     font-family: 'DM Serif Display', serif;
     font-size: 3rem;
@@ -95,23 +91,28 @@ html, body, [class*="css"] {
 """, unsafe_allow_html=True)
 
 
-# ── Load data ─────────────────────────────────────────────────
 @st.cache_data
 def load_data():
     df = pd.read_csv("data/final_dataset_processed.csv")
     return df
 
+
 @st.cache_resource
 def train_model(df):
     crop_cols = [c for c in df.columns if any(x in c for x in
-                 ['cassava','maize','rice','sorghum','wheat','yams'])]
-    feature_cols = (
+                 ['cassava', 'maize', 'rice', 'sorghum', 'wheat', 'yams'])]
+    raw_features = (
         crop_cols +
-        ['gdp_per_capita','water_access','sanitation_access',
-         'political_stability','ccri_score','temperature','precipitation'] +
+        ['gdp_per_capita', 'water_access', 'sanitation_access',
+         'political_stability', 'ccri_score', 'temperature', 'precipitation'] +
         [c for c in df.columns if '_lag1' in c or '_lag2' in c]
     )
-    feature_cols = [f for f in feature_cols if f in df.columns]
+    seen = set()
+    feature_cols = []
+    for f in raw_features:
+        if f not in seen and f in df.columns:
+            seen.add(f)
+            feature_cols.append(f)
 
     model_df = df[feature_cols + ['stunting_rate']].dropna()
     X = model_df[feature_cols]
@@ -127,12 +128,12 @@ def train_model(df):
 
 
 def categorize(feat):
-    if any(x in feat for x in ['gdp','water','sanitation','political','ccri']):
+    if any(x in feat for x in ['gdp', 'water', 'sanitation', 'political', 'ccri']):
         return 'Economic & Social', '#7ab3f5', 'tag-econ'
-    elif any(x in feat for x in ['cassava','maize','rice','sorghum','wheat','yams',
-                                   'production','area','yield','volatility']):
+    elif any(x in feat for x in ['cassava', 'maize', 'rice', 'sorghum', 'wheat', 'yams',
+                                  'production', 'area', 'yield', 'volatility']):
         return 'Crop Metrics', '#6fcf97', 'tag-crop'
-    elif any(x in feat for x in ['temp','precip']):
+    elif any(x in feat for x in ['temp', 'precip']):
         return 'Climate', '#f56f6f', 'tag-clim'
     else:
         return 'Other', '#c8b96f', 'tag-other'
@@ -147,43 +148,37 @@ def lag_label(feat):
 
 
 def clean_name(feat):
-    name = (feat
-        .replace('_lag2','').replace('_lag1','')
-        .replace('_production',' production')
-        .replace('_area',' area harvested')
-        .replace('_yield',' yield')
-        .replace('_volatility',' volatility')
-        .replace('_',' ')
-        .title()
-    )
-    return name
+    return (feat
+            .replace('_lag2', '').replace('_lag1', '')
+            .replace('_production', ' production')
+            .replace('_area', ' area harvested')
+            .replace('_yield', ' yield')
+            .replace('_volatility', ' volatility')
+            .replace('_', ' ')
+            .title())
 
 
-# ── Header ────────────────────────────────────────────────────
 st.markdown('<div class="main-header">🌍 Child Stunting Predictor</div>', unsafe_allow_html=True)
 st.markdown('<div class="sub-header">Sub-Saharan Africa · Understand what drives malnutrition in each country</div>', unsafe_allow_html=True)
 
-# ── Load ──────────────────────────────────────────────────────
 try:
     df = load_data()
     rf, feature_cols = train_model(df)
     data_loaded = True
 except FileNotFoundError:
     data_loaded = False
-    st.error("⚠️ Dataset not found. Please upload `final_dataset_processed.csv` into a `data/` folder.")
+    st.error("Dataset not found. Make sure data/final_dataset_processed.csv exists in the repo.")
 
 if data_loaded:
     countries = sorted(df['country'].dropna().unique())
 
-    # ── Sidebar ───────────────────────────────────────────────
     with st.sidebar:
         st.markdown("### Select Country")
-        selected_country = st.selectbox("", countries, label_visibility="collapsed")
-
+        selected_country = st.selectbox("Country", countries, label_visibility="collapsed")
         st.markdown("---")
         st.markdown("### Model Info")
-        st.markdown(f"**{len(df['country'].unique())}** countries")
-        st.markdown(f"**{df['year'].min()}–{df['year'].max()}** years")
+        st.markdown(f"**{df['country'].nunique()}** countries")
+        st.markdown(f"**{int(df['year'].min())}–{int(df['year'].max())}** years")
         st.markdown(f"**{len(feature_cols)}** features")
         st.markdown("---")
         st.markdown(
@@ -192,24 +187,23 @@ if data_loaded:
             unsafe_allow_html=True
         )
 
-    # ── Filter to country ─────────────────────────────────────
     country_df = df[df['country'] == selected_country].copy()
     model_df = country_df[feature_cols + ['stunting_rate']].dropna()
 
     col1, col2 = st.columns([2, 1])
 
     with col2:
-        # ── Summary metrics ───────────────────────────────────
-        latest = country_df.sort_values('year').dropna(subset=['stunting_rate']).iloc[-1]
-        earliest = country_df.sort_values('year').dropna(subset=['stunting_rate']).iloc[0]
-        change = latest['stunting_rate'] - earliest['stunting_rate']
+        ts_data = country_df.sort_values('year').dropna(subset=['stunting_rate'])
+        latest = ts_data.iloc[-1]
+        earliest = ts_data.iloc[0]
+        change = float(latest['stunting_rate']) - float(earliest['stunting_rate'])
         arrow = "↓" if change < 0 else "↑"
         chg_color = "#6fcf97" if change < 0 else "#f56f6f"
 
         st.markdown(f"""
         <div class="metric-card">
             <div class="metric-title">Latest Stunting Rate</div>
-            <div class="metric-value">{latest['stunting_rate']:.1f}%</div>
+            <div class="metric-value">{float(latest['stunting_rate']):.1f}%</div>
             <div class="metric-sub">{int(latest['year'])}</div>
         </div>
         <div class="metric-card">
@@ -219,26 +213,22 @@ if data_loaded:
         </div>
         <div class="metric-card">
             <div class="metric-title">Years of Data</div>
-            <div class="metric-value">{len(country_df['year'].unique())}</div>
+            <div class="metric-value">{country_df['year'].nunique()}</div>
             <div class="metric-sub">{int(country_df['year'].min())}–{int(country_df['year'].max())}</div>
         </div>
         """, unsafe_allow_html=True)
 
     with col1:
-        # ── Time series chart ─────────────────────────────────
-        st.markdown(f'<div class="section-title">Stunting Rate Over Time — {selected_country}</div>',
-                    unsafe_allow_html=True)
-
-        ts = country_df.sort_values('year').dropna(subset=['stunting_rate'])
-
+        st.markdown(
+            f'<div class="section-title">Stunting Rate Over Time — {selected_country}</div>',
+            unsafe_allow_html=True
+        )
         fig, ax = plt.subplots(figsize=(9, 3.5))
         fig.patch.set_facecolor('#0f1117')
         ax.set_facecolor('#0f1117')
-
-        ax.fill_between(ts['year'], ts['stunting_rate'], alpha=0.18, color='#f5c842')
-        ax.plot(ts['year'], ts['stunting_rate'], color='#f5c842', lw=2.5, marker='o',
-                markersize=5, markerfacecolor='#f5c842')
-
+        ax.fill_between(ts_data['year'], ts_data['stunting_rate'], alpha=0.18, color='#f5c842')
+        ax.plot(ts_data['year'], ts_data['stunting_rate'], color='#f5c842', lw=2.5,
+                marker='o', markersize=5, markerfacecolor='#f5c842')
         ax.set_ylabel('Stunting Rate (%)', color='#9b9b8a', fontsize=10)
         ax.tick_params(colors='#9b9b8a', labelsize=9)
         for spine in ax.spines.values():
@@ -250,18 +240,23 @@ if data_loaded:
         plt.close()
 
     st.markdown("---")
-
-    # ── Per-country feature importance ────────────────────────
-    st.markdown(f'<div class="section-title">What Drives Stunting Most in {selected_country}?</div>',
-                unsafe_allow_html=True)
+    st.markdown(
+        f'<div class="section-title">What Drives Stunting Most in {selected_country}?</div>',
+        unsafe_allow_html=True
+    )
 
     if len(model_df) < 5:
         st.warning("Not enough data points for this country to compute reliable feature importance.")
     else:
-        # Only keep feature cols that actually exist and have no nulls for this country
-        valid_features = [f for f in feature_cols if f in model_df.columns and bool(model_df[f].notna().all())]
-        X_c = model_df[valid_features].dropna()
-        y_c = model_df.loc[X_c.index, 'stunting_rate']
+        seen2 = set()
+        valid_features = []
+        for f in feature_cols:
+            if f not in seen2 and f in model_df.columns:
+                seen2.add(f)
+                valid_features.append(f)
+
+        X_c = model_df[valid_features].copy()
+        y_c = model_df['stunting_rate'].copy()
 
         rf_c = RandomForestRegressor(
             n_estimators=200, max_depth=10,
@@ -271,20 +266,18 @@ if data_loaded:
         rf_c.fit(X_c, y_c)
 
         imp_df = pd.DataFrame({
-            'feature': valid_features,
+            'feature': list(X_c.columns),
             'importance': rf_c.feature_importances_
         }).sort_values('importance', ascending=False).head(15)
 
-        # Chart
         cat_colors = [categorize(f)[1] for f in imp_df['feature']]
         labels = [clean_name(f) for f in imp_df['feature']]
 
         fig2, ax2 = plt.subplots(figsize=(9, 6))
         fig2.patch.set_facecolor('#0f1117')
         ax2.set_facecolor('#0f1117')
-
-        bars = ax2.barh(range(len(imp_df)), imp_df['importance'],
-                        color=cat_colors, edgecolor='#0f1117', height=0.7)
+        ax2.barh(range(len(imp_df)), imp_df['importance'],
+                 color=cat_colors, edgecolor='#0f1117', height=0.7)
         ax2.set_yticks(range(len(imp_df)))
         ax2.set_yticklabels(labels, fontsize=10, color='#e8e4dc')
         ax2.invert_yaxis()
@@ -293,7 +286,6 @@ if data_loaded:
         for spine in ax2.spines.values():
             spine.set_edgecolor('#2a2d3a')
         ax2.grid(axis='x', color='#2a2d3a', linewidth=0.6)
-
         legend_els = [
             mpatches.Patch(color='#7ab3f5', label='Economic & Social'),
             mpatches.Patch(color='#6fcf97', label='Crop Metrics'),
@@ -303,29 +295,21 @@ if data_loaded:
         ax2.legend(handles=legend_els, loc='lower right',
                    facecolor='#1a1d27', edgecolor='#2a2d3a',
                    labelcolor='#e8e4dc', fontsize=9)
-
         plt.tight_layout()
         st.pyplot(fig2)
         plt.close()
 
-        # ── Top insights ──────────────────────────────────────
-        st.markdown(f'<div class="section-title">Top Insights for {selected_country}</div>',
-                    unsafe_allow_html=True)
-
-        top5 = imp_df.head(5)
-        for _, row in top5.iterrows():
+        st.markdown(
+            f'<div class="section-title">Top Insights for {selected_country}</div>',
+            unsafe_allow_html=True
+        )
+        for _, row in imp_df.head(5).iterrows():
             cat_name, cat_color, tag_class = categorize(row['feature'])
             timing = lag_label(row['feature'])
             nice = clean_name(row['feature'])
-            pct = row['importance'] * 100
-
-            # Correlation direction
-            if row['feature'] in X_c.columns:
-                corr_val = X_c[row['feature']].corr(y_c)
-                direction = "↑ Higher → more stunting" if corr_val > 0 else "↑ Higher → less stunting"
-            else:
-                direction = ""
-
+            pct = float(row['importance']) * 100
+            corr_val = float(X_c[row['feature']].corr(y_c))
+            direction = "↑ Higher → more stunting" if corr_val > 0 else "↑ Higher → less stunting"
             st.markdown(f"""
             <div class="insight-box">
                 <span class="tag {tag_class}">{cat_name}</span>
@@ -338,19 +322,20 @@ if data_loaded:
             </div>
             """, unsafe_allow_html=True)
 
-        # ── Category breakdown pie ────────────────────────────
         st.markdown('<div class="section-title">Category Breakdown</div>', unsafe_allow_html=True)
 
-        all_imp = pd.DataFrame({'feature': valid_features, 'importance': rf_c.feature_importances_})
-        cats = {'Economic & Social': 0, 'Crop Metrics': 0, 'Climate': 0, 'Other': 0}
+        all_imp = pd.DataFrame({
+            'feature': list(X_c.columns),
+            'importance': rf_c.feature_importances_
+        })
+        cats = {'Economic & Social': 0.0, 'Crop Metrics': 0.0, 'Climate': 0.0, 'Other': 0.0}
         for _, row in all_imp.iterrows():
             cat_name, _, _ = categorize(row['feature'])
-            cats[cat_name] += row['importance']
+            cats[cat_name] += float(row['importance'])
 
         fig3, ax3 = plt.subplots(figsize=(5, 4))
         fig3.patch.set_facecolor('#0f1117')
         ax3.set_facecolor('#0f1117')
-
         pie_colors = ['#7ab3f5', '#6fcf97', '#f56f6f', '#c8b96f']
         wedges, texts, autotexts = ax3.pie(
             list(cats.values()),
@@ -364,7 +349,6 @@ if data_loaded:
         for at in autotexts:
             at.set_color('#0f1117')
             at.set_fontweight('bold')
-
         plt.tight_layout()
         st.pyplot(fig3)
         plt.close()
