@@ -259,7 +259,7 @@ if data_loaded:
         st.warning("Not enough data points for this country to compute reliable feature importance.")
     else:
         # Only keep feature cols that actually exist and have no nulls for this country
-        valid_features = [f for f in feature_cols if f in model_df.columns and model_df[f].notna().all()]
+        valid_features = [f for f in feature_cols if f in model_df.columns and bool(model_df[f].notna().all())]
         X_c = model_df[valid_features].dropna()
         y_c = model_df.loc[X_c.index, 'stunting_rate']
 
