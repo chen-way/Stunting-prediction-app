@@ -16,73 +16,20 @@ st.set_page_config(
 st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@300;400;500;600&display=swap');
-
 html, body, [class*="css"] {
     font-family: 'DM Sans', sans-serif;
     background-color: #0f1117;
     color: #e8e4dc;
 }
-.main-header {
-    font-family: 'DM Serif Display', serif;
-    font-size: 3rem;
-    color: #f5c842;
-    line-height: 1.15;
-    margin-bottom: 0.2rem;
-}
-.sub-header {
-    font-size: 1.05rem;
-    color: #9b9b8a;
-    font-weight: 300;
-    margin-bottom: 2rem;
-}
-.metric-card {
-    background: #1a1d27;
-    border: 1px solid #2a2d3a;
-    border-radius: 12px;
-    padding: 1.2rem 1.5rem;
-    margin-bottom: 1rem;
-}
-.metric-title {
-    font-size: 0.75rem;
-    text-transform: uppercase;
-    letter-spacing: 0.12em;
-    color: #6b6b5a;
-    margin-bottom: 0.3rem;
-}
-.metric-value {
-    font-family: 'DM Serif Display', serif;
-    font-size: 2.2rem;
-    color: #f5c842;
-}
-.metric-sub {
-    font-size: 0.8rem;
-    color: #6b6b5a;
-}
-.section-title {
-    font-family: 'DM Serif Display', serif;
-    font-size: 1.4rem;
-    color: #e8e4dc;
-    border-bottom: 1px solid #2a2d3a;
-    padding-bottom: 0.4rem;
-    margin: 1.5rem 0 1rem 0;
-}
-.insight-box {
-    background: #1a1d27;
-    border-left: 3px solid #f5c842;
-    border-radius: 0 8px 8px 0;
-    padding: 1rem 1.2rem;
-    margin: 0.5rem 0;
-    font-size: 0.92rem;
-}
-.tag {
-    display: inline-block;
-    padding: 2px 10px;
-    border-radius: 999px;
-    font-size: 0.72rem;
-    font-weight: 600;
-    letter-spacing: 0.06em;
-    margin-right: 4px;
-}
+.main-header { font-family: 'DM Serif Display', serif; font-size: 3rem; color: #f5c842; line-height: 1.15; margin-bottom: 0.2rem; }
+.sub-header { font-size: 1.05rem; color: #9b9b8a; font-weight: 300; margin-bottom: 2rem; }
+.metric-card { background: #1a1d27; border: 1px solid #2a2d3a; border-radius: 12px; padding: 1.2rem 1.5rem; margin-bottom: 1rem; }
+.metric-title { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: #6b6b5a; margin-bottom: 0.3rem; }
+.metric-value { font-family: 'DM Serif Display', serif; font-size: 2.2rem; color: #f5c842; }
+.metric-sub { font-size: 0.8rem; color: #6b6b5a; }
+.section-title { font-family: 'DM Serif Display', serif; font-size: 1.4rem; color: #e8e4dc; border-bottom: 1px solid #2a2d3a; padding-bottom: 0.4rem; margin: 1.5rem 0 1rem 0; }
+.insight-box { background: #1a1d27; border-left: 3px solid #f5c842; border-radius: 0 8px 8px 0; padding: 1rem 1.2rem; margin: 0.5rem 0; font-size: 0.92rem; }
+.tag { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: 0.72rem; font-weight: 600; letter-spacing: 0.06em; margin-right: 4px; }
 .tag-econ  { background: #1e3a5f; color: #7ab3f5; }
 .tag-crop  { background: #1a3d2b; color: #6fcf97; }
 .tag-clim  { background: #3d1a1a; color: #f56f6f; }
@@ -93,8 +40,7 @@ html, body, [class*="css"] {
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv("data/final_dataset_processed.csv")
-    return df
+    return pd.read_csv("data/final_dataset_processed.csv")
 
 
 @st.cache_resource
@@ -117,12 +63,9 @@ def train_model(df):
     model_df = df[feature_cols + ['stunting_rate']].dropna()
     X = model_df[feature_cols]
     y = model_df['stunting_rate']
-
-    rf = RandomForestRegressor(
-        n_estimators=100, max_depth=15,
-        min_samples_split=5, min_samples_leaf=2,
-        random_state=42, n_jobs=-1
-    )
+    rf = RandomForestRegressor(n_estimators=100, max_depth=15,
+                               min_samples_split=5, min_samples_leaf=2,
+                               random_state=42, n_jobs=-1)
     rf.fit(X, y)
     return rf, feature_cols
 
@@ -139,6 +82,30 @@ def categorize(feat):
         return 'Other', '#c8b96f', 'tag-other'
 
 
+def clean_name(feat):
+    """Returns display label with lag suffix clearly shown."""
+    # Determine lag suffix first
+    if '_lag2' in feat:
+        lag_suffix = ' (lag 2)'
+        base = feat.replace('_lag2', '')
+    elif '_lag1' in feat:
+        lag_suffix = ' (lag 1)'
+        base = feat.replace('_lag1', '')
+    else:
+        lag_suffix = ''
+        base = feat
+
+    # Clean up the base name
+    base = (base
+            .replace('_production', ' production')
+            .replace('_area', ' area harvested')
+            .replace('_yield', ' yield')
+            .replace('_volatility', ' volatility')
+            .replace('_', ' ')
+            .title())
+    return base + lag_suffix
+
+
 def lag_label(feat):
     if '_lag2' in feat:
         return '2 yrs prior'
@@ -147,17 +114,7 @@ def lag_label(feat):
     return 'Current year'
 
 
-def clean_name(feat):
-    return (feat
-            .replace('_lag2', '').replace('_lag1', '')
-            .replace('_production', ' production')
-            .replace('_area', ' area harvested')
-            .replace('_yield', ' yield')
-            .replace('_volatility', ' volatility')
-            .replace('_', ' ')
-            .title())
-
-
+# ── Header ────────────────────────────────────────────────────
 st.markdown('<div class="main-header">🌍 Child Stunting Predictor</div>', unsafe_allow_html=True)
 st.markdown('<div class="sub-header">Sub-Saharan Africa · Understand what drives malnutrition in each country</div>', unsafe_allow_html=True)
 
@@ -181,11 +138,8 @@ if data_loaded:
         st.markdown(f"**{int(df['year'].min())}–{int(df['year'].max())}** years")
         st.markdown(f"**{len(feature_cols)}** features")
         st.markdown("---")
-        st.markdown(
-            "<small style='color:#555'>Data: UNICEF, FAO, World Bank<br>"
-            "Model: Random Forest Regressor</small>",
-            unsafe_allow_html=True
-        )
+        st.markdown("<small style='color:#555'>Data: UNICEF, FAO, World Bank<br>Model: Random Forest Regressor</small>",
+                    unsafe_allow_html=True)
 
     country_df = df[df['country'] == selected_country].copy()
     model_df = country_df[feature_cols + ['stunting_rate']].dropna()
@@ -199,7 +153,6 @@ if data_loaded:
         change = float(latest['stunting_rate']) - float(earliest['stunting_rate'])
         arrow = "↓" if change < 0 else "↑"
         chg_color = "#6fcf97" if change < 0 else "#f56f6f"
-
         st.markdown(f"""
         <div class="metric-card">
             <div class="metric-title">Latest Stunting Rate</div>
@@ -219,10 +172,8 @@ if data_loaded:
         """, unsafe_allow_html=True)
 
     with col1:
-        st.markdown(
-            f'<div class="section-title">Stunting Rate Over Time — {selected_country}</div>',
-            unsafe_allow_html=True
-        )
+        st.markdown(f'<div class="section-title">Stunting Rate Over Time — {selected_country}</div>',
+                    unsafe_allow_html=True)
         fig, ax = plt.subplots(figsize=(9, 3.5))
         fig.patch.set_facecolor('#0f1117')
         ax.set_facecolor('#0f1117')
@@ -240,14 +191,13 @@ if data_loaded:
         plt.close()
 
     st.markdown("---")
-    st.markdown(
-        f'<div class="section-title">What Drives Stunting Most in {selected_country}?</div>',
-        unsafe_allow_html=True
-    )
+    st.markdown(f'<div class="section-title">What Drives Stunting Most in {selected_country}?</div>',
+                unsafe_allow_html=True)
 
     if len(model_df) < 5:
         st.warning("Not enough data points for this country to compute reliable feature importance.")
     else:
+        # Deduplicate features
         seen2 = set()
         valid_features = []
         for f in feature_cols:
@@ -255,14 +205,16 @@ if data_loaded:
                 seen2.add(f)
                 valid_features.append(f)
 
+        # Fill NaNs with column median so lag features are NOT dropped
         X_c = model_df[valid_features].copy()
+        for col in X_c.columns:
+            if X_c[col].isnull().any():
+                X_c[col] = X_c[col].fillna(X_c[col].median())
         y_c = model_df['stunting_rate'].copy()
 
-        rf_c = RandomForestRegressor(
-            n_estimators=200, max_depth=10,
-            min_samples_split=2, min_samples_leaf=1,
-            random_state=42, n_jobs=-1
-        )
+        rf_c = RandomForestRegressor(n_estimators=200, max_depth=10,
+                                     min_samples_split=2, min_samples_leaf=1,
+                                     random_state=42, n_jobs=-1)
         rf_c.fit(X_c, y_c)
 
         imp_df = pd.DataFrame({
@@ -270,10 +222,11 @@ if data_loaded:
             'importance': rf_c.feature_importances_
         }).sort_values('importance', ascending=False).head(15)
 
+        # ── Feature importance bar chart ──────────────────────
         cat_colors = [categorize(f)[1] for f in imp_df['feature']]
-        labels = [clean_name(f) for f in imp_df['feature']]
+        labels = [clean_name(f) for f in imp_df['feature']]  # now shows "(lag 1)" / "(lag 2)"
 
-        fig2, ax2 = plt.subplots(figsize=(9, 6))
+        fig2, ax2 = plt.subplots(figsize=(10, 7))
         fig2.patch.set_facecolor('#0f1117')
         ax2.set_facecolor('#0f1117')
         ax2.barh(range(len(imp_df)), imp_df['importance'],
@@ -299,10 +252,9 @@ if data_loaded:
         st.pyplot(fig2)
         plt.close()
 
-        st.markdown(
-            f'<div class="section-title">Top Insights for {selected_country}</div>',
-            unsafe_allow_html=True
-        )
+        # ── Top 5 insights ────────────────────────────────────
+        st.markdown(f'<div class="section-title">Top Insights for {selected_country}</div>',
+                    unsafe_allow_html=True)
         for _, row in imp_df.head(5).iterrows():
             cat_name, cat_color, tag_class = categorize(row['feature'])
             timing = lag_label(row['feature'])
@@ -322,6 +274,7 @@ if data_loaded:
             </div>
             """, unsafe_allow_html=True)
 
+        # ── Category breakdown — TOP 3 only ──────────────────
         st.markdown('<div class="section-title">Category Breakdown</div>', unsafe_allow_html=True)
 
         all_imp = pd.DataFrame({
@@ -333,15 +286,26 @@ if data_loaded:
             cat_name, _, _ = categorize(row['feature'])
             cats[cat_name] += float(row['importance'])
 
+        # Keep only top 3 categories by importance
+        cats_sorted = sorted(cats.items(), key=lambda x: x[1], reverse=True)[:3]
+        top3_labels = [c[0] for c in cats_sorted]
+        top3_values = [c[1] for c in cats_sorted]
+        color_map = {
+            'Economic & Social': '#7ab3f5',
+            'Crop Metrics': '#6fcf97',
+            'Climate': '#f56f6f',
+            'Other': '#c8b96f'
+        }
+        top3_colors = [color_map[l] for l in top3_labels]
+
         fig3, ax3 = plt.subplots(figsize=(5, 4))
         fig3.patch.set_facecolor('#0f1117')
         ax3.set_facecolor('#0f1117')
-        pie_colors = ['#7ab3f5', '#6fcf97', '#f56f6f', '#c8b96f']
         wedges, texts, autotexts = ax3.pie(
-            list(cats.values()),
-            labels=list(cats.keys()),
+            top3_values,
+            labels=top3_labels,
             autopct='%1.1f%%',
-            colors=pie_colors,
+            colors=top3_colors,
             startangle=90,
             textprops={'color': '#e8e4dc', 'fontsize': 10},
             wedgeprops={'edgecolor': '#0f1117', 'linewidth': 2}
