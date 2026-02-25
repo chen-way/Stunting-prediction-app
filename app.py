@@ -45,45 +45,44 @@ def load_data():
 
 @st.cache_resource
 def train_model(df):
-    # Dynamic: grab every column except identifiers and target
     allowed = {
-    'cassava_area','cassava_production','cassava_yield',
-    'maize_area','maize_production','maize_yield',
-    'rice_area','rice_production','rice_yield',
-    'sorghum_area','sorghum_production','sorghum_yield',
-    'wheat_area','wheat_production','wheat_yield',
-    'yams_area','yams_production','yams_yield',
-    'gdp_per_capita','water_access','sanitation_access',
-    'political_stability','ccri_score','temperature','precipitation',
-    'cassava_volatility','maize_volatility','rice_volatility',
-    'sorghum_volatility','wheat_volatility','yams_volatility',
-    'gdp_per_capita_lag1','water_access_lag1','sanitation_access_lag1',
-    'political_stability_lag1','temperature_lag1','precipitation_lag1',
-    'cassava_production_lag1','cassava_area_lag1','cassava_yield_lag1','cassava_volatility_lag1',
-    'maize_production_lag1','maize_area_lag1','maize_yield_lag1','maize_volatility_lag1',
-    'rice_production_lag1','rice_area_lag1','rice_yield_lag1','rice_volatility_lag1',
-    'sorghum_production_lag1','sorghum_area_lag1','sorghum_yield_lag1','sorghum_volatility_lag1',
-    'wheat_production_lag1','wheat_area_lag1','wheat_yield_lag1','wheat_volatility_lag1',
-    'yams_production_lag1','yams_area_lag1','yams_yield_lag1','yams_volatility_lag1',
-    'gdp_per_capita_lag2','water_access_lag2','sanitation_access_lag2',
-    'political_stability_lag2','temperature_lag2','precipitation_lag2',
-    'cassava_production_lag2','cassava_area_lag2','cassava_yield_lag2','cassava_volatility_lag2',
-    'maize_production_lag2','maize_area_lag2','maize_yield_lag2','maize_volatility_lag2',
-    'rice_production_lag2','rice_area_lag2','rice_yield_lag2','rice_volatility_lag2',
-    'sorghum_production_lag2','sorghum_area_lag2','sorghum_yield_lag2','sorghum_volatility_lag2',
-    'wheat_production_lag2','wheat_area_lag2','wheat_yield_lag2','wheat_volatility_lag2',
-    'yams_production_lag2','yams_area_lag2','yams_yield_lag2','yams_volatility_lag2',
-}
-feature_cols = [c for c in df.columns if c in allowed]
-    
-model_df = df[feature_cols + ['stunting_rate']].dropna()
-X = model_df[feature_cols]
-y = model_df['stunting_rate']
-rf = RandomForestRegressor(n_estimators=100, max_depth=15,
-                            min_samples_split=5, min_samples_leaf=2,
-                            random_state=42, n_jobs=-1)
-rf.fit(X, y)
-return rf, feature_cols
+        'cassava_area','cassava_production','cassava_yield',
+        'maize_area','maize_production','maize_yield',
+        'rice_area','rice_production','rice_yield',
+        'sorghum_area','sorghum_production','sorghum_yield',
+        'wheat_area','wheat_production','wheat_yield',
+        'yams_area','yams_production','yams_yield',
+        'gdp_per_capita','water_access','sanitation_access',
+        'political_stability','ccri_score','temperature','precipitation',
+        'cassava_volatility','maize_volatility','rice_volatility',
+        'sorghum_volatility','wheat_volatility','yams_volatility',
+        'gdp_per_capita_lag1','water_access_lag1','sanitation_access_lag1',
+        'political_stability_lag1','temperature_lag1','precipitation_lag1',
+        'cassava_production_lag1','cassava_area_lag1','cassava_yield_lag1','cassava_volatility_lag1',
+        'maize_production_lag1','maize_area_lag1','maize_yield_lag1','maize_volatility_lag1',
+        'rice_production_lag1','rice_area_lag1','rice_yield_lag1','rice_volatility_lag1',
+        'sorghum_production_lag1','sorghum_area_lag1','sorghum_yield_lag1','sorghum_volatility_lag1',
+        'wheat_production_lag1','wheat_area_lag1','wheat_yield_lag1','wheat_volatility_lag1',
+        'yams_production_lag1','yams_area_lag1','yams_yield_lag1','yams_volatility_lag1',
+        'gdp_per_capita_lag2','water_access_lag2','sanitation_access_lag2',
+        'political_stability_lag2','temperature_lag2','precipitation_lag2',
+        'cassava_production_lag2','cassava_area_lag2','cassava_yield_lag2','cassava_volatility_lag2',
+        'maize_production_lag2','maize_area_lag2','maize_yield_lag2','maize_volatility_lag2',
+        'rice_production_lag2','rice_area_lag2','rice_yield_lag2','rice_volatility_lag2',
+        'sorghum_production_lag2','sorghum_area_lag2','sorghum_yield_lag2','sorghum_volatility_lag2',
+        'wheat_production_lag2','wheat_area_lag2','wheat_yield_lag2','wheat_volatility_lag2',
+        'yams_production_lag2','yams_area_lag2','yams_yield_lag2','yams_volatility_lag2',
+    }
+    feature_cols = [c for c in df.columns if c in allowed]
+
+    model_df = df[feature_cols + ['stunting_rate']].dropna()
+    X = model_df[feature_cols]
+    y = model_df['stunting_rate']
+    rf = RandomForestRegressor(n_estimators=100, max_depth=15,
+                               min_samples_split=5, min_samples_leaf=2,
+                               random_state=42, n_jobs=-1)
+    rf.fit(X, y)
+    return rf, feature_cols
 
 
 def categorize(feat):
@@ -210,7 +209,6 @@ if data_loaded:
     if len(model_df) < 5:
         st.warning("Not enough data points for this country to compute reliable feature importance.")
     else:
-        # Fill NaNs with column median so lag features are NOT dropped
         X_c = model_df[feature_cols].copy()
         for col in X_c.columns:
             if X_c[col].isnull().any():
@@ -227,7 +225,6 @@ if data_loaded:
             'importance': rf_c.feature_importances_
         }).sort_values('importance', ascending=False).head(15)
 
-        # ── Feature importance bar chart ──────────────────────
         cat_colors = [categorize(f)[1] for f in imp_df['feature']]
         labels = [clean_name(f) for f in imp_df['feature']]
 
@@ -257,7 +254,6 @@ if data_loaded:
         st.pyplot(fig2)
         plt.close()
 
-        # ── Top 5 insights ────────────────────────────────────
         st.markdown(f'<div class="section-title">Top Insights for {selected_country}</div>',
                     unsafe_allow_html=True)
         for _, row in imp_df.head(5).iterrows():
@@ -279,7 +275,6 @@ if data_loaded:
             </div>
             """, unsafe_allow_html=True)
 
-        # ── Category breakdown — TOP 3 only ──────────────────
         st.markdown('<div class="section-title">Category Breakdown</div>', unsafe_allow_html=True)
 
         all_imp = pd.DataFrame({
