@@ -39,14 +39,18 @@ html, body, [class*="css"] {
 
 
 @st.cache_data
-def load_data():
+def load_data(_version=2):
     return pd.read_csv("data/final_dataset_processed.csv")
 
 
 @st.cache_resource
-def train_model(df, _version=4):
-    exclude = {'country', 'year', 'stunting_rate'}
-    feature_cols = [c for c in df.columns if c not in exclude]
+def train_model(df, _version=5):
+    exclude = {
+        'country', 'year', 'stunting_rate',
+        'temp_anomaly', 'precip_anomaly', 'climate_stress', 'socioeconomic_index',
+        'temp_anomaly_lag1', 'precip_anomaly_lag1', 'climate_stress_lag1',
+    }
+    feature_cols = [c for c in df.columns if c not in exclude and '_change' not in c]
     model_df = df[feature_cols + ['stunting_rate']].dropna()
     X = model_df[feature_cols]
     y = model_df['stunting_rate']
@@ -101,8 +105,8 @@ st.markdown('<div class="main-header">🌍 Child Stunting Predictor</div>', unsa
 st.markdown('<div class="sub-header">Sub-Saharan Africa · Understand what drives malnutrition in each country</div>', unsafe_allow_html=True)
 
 try:
-    df = load_data()
-    rf, feature_cols = train_model(df, _version=4)
+    df = load_data(_version=2)
+    rf, feature_cols = train_model(df, _version=5)
     data_loaded = True
 except FileNotFoundError:
     data_loaded = False
@@ -285,5 +289,3 @@ if data_loaded:
         plt.tight_layout()
         st.pyplot(fig3)
         plt.close()
-
-st.write(feature_cols)
