@@ -77,13 +77,13 @@ def train_model(df):
 feature_cols = [c for c in df.columns if c in allowed]
     
 model_df = df[feature_cols + ['stunting_rate']].dropna()
-    X = model_df[feature_cols]
-    y = model_df['stunting_rate']
-    rf = RandomForestRegressor(n_estimators=100, max_depth=15,
-                               min_samples_split=5, min_samples_leaf=2,
-                               random_state=42, n_jobs=-1)
-    rf.fit(X, y)
-    return rf, feature_cols
+X = model_df[feature_cols]
+y = model_df['stunting_rate']
+rf = RandomForestRegressor(n_estimators=100, max_depth=15,
+                            min_samples_split=5, min_samples_leaf=2,
+                            random_state=42, n_jobs=-1)
+rf.fit(X, y)
+return rf, feature_cols
 
 
 def categorize(feat):
