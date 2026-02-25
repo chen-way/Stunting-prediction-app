@@ -69,6 +69,8 @@ def train_model(df):
     rf.fit(X, y)
     return rf, feature_cols
 
+st.write(f"Features found: {len(feature_cols)}")
+st.write(feature_cols)
 
 def categorize(feat):
     if any(x in feat for x in ['gdp', 'water', 'sanitation', 'political', 'ccri']):
