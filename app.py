@@ -76,7 +76,7 @@ def train_model(df):
 }
 feature_cols = [c for c in df.columns if c in allowed]
     
-    model_df = df[feature_cols + ['stunting_rate']].dropna()
+model_df = df[feature_cols + ['stunting_rate']].dropna()
     X = model_df[feature_cols]
     y = model_df['stunting_rate']
     rf = RandomForestRegressor(n_estimators=100, max_depth=15,
