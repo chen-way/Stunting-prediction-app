@@ -45,13 +45,35 @@ def load_data():
 
 @st.cache_resource
 def train_model(df):
-    exclude = {
-    'country', 'year', 'stunting_rate',
-    'temp_anomaly', 'precip_anomaly', 'climate_stress', 'socioeconomic_index',
-    'temp_anomaly_lag1', 'precip_anomaly_lag1', 'climate_stress_lag1',
-}
-feature_cols = [c for c in df.columns 
-                if c not in exclude and '_change' not in c]
+    allowed = {
+        'cassava_area','cassava_production','cassava_yield',
+        'maize_area','maize_production','maize_yield',
+        'rice_area','rice_production','rice_yield',
+        'sorghum_area','sorghum_production','sorghum_yield',
+        'wheat_area','wheat_production','wheat_yield',
+        'yams_area','yams_production','yams_yield',
+        'gdp_per_capita','water_access','sanitation_access',
+        'political_stability','ccri_score','temperature','precipitation',
+        'cassava_volatility','maize_volatility','rice_volatility',
+        'sorghum_volatility','wheat_volatility','yams_volatility',
+        'gdp_per_capita_lag1','water_access_lag1','sanitation_access_lag1',
+        'political_stability_lag1','temperature_lag1','precipitation_lag1',
+        'cassava_production_lag1','cassava_area_lag1','cassava_yield_lag1','cassava_volatility_lag1',
+        'maize_production_lag1','maize_area_lag1','maize_yield_lag1','maize_volatility_lag1',
+        'rice_production_lag1','rice_area_lag1','rice_yield_lag1','rice_volatility_lag1',
+        'sorghum_production_lag1','sorghum_area_lag1','sorghum_yield_lag1','sorghum_volatility_lag1',
+        'wheat_production_lag1','wheat_area_lag1','wheat_yield_lag1','wheat_volatility_lag1',
+        'yams_production_lag1','yams_area_lag1','yams_yield_lag1','yams_volatility_lag1',
+        'gdp_per_capita_lag2','water_access_lag2','sanitation_access_lag2',
+        'political_stability_lag2','temperature_lag2','precipitation_lag2',
+        'cassava_production_lag2','cassava_area_lag2','cassava_yield_lag2','cassava_volatility_lag2',
+        'maize_production_lag2','maize_area_lag2','maize_yield_lag2','maize_volatility_lag2',
+        'rice_production_lag2','rice_area_lag2','rice_yield_lag2','rice_volatility_lag2',
+        'sorghum_production_lag2','sorghum_area_lag2','sorghum_yield_lag2','sorghum_volatility_lag2',
+        'wheat_production_lag2','wheat_area_lag2','wheat_yield_lag2','wheat_volatility_lag2',
+        'yams_production_lag2','yams_area_lag2','yams_yield_lag2','yams_volatility_lag2',
+    }
+    feature_cols = [c for c in df.columns if c in allowed]
 
     model_df = df[feature_cols + ['stunting_rate']].dropna()
     X = model_df[feature_cols]
