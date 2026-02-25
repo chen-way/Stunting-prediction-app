@@ -45,36 +45,12 @@ def load_data():
 
 @st.cache_resource
 def train_model(df):
-    allowed = {
-        'cassava_area','cassava_production','cassava_yield',
-        'maize_area','maize_production','maize_yield',
-        'rice_area','rice_production','rice_yield',
-        'sorghum_area','sorghum_production','sorghum_yield',
-        'wheat_area','wheat_production','wheat_yield',
-        'yams_area','yams_production','yams_yield',
-        'gdp_per_capita','water_access','sanitation_access',
-        'political_stability','ccri_score','temperature','precipitation',
-        'cassava_volatility','maize_volatility','rice_volatility',
-        'sorghum_volatility','wheat_volatility','yams_volatility',
-        'gdp_per_capita_lag1','water_access_lag1','sanitation_access_lag1',
-        'political_stability_lag1','temperature_lag1','precipitation_lag1',
-        'cassava_production_lag1','cassava_area_lag1','cassava_yield_lag1','cassava_volatility_lag1',
-        'maize_production_lag1','maize_area_lag1','maize_yield_lag1','maize_volatility_lag1',
-        'rice_production_lag1','rice_area_lag1','rice_yield_lag1','rice_volatility_lag1',
-        'sorghum_production_lag1','sorghum_area_lag1','sorghum_yield_lag1','sorghum_volatility_lag1',
-        'wheat_production_lag1','wheat_area_lag1','wheat_yield_lag1','wheat_volatility_lag1',
-        'yams_production_lag1','yams_area_lag1','yams_yield_lag1','yams_volatility_lag1',
-        'gdp_per_capita_lag2','water_access_lag2','sanitation_access_lag2',
-        'political_stability_lag2','temperature_lag2','precipitation_lag2',
-        'cassava_production_lag2','cassava_area_lag2','cassava_yield_lag2','cassava_volatility_lag2',
-        'maize_production_lag2','maize_area_lag2','maize_yield_lag2','maize_volatility_lag2',
-        'rice_production_lag2','rice_area_lag2','rice_yield_lag2','rice_volatility_lag2',
-        'sorghum_production_lag2','sorghum_area_lag2','sorghum_yield_lag2','sorghum_volatility_lag2',
-        'wheat_production_lag2','wheat_area_lag2','wheat_yield_lag2','wheat_volatility_lag2',
-        'yams_production_lag2','yams_area_lag2','yams_yield_lag2','yams_volatility_lag2',
+    exclude = {
+        'country', 'year', 'stunting_rate',
+        'temp_anomaly', 'precip_anomaly', 'climate_stress', 'socioeconomic_index',
+        'temp_anomaly_lag1', 'precip_anomaly_lag1', 'climate_stress_lag1',
     }
-    feature_cols = [c for c in df.columns if c in allowed]
-
+    feature_cols = [c for c in df.columns if c not in exclude and '_change' not in c]
     model_df = df[feature_cols + ['stunting_rate']].dropna()
     X = model_df[feature_cols]
     y = model_df['stunting_rate']
@@ -91,7 +67,7 @@ def categorize(feat):
     elif any(x in feat for x in ['cassava', 'maize', 'rice', 'sorghum', 'wheat', 'yams',
                                   'production', 'area', 'yield', 'volatility']):
         return 'Crop Metrics', '#6fcf97', 'tag-crop'
-    elif any(x in feat for x in ['temp', 'precip', 'temperature', 'precipitation', 'climate']):
+    elif any(x in feat for x in ['temperature', 'precipitation']):
         return 'Climate', '#f56f6f', 'tag-clim'
     else:
         return 'Other', '#c8b96f', 'tag-other'
@@ -107,7 +83,6 @@ def clean_name(feat):
     else:
         lag_suffix = ''
         base = feat
-
     base = (base
             .replace('_production', ' production')
             .replace('_area', ' area harvested')
@@ -126,7 +101,6 @@ def lag_label(feat):
     return 'Current year'
 
 
-# ── Header ────────────────────────────────────────────────────
 st.markdown('<div class="main-header">🌍 Child Stunting Predictor</div>', unsafe_allow_html=True)
 st.markdown('<div class="sub-header">Sub-Saharan Africa · Understand what drives malnutrition in each country</div>', unsafe_allow_html=True)
 
