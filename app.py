@@ -44,7 +44,7 @@ def load_data():
 
 
 @st.cache_resource
-def train_model(df):
+def train_model(df, _version=3):
     exclude = {
         'country', 'year', 'stunting_rate',
         'temp_anomaly', 'precip_anomaly', 'climate_stress', 'socioeconomic_index',
@@ -106,7 +106,7 @@ st.markdown('<div class="sub-header">Sub-Saharan Africa · Understand what drive
 
 try:
     df = load_data()
-    rf, feature_cols = train_model(df)
+    rf, feature_cols = train_model(df, _version=3)
     data_loaded = True
 except FileNotFoundError:
     data_loaded = False
