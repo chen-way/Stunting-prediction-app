@@ -293,3 +293,6 @@ if data_loaded:
         plt.tight_layout()
         st.pyplot(fig3)
         plt.close()
+
+st.write(len(feature_cols))
+st.write(feature_cols)
