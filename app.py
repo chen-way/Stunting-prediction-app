@@ -45,20 +45,9 @@ def load_data():
 
 @st.cache_resource
 def train_model(df):
-    crop_cols = [c for c in df.columns if any(x in c for x in
-                 ['cassava', 'maize', 'rice', 'sorghum', 'wheat', 'yams'])]
-    raw_features = (
-        crop_cols +
-        ['gdp_per_capita', 'water_access', 'sanitation_access',
-         'political_stability', 'ccri_score', 'temperature', 'precipitation'] +
-        [c for c in df.columns if '_lag1' in c or '_lag2' in c]
-    )
-    seen = set()
-    feature_cols = []
-    for f in raw_features:
-        if f not in seen and f in df.columns:
-            seen.add(f)
-            feature_cols.append(f)
+    # Dynamic: grab every column except identifiers and target
+    exclude = {'country', 'year', 'stunting_rate'}
+    feature_cols = [c for c in df.columns if c not in exclude]
 
     model_df = df[feature_cols + ['stunting_rate']].dropna()
     X = model_df[feature_cols]
@@ -69,21 +58,20 @@ def train_model(df):
     rf.fit(X, y)
     return rf, feature_cols
 
+
 def categorize(feat):
     if any(x in feat for x in ['gdp', 'water', 'sanitation', 'political', 'ccri']):
         return 'Economic & Social', '#7ab3f5', 'tag-econ'
     elif any(x in feat for x in ['cassava', 'maize', 'rice', 'sorghum', 'wheat', 'yams',
                                   'production', 'area', 'yield', 'volatility']):
         return 'Crop Metrics', '#6fcf97', 'tag-crop'
-    elif any(x in feat for x in ['temp', 'precip']):
+    elif any(x in feat for x in ['temp', 'precip', 'temperature', 'precipitation', 'climate']):
         return 'Climate', '#f56f6f', 'tag-clim'
     else:
         return 'Other', '#c8b96f', 'tag-other'
 
 
 def clean_name(feat):
-    """Returns display label with lag suffix clearly shown."""
-    # Determine lag suffix first
     if '_lag2' in feat:
         lag_suffix = ' (lag 2)'
         base = feat.replace('_lag2', '')
@@ -94,7 +82,6 @@ def clean_name(feat):
         lag_suffix = ''
         base = feat
 
-    # Clean up the base name
     base = (base
             .replace('_production', ' production')
             .replace('_area', ' area harvested')
@@ -196,16 +183,8 @@ if data_loaded:
     if len(model_df) < 5:
         st.warning("Not enough data points for this country to compute reliable feature importance.")
     else:
-        # Deduplicate features
-        seen2 = set()
-        valid_features = []
-        for f in feature_cols:
-            if f not in seen2 and f in model_df.columns:
-                seen2.add(f)
-                valid_features.append(f)
-
         # Fill NaNs with column median so lag features are NOT dropped
-        X_c = model_df[valid_features].copy()
+        X_c = model_df[feature_cols].copy()
         for col in X_c.columns:
             if X_c[col].isnull().any():
                 X_c[col] = X_c[col].fillna(X_c[col].median())
@@ -223,7 +202,7 @@ if data_loaded:
 
         # ── Feature importance bar chart ──────────────────────
         cat_colors = [categorize(f)[1] for f in imp_df['feature']]
-        labels = [clean_name(f) for f in imp_df['feature']]  # now shows "(lag 1)" / "(lag 2)"
+        labels = [clean_name(f) for f in imp_df['feature']]
 
         fig2, ax2 = plt.subplots(figsize=(10, 7))
         fig2.patch.set_facecolor('#0f1117')
@@ -285,7 +264,6 @@ if data_loaded:
             cat_name, _, _ = categorize(row['feature'])
             cats[cat_name] += float(row['importance'])
 
-        # Keep only top 3 categories by importance
         cats_sorted = sorted(cats.items(), key=lambda x: x[1], reverse=True)[:3]
         top3_labels = [c[0] for c in cats_sorted]
         top3_values = [c[1] for c in cats_sorted]
@@ -315,6 +293,3 @@ if data_loaded:
         plt.tight_layout()
         st.pyplot(fig3)
         plt.close()
-
-st.write(f"Features found: {len(feature_cols)}")
-st.write(feature_cols)
