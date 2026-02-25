@@ -69,9 +69,6 @@ def train_model(df):
     rf.fit(X, y)
     return rf, feature_cols
 
-st.write(f"Features found: {len(feature_cols)}")
-st.write(feature_cols)
-
 def categorize(feat):
     if any(x in feat for x in ['gdp', 'water', 'sanitation', 'political', 'ccri']):
         return 'Economic & Social', '#7ab3f5', 'tag-econ'
@@ -318,3 +315,6 @@ if data_loaded:
         plt.tight_layout()
         st.pyplot(fig3)
         plt.close()
+
+st.write(f"Features found: {len(feature_cols)}")
+st.write(feature_cols)
