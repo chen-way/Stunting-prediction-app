@@ -47,7 +47,10 @@ def load_data():
 def train_model(df):
     # Dynamic: grab every column except identifiers and target
     exclude = {'country', 'year', 'stunting_rate'}
-    feature_cols = [c for c in df.columns if c not in exclude]
+    drop_patterns = ['_change', 'temp_anomaly', 'precip_anomaly', 'climate_stress']
+    feature_cols = [c for c in df.columns 
+                if c not in exclude 
+                and not any(p in c for p in drop_patterns)]
 
     model_df = df[feature_cols + ['stunting_rate']].dropna()
     X = model_df[feature_cols]
