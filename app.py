@@ -44,13 +44,9 @@ def load_data():
 
 
 @st.cache_resource
-def train_model(df, _version=3):
-    exclude = {
-        'country', 'year', 'stunting_rate',
-        'temp_anomaly', 'precip_anomaly', 'climate_stress', 'socioeconomic_index',
-        'temp_anomaly_lag1', 'precip_anomaly_lag1', 'climate_stress_lag1',
-    }
-    feature_cols = [c for c in df.columns if c not in exclude and '_change' not in c]
+def train_model(df, _version=4):
+    exclude = {'country', 'year', 'stunting_rate'}
+    feature_cols = [c for c in df.columns if c not in exclude]
     model_df = df[feature_cols + ['stunting_rate']].dropna()
     X = model_df[feature_cols]
     y = model_df['stunting_rate']
@@ -106,7 +102,7 @@ st.markdown('<div class="sub-header">Sub-Saharan Africa · Understand what drive
 
 try:
     df = load_data()
-    rf, feature_cols = train_model(df, _version=3)
+    rf, feature_cols = train_model(df, _version=4)
     data_loaded = True
 except FileNotFoundError:
     data_loaded = False
