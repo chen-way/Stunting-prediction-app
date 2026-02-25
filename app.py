@@ -285,3 +285,5 @@ if data_loaded:
         plt.tight_layout()
         st.pyplot(fig3)
         plt.close()
+
+st.write(feature_cols)
