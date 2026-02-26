@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.patches as mpatches
+import plotly.graph_objects as go
 from sklearn.ensemble import RandomForestRegressor
 import warnings
 warnings.filterwarnings('ignore')
@@ -21,8 +22,9 @@ html, body, [class*="css"] {
     background-color: #0f1117;
     color: #e8e4dc;
 }
+[data-testid="stSidebar"] { display: none; }
 .main-header { font-family: 'DM Serif Display', serif; font-size: 3rem; color: #f5c842; line-height: 1.15; margin-bottom: 0.2rem; }
-.sub-header { font-size: 1.05rem; color: #9b9b8a; font-weight: 300; margin-bottom: 2rem; }
+.sub-header { font-size: 1.05rem; color: #9b9b8a; font-weight: 300; margin-bottom: 1.5rem; }
 .metric-card { background: #1a1d27; border: 1px solid #2a2d3a; border-radius: 12px; padding: 1.2rem 1.5rem; margin-bottom: 1rem; }
 .metric-title { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: #6b6b5a; margin-bottom: 0.3rem; }
 .metric-value { font-family: 'DM Serif Display', serif; font-size: 2.2rem; color: #f5c842; }
@@ -101,8 +103,91 @@ def lag_label(feat):
     return 'Current year'
 
 
+def build_map(df_all, selected_country):
+    """Plotly choropleth of Africa coloured by latest stunting rate."""
+    latest = (df_all.sort_values('year')
+              .groupby('country').last()
+              .reset_index()[['country', 'stunting_rate']])
+
+    fig = go.Figure(go.Choropleth(
+        locations=latest['country'],
+        locationmode='country names',
+        z=latest['stunting_rate'],
+        colorscale=[
+            [0.0,  '#1b4332'],
+            [0.25, '#52b788'],
+            [0.5,  '#d4a017'],
+            [0.75, '#c0392b'],
+            [1.0,  '#6b0000'],
+        ],
+        zmin=10, zmax=55,
+        showscale=False,
+        hovertemplate='<b>%{location}</b><br>Latest stunting: %{z:.1f}%<extra></extra>',
+        marker_line_color='rgba(255,255,255,0.08)',
+        marker_line_width=0.6,
+    ))
+
+    # Golden highlight on selected country
+    sel_row = latest[latest['country'] == selected_country]
+    if len(sel_row):
+        fig.add_trace(go.Choropleth(
+            locations=sel_row['country'],
+            locationmode='country names',
+            z=sel_row['stunting_rate'],
+            colorscale=[[0, '#f5c842'], [1, '#f5c842']],
+            zmin=10, zmax=55,
+            showscale=False,
+            hovertemplate='<b>%{location}</b> ✓<extra></extra>',
+            marker_line_color='#f5c842',
+            marker_line_width=2.5,
+        ))
+
+    fig.update_layout(
+        geo=dict(
+            scope='africa',
+            bgcolor='rgba(0,0,0,0)',
+            showframe=False,
+            showcoastlines=False,
+            landcolor='#181b26',
+            lakecolor='rgba(0,0,0,0)',
+            showlakes=True,
+            projection_type='natural earth',
+        ),
+        paper_bgcolor='rgba(0,0,0,0)',
+        margin=dict(l=0, r=0, t=0, b=0),
+        height=500,
+        hoverlabel=dict(
+            bgcolor='#1a1d27',
+            font_color='#e8e4dc',
+            font_family='DM Sans',
+            font_size=13,
+            bordercolor='#2a2d3a',
+        ),
+    )
+
+    for i, (label, color) in enumerate([
+        ('< 20% — Low',       '#52b788'),
+        ('20–30% — Moderate', '#d4a017'),
+        ('30–40% — High',     '#c0392b'),
+        ('> 40% — Severe',    '#6b0000'),
+    ]):
+        fig.add_annotation(
+            x=0.01, y=0.30 - i * 0.058,
+            xref='paper', yref='paper',
+            text=f"<span style='color:{color}'>■</span>  {label}",
+            showarrow=False,
+            font=dict(size=10, color='#9b9b8a', family='DM Sans'),
+            align='left', xanchor='left',
+        )
+
+    return fig
+
+
+# ── Header ──────────────────────────────────────────────────────────────────────
+
 st.markdown('<div class="main-header">🌍 Child Stunting Predictor</div>', unsafe_allow_html=True)
-st.markdown('<div class="sub-header">Sub-Saharan Africa · Understand what drives malnutrition in each country</div>', unsafe_allow_html=True)
+st.markdown('<div class="sub-header">Sub-Saharan Africa · Click a country on the map or use the dropdown to explore drivers of malnutrition</div>',
+            unsafe_allow_html=True)
 
 try:
     df = load_data(_version=2)
@@ -110,23 +195,53 @@ try:
     data_loaded = True
 except FileNotFoundError:
     data_loaded = False
-    st.error("Dataset not found. Make sure data/final_dataset_processed.csv exists in the repo.")
+    st.error("Dataset not found. Make sure data/final_dataset_processed.csv exists.")
 
 if data_loaded:
     countries = sorted(df['country'].dropna().unique())
 
-    with st.sidebar:
-        st.markdown("### Select Country")
-        selected_country = st.selectbox("Country", countries, label_visibility="collapsed")
-        st.markdown("---")
-        st.markdown("### Model Info")
-        st.markdown(f"**{df['country'].nunique()}** countries")
-        st.markdown(f"**{int(df['year'].min())}–{int(df['year'].max())}** years")
-        st.markdown(f"**{len(feature_cols)}** features")
-        st.markdown("---")
-        st.markdown("<small style='color:#555'>Data: UNICEF, FAO, World Bank<br>Model: Random Forest Regressor</small>",
-                    unsafe_allow_html=True)
+    if 'selected_country' not in st.session_state:
+        st.session_state.selected_country = countries[0]
 
+    # ── Map + dropdown row ───────────────────────────────────────────────────────
+    map_col, ctrl_col = st.columns([3, 1], gap='medium')
+
+    with map_col:
+        fig_map = build_map(df, st.session_state.selected_country)
+        clicked = st.plotly_chart(fig_map, use_container_width=True,
+                                  on_select='rerun', key='africa_map')
+
+    # Handle map click
+    if clicked and clicked.get('selection') and clicked['selection'].get('points'):
+        clicked_country = clicked['selection']['points'][0].get('location')
+        if clicked_country and clicked_country in countries:
+            st.session_state.selected_country = clicked_country
+
+    with ctrl_col:
+        st.markdown('<div style="height:56px"></div>', unsafe_allow_html=True)
+        st.markdown("**Select country**")
+        dropdown_idx = list(countries).index(st.session_state.selected_country)
+        new_sel = st.selectbox('Country', countries, index=dropdown_idx,
+                               label_visibility='collapsed', key='country_dd')
+        if new_sel != st.session_state.selected_country:
+            st.session_state.selected_country = new_sel
+            st.rerun()
+
+        st.markdown('<div style="height:16px"></div>', unsafe_allow_html=True)
+        st.markdown(
+            f"<small style='color:#6b6b5a'>"
+            f"{df['country'].nunique()} countries<br>"
+            f"{int(df['year'].min())}–{int(df['year'].max())}<br>"
+            f"{len(feature_cols)} features<br><br>"
+            f"Data: UNICEF, FAO, World Bank<br>"
+            f"Model: Random Forest Regressor</small>",
+            unsafe_allow_html=True)
+
+    selected_country = st.session_state.selected_country
+
+    st.markdown('---')
+
+    # ── Country detail ───────────────────────────────────────────────────────────
     country_df = df[df['country'] == selected_country].copy()
     model_df = country_df[feature_cols + ['stunting_rate']].dropna()
 
@@ -176,7 +291,7 @@ if data_loaded:
         st.pyplot(fig)
         plt.close()
 
-    st.markdown("---")
+    st.markdown('---')
     st.markdown(f'<div class="section-title">What Drives Stunting Most in {selected_country}?</div>',
                 unsafe_allow_html=True)
 
@@ -263,13 +378,13 @@ if data_loaded:
         cats_sorted = sorted(cats.items(), key=lambda x: x[1], reverse=True)[:3]
         top3_labels = [c[0] for c in cats_sorted]
         top3_values = [c[1] for c in cats_sorted]
-        color_map = {
+        color_map_pie = {
             'Economic & Social': '#7ab3f5',
-            'Crop Metrics': '#6fcf97',
-            'Climate': '#f56f6f',
-            'Other': '#c8b96f'
+            'Crop Metrics':      '#6fcf97',
+            'Climate':           '#f56f6f',
+            'Other':             '#c8b96f',
         }
-        top3_colors = [color_map[l] for l in top3_labels]
+        top3_colors = [color_map_pie[l] for l in top3_labels]
 
         fig3, ax3 = plt.subplots(figsize=(5, 4))
         fig3.patch.set_facecolor('#0f1117')
