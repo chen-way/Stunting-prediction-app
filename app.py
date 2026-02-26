@@ -138,6 +138,12 @@ def build_map_data(cols):
 def build_map(selected_country):
     latest = build_map_data(None)
 
+    # Single trace with per-country border color — no second trace, no flash
+    line_colors = ['#f5c842' if c == selected_country else 'rgba(255,255,255,0.08)'
+                   for c in latest['country']]
+    line_widths = [3.0 if c == selected_country else 0.6
+                   for c in latest['country']]
+
     fig = go.Figure(go.Choropleth(
         locations=latest['country'],
         locationmode='country names',
@@ -152,23 +158,8 @@ def build_map(selected_country):
         zmin=10, zmax=55,
         showscale=False,
         hovertemplate='<b>%{location}</b><br>Latest stunting: %{z:.1f}%<extra></extra>',
-        marker_line_color='rgba(255,255,255,0.08)',
-        marker_line_width=0.6,
+        marker=dict(line=dict(color=line_colors, width=line_widths)),
     ))
-
-    sel_row = latest[latest['country'] == selected_country]
-    if len(sel_row):
-        fig.add_trace(go.Choropleth(
-            locations=sel_row['country'],
-            locationmode='country names',
-            z=sel_row['stunting_rate'],
-            colorscale=[[0, '#f5c842'], [1, '#f5c842']],
-            zmin=10, zmax=55,
-            showscale=False,
-            hovertemplate='<b>%{location}</b> ✓<extra></extra>',
-            marker_line_color='#f5c842',
-            marker_line_width=2.5,
-        ))
 
     fig.update_layout(
         geo=dict(
@@ -248,9 +239,10 @@ if data_loaded:
     # before the dropdown or any detail section renders.
     if event and event.selection and event.selection.points:
         loc = event.selection.points[0].get('location')
-        if loc and loc in countries and loc != st.session_state.selected_country:
+        if loc and loc in countries:
             st.session_state.selected_country = loc
-            st.rerun()  # rerun so dropdown index and detail section reflect new country
+            # on_select='rerun' already triggers a rerun — don't call st.rerun() again
+            # doing so causes a double-rerun which wipes the map's render state
 
     # ── Dropdown (no index= arg — let session_state drive it) ────────────────────
     with ctrl_col:
