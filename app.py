@@ -63,6 +63,41 @@ def train_model(df, _version=5):
     return rf, feature_cols
 
 
+@st.cache_data
+def train_country_model(country, _df, _version=1):
+    """Train and cache a per-country RF — runs once per country, then instant."""
+    exclude = {
+        'country', 'year', 'stunting_rate',
+        'temp_anomaly', 'precip_anomaly', 'climate_stress', 'socioeconomic_index',
+        'temp_anomaly_lag1', 'precip_anomaly_lag1', 'climate_stress_lag1',
+    }
+    feature_cols = [c for c in _df.columns if c not in exclude and '_change' not in c]
+
+    country_df = _df[_df['country'] == country].copy()
+    model_df = country_df[feature_cols + ['stunting_rate']].dropna()
+
+    if len(model_df) < 5:
+        return None, feature_cols, None, None
+
+    X_c = model_df[feature_cols].copy()
+    for col in X_c.columns:
+        if X_c[col].isnull().any():
+            X_c[col] = X_c[col].fillna(X_c[col].median())
+    y_c = model_df['stunting_rate'].copy()
+
+    rf_c = RandomForestRegressor(n_estimators=200, max_depth=10,
+                                 min_samples_split=2, min_samples_leaf=1,
+                                 random_state=42, n_jobs=-1)
+    rf_c.fit(X_c, y_c)
+
+    imp_df = pd.DataFrame({
+        'feature': list(X_c.columns),
+        'importance': rf_c.feature_importances_
+    }).sort_values('importance', ascending=False).head(15)
+
+    return rf_c, feature_cols, X_c, imp_df
+
+
 def categorize(feat):
     if any(x in feat for x in ['gdp', 'water', 'sanitation', 'political', 'ccri']):
         return 'Economic & Social', '#7ab3f5', 'tag-econ'
@@ -203,27 +238,31 @@ if data_loaded:
     if 'selected_country' not in st.session_state:
         st.session_state.selected_country = countries[0]
 
+    # ── Process map click FIRST, before rendering anything ──────────────────────
+    # on_select='rerun' stores the selection under the widget key in session_state
+    map_state = st.session_state.get('africa_map', {})
+    if map_state and map_state.get('selection') and map_state['selection'].get('points'):
+        clicked_country = map_state['selection']['points'][0].get('location')
+        if clicked_country and clicked_country in countries:
+            st.session_state.selected_country = clicked_country
+
+    selected_country = st.session_state.selected_country
+
     # ── Map + dropdown row ───────────────────────────────────────────────────────
     map_col, ctrl_col = st.columns([3, 1], gap='medium')
 
     with map_col:
-        fig_map = build_map(df, st.session_state.selected_country)
-        clicked = st.plotly_chart(fig_map, use_container_width=True,
-                                  on_select='rerun', key='africa_map')
-
-    # Handle map click
-    if clicked and clicked.get('selection') and clicked['selection'].get('points'):
-        clicked_country = clicked['selection']['points'][0].get('location')
-        if clicked_country and clicked_country in countries:
-            st.session_state.selected_country = clicked_country
+        fig_map = build_map(df, selected_country)
+        st.plotly_chart(fig_map, use_container_width=True,
+                        on_select='rerun', key='africa_map')
 
     with ctrl_col:
         st.markdown('<div style="height:56px"></div>', unsafe_allow_html=True)
         st.markdown("**Select country**")
-        dropdown_idx = list(countries).index(st.session_state.selected_country)
+        dropdown_idx = list(countries).index(selected_country)
         new_sel = st.selectbox('Country', countries, index=dropdown_idx,
                                label_visibility='collapsed', key='country_dd')
-        if new_sel != st.session_state.selected_country:
+        if new_sel != selected_country:
             st.session_state.selected_country = new_sel
             st.rerun()
 
@@ -237,13 +276,10 @@ if data_loaded:
             f"Model: Random Forest Regressor</small>",
             unsafe_allow_html=True)
 
-    selected_country = st.session_state.selected_country
-
     st.markdown('---')
 
     # ── Country detail ───────────────────────────────────────────────────────────
     country_df = df[df['country'] == selected_country].copy()
-    model_df = country_df[feature_cols + ['stunting_rate']].dropna()
 
     col1, col2 = st.columns([2, 1])
 
@@ -295,24 +331,18 @@ if data_loaded:
     st.markdown(f'<div class="section-title">What Drives Stunting Most in {selected_country}?</div>',
                 unsafe_allow_html=True)
 
-    if len(model_df) < 5:
+    # ── Use cached per-country model — trains once, then instant ────────────────
+    rf_c, feat_cols_c, X_c, imp_df = train_country_model(selected_country, df, _version=1)
+
+    if rf_c is None:
         st.warning("Not enough data points for this country to compute reliable feature importance.")
     else:
-        X_c = model_df[feature_cols].copy()
-        for col in X_c.columns:
-            if X_c[col].isnull().any():
-                X_c[col] = X_c[col].fillna(X_c[col].median())
-        y_c = model_df['stunting_rate'].copy()
-
-        rf_c = RandomForestRegressor(n_estimators=200, max_depth=10,
-                                     min_samples_split=2, min_samples_leaf=1,
-                                     random_state=42, n_jobs=-1)
-        rf_c.fit(X_c, y_c)
-
-        imp_df = pd.DataFrame({
-            'feature': list(X_c.columns),
-            'importance': rf_c.feature_importances_
-        }).sort_values('importance', ascending=False).head(15)
+        country_df2 = df[df['country'] == selected_country].copy()
+        model_df2 = country_df2[feat_cols_c + ['stunting_rate']].dropna()
+        y_c = model_df2['stunting_rate'].copy()
+        # X_c already filled/aligned inside train_country_model
+        # re-align y_c index to X_c
+        y_c = y_c.loc[X_c.index] if hasattr(X_c, 'index') else y_c
 
         cat_colors = [categorize(f)[1] for f in imp_df['feature']]
         labels = [clean_name(f) for f in imp_df['feature']]
