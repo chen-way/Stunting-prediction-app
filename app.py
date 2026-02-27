@@ -428,7 +428,7 @@ if data_loaded:
 
     rf_c, feat_cols_c, X_c, imp_df = train_country_model(selected_country)
 
-  if imp_df is None or len(imp_df) == 0:
+    if imp_df is None or len(imp_df) == 0:
         st.warning("Not enough data points for this country to compute reliable feature importance.")
     else:
         country_df2 = df[df['country'] == selected_country].copy()
