@@ -82,6 +82,7 @@ def compute_forecasts():
 
 @st.cache_data
 @st.cache_data
+@st.cache_data
 def train_country_model(country):
     df = load_data()
     feature_cols = get_feature_cols(tuple(df.columns.tolist()))
@@ -89,12 +90,11 @@ def train_country_model(country):
     # Load precomputed importance from Colab
     imp_all = pd.read_csv("data/country_feature_importance.csv")
     imp_df = imp_all[imp_all['country'] == country].sort_values('importance', ascending=False).head(15)
-    imp_df = imp_df.rename(columns={'feature': 'feature', 'importance': 'importance'})
     
     if len(imp_df) == 0:
         return None, feature_cols, None, None
     
-    # We still need X_c for the correlation direction calculation
+    # Keep X_c for correlation direction calculation in the insights section
     country_df = df[df['country'] == country].copy()
     model_df = country_df[feature_cols + ['stunting_rate']].dropna()
     
@@ -106,12 +106,9 @@ def train_country_model(country):
         if X_c[col].isnull().any():
             X_c[col] = X_c[col].fillna(X_c[col].median())
     
-    # Create a dummy rf_c just so the rest of the app code doesn't break
-    # We only use it for rf_c.feature_importances_ in the pie chart
-    # which we now compute from imp_all instead
-    X_c = None
-    
-    return rf_c, feature_cols, X_c, imp_df
+    # rf_c is no longer needed since we use precomputed importances,
+    # but we return None to keep the unpacking signature intact
+    return None, feature_cols, X_c, imp_df
 
 
 def categorize(feat):
