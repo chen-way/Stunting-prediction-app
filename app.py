@@ -36,6 +36,16 @@ html, body, [class*="css"] {
 .tag-crop  { background: #1a3d2b; color: #6fcf97; }
 .tag-clim  { background: #3d1a1a; color: #f56f6f; }
 .tag-other { background: #2d2d1a; color: #c8b96f; }
+.forecast-card {
+    background: linear-gradient(135deg, #1a1d27 0%, #1e2535 100%);
+    border: 1px solid #f5c842;
+    border-radius: 14px;
+    padding: 1.4rem 1.8rem;
+    margin-bottom: 1rem;
+}
+.forecast-value { font-family: 'DM Serif Display', serif; font-size: 3rem; font-weight: 700; line-height: 1; }
+.forecast-label { font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.14em; color: #6b6b5a; margin-bottom: 6px; }
+.forecast-note { font-size: 0.78rem; color: #6b6b5a; margin-top: 8px; font-style: italic; }
 </style>
 """, unsafe_allow_html=True)
 
@@ -53,6 +63,106 @@ def get_feature_cols(cols):
         'temp_anomaly_lag1', 'precip_anomaly_lag1', 'climate_stress_lag1',
     }
     return [c for c in cols if c not in exclude and '_change' not in c]
+
+
+@st.cache_data
+def train_global_model():
+    """Train a global RF on all countries — used for recursive forecasting."""
+    df = load_data()
+    feature_cols = get_feature_cols(tuple(df.columns.tolist()))
+    model_df = df[feature_cols + ['stunting_rate']].dropna()
+    X = model_df[feature_cols]
+    y = model_df['stunting_rate']
+    rf = RandomForestRegressor(n_estimators=200, max_depth=12,
+                               min_samples_split=4, min_samples_leaf=2,
+                               random_state=42, n_jobs=-1)
+    rf.fit(X, y)
+    return rf, feature_cols
+
+
+@st.cache_data
+def compute_forecasts():
+    """
+    Recursive forecast: 2023 (actual) → predict 2024 → predict 2025 → predict 2026.
+    Uses lag features: lag1 = previous year, lag2 = two years prior.
+    Returns a dict: country → {'pred_2026': float, 'actual_2023': float, 'trend': float}
+    """
+    df = load_data()
+    rf, feature_cols = train_global_model()
+
+    # Identify which features are lag1, lag2, or current
+    lag1_feats = [f for f in feature_cols if '_lag1' in f]
+    lag2_feats = [f for f in feature_cols if '_lag2' in f]
+    base_feats  = [f for f in feature_cols if '_lag1' not in f and '_lag2' not in f]
+
+    results = {}
+
+    for country, grp in df.groupby('country'):
+        grp = grp.sort_values('year')
+
+        # Need at least 2022 and 2023
+        if 2022 not in grp['year'].values or 2023 not in grp['year'].values:
+            continue
+
+        row22 = grp[grp['year'] == 2022].iloc[0]
+        row23 = grp[grp['year'] == 2023].iloc[0]
+        actual_2023 = row23['stunting_rate']
+
+        def make_row(current_row, lag1_row, lag2_row):
+            """Build a feature row for prediction given three year-rows."""
+            feat_row = {}
+            for f in feature_cols:
+                if '_lag2' in f:
+                    base = f.replace('_lag2', '')
+                    feat_row[f] = lag2_row.get(base, lag2_row.get(f, np.nan))
+                elif '_lag1' in f:
+                    base = f.replace('_lag1', '')
+                    feat_row[f] = lag1_row.get(base, lag1_row.get(f, np.nan))
+                else:
+                    feat_row[f] = current_row.get(f, np.nan)
+            return feat_row
+
+        def row_to_dict(row):
+            return row.to_dict()
+
+        try:
+            r22 = row_to_dict(row22)
+            r23 = row_to_dict(row23)
+
+            # Predict 2024: current≈2023 trend, lag1=2023, lag2=2022
+            feat_2024 = make_row(r23, r23, r22)
+            X_2024 = pd.DataFrame([feat_2024])[feature_cols].fillna(
+                pd.Series({f: df[f].median() for f in feature_cols if f in df.columns})
+            )
+            pred_2024 = float(rf.predict(X_2024)[0])
+
+            # Predict 2025: lag1=pred_2024, lag2=2023
+            r24_synth = {**r23, 'stunting_rate': pred_2024}
+            feat_2025 = make_row(r24_synth, r24_synth, r23)
+            X_2025 = pd.DataFrame([feat_2025])[feature_cols].fillna(
+                pd.Series({f: df[f].median() for f in feature_cols if f in df.columns})
+            )
+            pred_2025 = float(rf.predict(X_2025)[0])
+
+            # Predict 2026: lag1=pred_2025, lag2=pred_2024
+            r25_synth = {**r23, 'stunting_rate': pred_2025}
+            feat_2026 = make_row(r25_synth, r25_synth, r24_synth)
+            X_2026 = pd.DataFrame([feat_2026])[feature_cols].fillna(
+                pd.Series({f: df[f].median() for f in feature_cols if f in df.columns})
+            )
+            pred_2026 = float(rf.predict(X_2026)[0])
+
+            results[country] = {
+                'pred_2026': round(pred_2026, 1),
+                'pred_2025': round(pred_2025, 1),
+                'pred_2024': round(pred_2024, 1),
+                'actual_2023': round(actual_2023, 1),
+                'trend': round(pred_2026 - actual_2023, 1),
+            }
+        except Exception:
+            continue
+
+    return results
 
 
 @st.cache_data
@@ -126,6 +236,13 @@ def lag_label(feat):
     return 'Current year'
 
 
+def severity_color(val):
+    if val < 20:   return '#52b788', 'Low'
+    elif val < 30: return '#d4a017', 'Moderate'
+    elif val < 40: return '#e05020', 'High'
+    else:          return '#9b1b1b', 'Severe'
+
+
 @st.cache_data
 def build_map_data(cols):
     df = load_data()
@@ -138,7 +255,6 @@ def build_map_data(cols):
 def build_map(selected_country):
     latest = build_map_data(None)
 
-    # Single trace with per-country border color — no second trace, no flash
     line_colors = ['#f5c842' if c == selected_country else 'rgba(255,255,255,0.08)'
                    for c in latest['country']]
     line_widths = [3.0 if c == selected_country else 0.6
@@ -202,7 +318,7 @@ def build_map(selected_country):
     return fig
 
 
-# ── App ──────────────────────────────────────────────────────────────────────
+# ── App ───────────────────────────────────────────────────────────────────────
 
 st.markdown('<div class="main-header">🌍 Child Stunting Predictor</div>', unsafe_allow_html=True)
 st.markdown('<div class="sub-header">Sub-Saharan Africa · Click a country on the map or use the dropdown to explore drivers of malnutrition</div>',
@@ -211,6 +327,7 @@ st.markdown('<div class="sub-header">Sub-Saharan Africa · Click a country on th
 try:
     df = load_data()
     feature_cols = get_feature_cols(tuple(df.columns.tolist()))
+    forecasts = compute_forecasts()
     data_loaded = True
 except FileNotFoundError:
     data_loaded = False
@@ -219,11 +336,10 @@ except FileNotFoundError:
 if data_loaded:
     countries = sorted(df['country'].dropna().unique())
 
-    # Initialise session state
     if 'selected_country' not in st.session_state:
         st.session_state.selected_country = countries[0]
 
-    # ── Map ──────────────────────────────────────────────────────────────────────
+    # ── Map ───────────────────────────────────────────────────────────────────────
     map_col, ctrl_col = st.columns([3, 1], gap='medium')
 
     with map_col:
@@ -234,26 +350,18 @@ if data_loaded:
             key='africa_map',
         )
 
-    # on_select='rerun' returns the event object directly from st.plotly_chart.
-    # Pull the clicked country out of it and update session_state NOW,
-    # before the dropdown or any detail section renders.
     if event and event.selection and event.selection.points:
         loc = event.selection.points[0].get('location')
         if loc and loc in countries:
             st.session_state.selected_country = loc
-            # on_select='rerun' already triggers a rerun — don't call st.rerun() again
-            # doing so causes a double-rerun which wipes the map's render state
 
-    # ── Dropdown (no index= arg — let session_state drive it) ────────────────────
     with ctrl_col:
         st.markdown('<div style="height:56px"></div>', unsafe_allow_html=True)
         st.markdown("**Select country**")
-        # Use session_state key directly so selectbox and session_state stay in sync
-        # without the index drift bug
         st.selectbox(
             'Country',
             countries,
-            key='selected_country',   # binds directly — no separate sync needed
+            key='selected_country',
             label_visibility='collapsed',
         )
         st.markdown('<div style="height:16px"></div>', unsafe_allow_html=True)
@@ -266,59 +374,132 @@ if data_loaded:
             f"Model: Random Forest Regressor</small>",
             unsafe_allow_html=True)
 
-    # selected_country is now always whatever session_state holds
     selected_country = st.session_state.selected_country
 
     st.markdown('---')
 
-    # ── Country detail ────────────────────────────────────────────────────────────
+    # ── Country detail ─────────────────────────────────────────────────────────────
     country_df = df[df['country'] == selected_country].copy()
     ts_data = country_df.sort_values('year').dropna(subset=['stunting_rate'])
 
-    col1, col2 = st.columns([2, 1])
+    # Top row: historical metrics + 2026 forecast side by side
+    col_hist, col_forecast = st.columns([1, 1])
 
-    with col2:
-        latest = ts_data.iloc[-1]
-        earliest = ts_data.iloc[0]
-        change = float(latest['stunting_rate']) - float(earliest['stunting_rate'])
+    with col_hist:
+        latest_row = ts_data.iloc[-1]
+        earliest_row = ts_data.iloc[0]
+        change = float(latest_row['stunting_rate']) - float(earliest_row['stunting_rate'])
         arrow = "↓" if change < 0 else "↑"
         chg_color = "#6fcf97" if change < 0 else "#f56f6f"
+        st.markdown(f'<div class="section-title">Historical Overview — {selected_country}</div>',
+                    unsafe_allow_html=True)
         st.markdown(f"""
-        <div class="metric-card">
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <div class="metric-card" style="flex:1; min-width:120px">
             <div class="metric-title">Latest Stunting Rate</div>
-            <div class="metric-value">{float(latest['stunting_rate']):.1f}%</div>
-            <div class="metric-sub">{int(latest['year'])}</div>
-        </div>
-        <div class="metric-card">
-            <div class="metric-title">Change Since {int(earliest['year'])}</div>
+            <div class="metric-value">{float(latest_row['stunting_rate']):.1f}%</div>
+            <div class="metric-sub">{int(latest_row['year'])}</div>
+          </div>
+          <div class="metric-card" style="flex:1; min-width:120px">
+            <div class="metric-title">Change Since {int(earliest_row['year'])}</div>
             <div class="metric-value" style="color:{chg_color}">{arrow} {abs(change):.1f}pp</div>
             <div class="metric-sub">percentage points</div>
-        </div>
-        <div class="metric-card">
+          </div>
+          <div class="metric-card" style="flex:1; min-width:120px">
             <div class="metric-title">Years of Data</div>
             <div class="metric-value">{country_df['year'].nunique()}</div>
             <div class="metric-sub">{int(country_df['year'].min())}–{int(country_df['year'].max())}</div>
+          </div>
         </div>
         """, unsafe_allow_html=True)
 
-    with col1:
-        st.markdown(f'<div class="section-title">Stunting Rate Over Time — {selected_country}</div>',
-                    unsafe_allow_html=True)
-        fig, ax = plt.subplots(figsize=(9, 3.5))
-        fig.patch.set_facecolor('#0f1117')
-        ax.set_facecolor('#0f1117')
-        ax.fill_between(ts_data['year'], ts_data['stunting_rate'], alpha=0.18, color='#f5c842')
-        ax.plot(ts_data['year'], ts_data['stunting_rate'], color='#f5c842', lw=2.5,
-                marker='o', markersize=5, markerfacecolor='#f5c842')
-        ax.set_ylabel('Stunting Rate (%)', color='#9b9b8a', fontsize=10)
-        ax.tick_params(colors='#9b9b8a', labelsize=9)
-        for spine in ax.spines.values():
-            spine.set_edgecolor('#2a2d3a')
-        ax.grid(axis='y', color='#2a2d3a', linewidth=0.6)
-        ax.xaxis.set_major_locator(plt.MaxNLocator(integer=True))
-        plt.tight_layout()
-        st.pyplot(fig)
-        plt.close()
+    with col_forecast:
+        st.markdown('<div class="section-title">2026 Forecast</div>', unsafe_allow_html=True)
+        fc = forecasts.get(selected_country)
+        if fc:
+            pred_val = fc['pred_2026']
+            actual_val = fc['actual_2023']
+            trend = fc['trend']
+            sev_color, sev_label = severity_color(pred_val)
+            trend_arrow = "▼" if trend < 0 else "▲"
+            trend_color = "#6fcf97" if trend < 0 else "#f56f6f"
+            trend_text = f"{trend_arrow} {abs(trend):.1f}pp vs 2023 actual"
+
+            st.markdown(f"""
+            <div class="forecast-card">
+              <div style="display:flex; align-items:flex-start; justify-content:space-between;">
+                <div>
+                  <div class="forecast-label">Predicted Stunting Rate · 2026</div>
+                  <div class="forecast-value" style="color:{sev_color}">{pred_val:.1f}%</div>
+                  <div style="margin-top:8px">
+                    <span style="display:inline-block; padding:3px 10px; border-radius:20px;
+                                 background:{sev_color}22; color:{sev_color};
+                                 border:1px solid {sev_color}44;
+                                 font-size:0.72rem; font-weight:600; letter-spacing:0.08em;
+                                 text-transform:uppercase">{sev_label} Risk</span>
+                  </div>
+                  <div style="margin-top:10px; font-size:0.85rem; color:{trend_color}; font-weight:500">
+                    {trend_text}
+                  </div>
+                  <div style="margin-top:6px; font-size:0.8rem; color:#6b6b5a">
+                    2023 actual: <strong style="color:#9b9b8a">{actual_val:.1f}%</strong>
+                    &nbsp;·&nbsp; 2024 est: <strong style="color:#9b9b8a">{fc['pred_2024']:.1f}%</strong>
+                    &nbsp;·&nbsp; 2025 est: <strong style="color:#9b9b8a">{fc['pred_2025']:.1f}%</strong>
+                  </div>
+                </div>
+                <div style="font-size:2.5rem; opacity:0.15; margin-left:12px">🔮</div>
+              </div>
+              <div class="forecast-note">
+                Recursive forecast via Random Forest — uses 2023 actuals as base,
+                iteratively predicts 2024 → 2025 → 2026 using lag features.
+              </div>
+            </div>
+            """, unsafe_allow_html=True)
+        else:
+            st.markdown("""
+            <div class="metric-card">
+              <div class="metric-title">2026 Forecast</div>
+              <div style="color:#6b6b5a; font-size:0.9rem; padding:8px 0">
+                Not enough data to generate forecast for this country
+                (requires 2022 + 2023 observations).
+              </div>
+            </div>
+            """, unsafe_allow_html=True)
+
+    # Time series chart
+    st.markdown(f'<div class="section-title">Stunting Rate Over Time — {selected_country}</div>',
+                unsafe_allow_html=True)
+
+    fig, ax = plt.subplots(figsize=(11, 3.5))
+    fig.patch.set_facecolor('#0f1117')
+    ax.set_facecolor('#0f1117')
+    ax.fill_between(ts_data['year'], ts_data['stunting_rate'], alpha=0.18, color='#f5c842')
+    ax.plot(ts_data['year'], ts_data['stunting_rate'], color='#f5c842', lw=2.5,
+            marker='o', markersize=5, markerfacecolor='#f5c842', label='Actual')
+
+    # Overlay forecast points if available
+    if fc:
+        forecast_years = [2023, 2024, 2025, 2026]
+        forecast_vals  = [fc['actual_2023'], fc['pred_2024'], fc['pred_2025'], fc['pred_2026']]
+        ax.plot(forecast_years, forecast_vals,
+                color='#7ab3f5', lw=1.8, linestyle='--',
+                marker='o', markersize=5, markerfacecolor='#7ab3f5',
+                alpha=0.85, label='Forecast')
+        ax.axvline(x=2023.5, color='#2a2d3a', lw=1, linestyle=':')
+        ax.text(2023.7, ax.get_ylim()[0] + 1, 'forecast →',
+                color='#6b6b5a', fontsize=8)
+
+    ax.legend(facecolor='#1a1d27', edgecolor='#2a2d3a', labelcolor='#9b9b8a',
+              fontsize=9, loc='upper right')
+    ax.set_ylabel('Stunting Rate (%)', color='#9b9b8a', fontsize=10)
+    ax.tick_params(colors='#9b9b8a', labelsize=9)
+    for spine in ax.spines.values():
+        spine.set_edgecolor('#2a2d3a')
+    ax.grid(axis='y', color='#2a2d3a', linewidth=0.6)
+    ax.xaxis.set_major_locator(plt.MaxNLocator(integer=True))
+    plt.tight_layout()
+    st.pyplot(fig)
+    plt.close()
 
     st.markdown('---')
     st.markdown(f'<div class="section-title">What Drives Stunting Most in {selected_country}?</div>',
