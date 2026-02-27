@@ -109,7 +109,7 @@ def train_country_model(country):
     # Create a dummy rf_c just so the rest of the app code doesn't break
     # We only use it for rf_c.feature_importances_ in the pie chart
     # which we now compute from imp_all instead
-    rf_c = None
+    X_c = None
     
     return rf_c, feature_cols, X_c, imp_df
 
@@ -485,10 +485,8 @@ if data_loaded:
 
         st.markdown('<div class="section-title">Category Breakdown</div>', unsafe_allow_html=True)
 
-        all_imp = pd.DataFrame({
-            'feature': list(X_c.columns),
-            'importance': rf_c.feature_importances_
-        })
+        imp_all_loaded = pd.read_csv("data/country_feature_importance.csv")
+        all_imp = imp_all_loaded[imp_all_loaded['country'] == selected_country][['feature', 'importance']]
         cats = {'Economic & Social': 0.0, 'Crop Metrics': 0.0, 'Climate': 0.0, 'Other': 0.0}
         for _, row in all_imp.iterrows():
             cat_name, _, _ = categorize(row['feature'])
