@@ -66,21 +66,6 @@ def get_feature_cols(cols):
 
 
 @st.cache_data
-def train_global_model():
-    """Train a global RF on all countries — used for recursive forecasting."""
-    df = load_data()
-    feature_cols = get_feature_cols(tuple(df.columns.tolist()))
-    model_df = df[feature_cols + ['stunting_rate']].dropna()
-    X = model_df[feature_cols]
-    y = model_df['stunting_rate']
-    rf = RandomForestRegressor(n_estimators=200, max_depth=12,
-                               min_samples_split=4, min_samples_leaf=2,
-                               random_state=42, n_jobs=-1)
-    rf.fit(X, y)
-    return rf, feature_cols
-
-
-@st.cache_data
 def compute_forecasts():
        df = pd.read_csv("data/predictions_2026.csv")
     results = {}
@@ -96,33 +81,36 @@ def compute_forecasts():
 
 
 @st.cache_data
+@st.cache_data
 def train_country_model(country):
-    """Train and cache a per-country RF. Runs once per country, then instant."""
     df = load_data()
     feature_cols = get_feature_cols(tuple(df.columns.tolist()))
-
+    
+    # Load precomputed importance from Colab
+    imp_all = pd.read_csv("data/country_feature_importance.csv")
+    imp_df = imp_all[imp_all['country'] == country].sort_values('importance', ascending=False).head(15)
+    imp_df = imp_df.rename(columns={'feature': 'feature', 'importance': 'importance'})
+    
+    if len(imp_df) == 0:
+        return None, feature_cols, None, None
+    
+    # We still need X_c for the correlation direction calculation
     country_df = df[df['country'] == country].copy()
     model_df = country_df[feature_cols + ['stunting_rate']].dropna()
-
+    
     if len(model_df) < 5:
         return None, feature_cols, None, None
-
+    
     X_c = model_df[feature_cols].copy()
     for col in X_c.columns:
         if X_c[col].isnull().any():
             X_c[col] = X_c[col].fillna(X_c[col].median())
-    y_c = model_df['stunting_rate'].copy()
-
-    rf_c = RandomForestRegressor(n_estimators=200, max_depth=10,
-                                 min_samples_split=2, min_samples_leaf=1,
-                                 random_state=42, n_jobs=-1)
-    rf_c.fit(X_c, y_c)
-
-    imp_df = pd.DataFrame({
-        'feature': list(X_c.columns),
-        'importance': rf_c.feature_importances_
-    }).sort_values('importance', ascending=False).head(15)
-
+    
+    # Create a dummy rf_c just so the rest of the app code doesn't break
+    # We only use it for rf_c.feature_importances_ in the pie chart
+    # which we now compute from imp_all instead
+    rf_c = None
+    
     return rf_c, feature_cols, X_c, imp_df
 
 
