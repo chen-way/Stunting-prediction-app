@@ -83,31 +83,37 @@ def compute_forecasts():
 @st.cache_data
 @st.cache_data
 @st.cache_data
+@st.cache_data
 def train_country_model(country):
     df = load_data()
     feature_cols = get_feature_cols(tuple(df.columns.tolist()))
     
-    # Load precomputed importance from Colab
     imp_all = pd.read_csv("data/country_feature_importance.csv")
     imp_df = imp_all[imp_all['country'] == country].sort_values('importance', ascending=False).head(15)
     
     if len(imp_df) == 0:
         return None, feature_cols, None, None
     
-    # Keep X_c for correlation direction calculation in the insights section
     country_df = df[df['country'] == country].copy()
-    model_df = country_df[feature_cols + ['stunting_rate']].dropna()
     
-    if len(model_df) < 5:
+    # Only require the top features + stunting_rate to be present, not ALL features
+    top_features = imp_df['feature'].tolist()
+    available_features = [f for f in top_features if f in country_df.columns]
+    model_df = country_df[available_features + ['stunting_rate']].dropna(subset=['stunting_rate'])
+    
+    if len(model_df) < 2:
         return None, feature_cols, None, None
     
-    X_c = model_df[feature_cols].copy()
+    # Build X_c from all feature_cols for correlation, filling nulls with median
+    X_c = country_df[feature_cols].copy()
     for col in X_c.columns:
         if X_c[col].isnull().any():
             X_c[col] = X_c[col].fillna(X_c[col].median())
     
-    # rf_c is no longer needed since we use precomputed importances,
-    # but we return None to keep the unpacking signature intact
+    # Align index with stunting_rate
+    y_align = country_df['stunting_rate'].copy()
+    X_c = X_c[y_align.notna()].reset_index(drop=True)
+    
     return None, feature_cols, X_c, imp_df
 
 
@@ -422,7 +428,7 @@ if data_loaded:
 
     rf_c, feat_cols_c, X_c, imp_df = train_country_model(selected_country)
 
-    if rf_c is None:
+  if imp_df is None or len(imp_df) == 0:
         st.warning("Not enough data points for this country to compute reliable feature importance.")
     else:
         country_df2 = df[df['country'] == selected_country].copy()
