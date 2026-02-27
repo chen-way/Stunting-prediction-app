@@ -98,7 +98,7 @@ def train_country_model(country):
     country_df = df[df['country'] == country].copy()
     model_df = country_df[feature_cols + ['stunting_rate']].dropna()
     
-    if len(model_df) < 5:
+    if len(model_df) < 0:
         return None, feature_cols, None, None
     
     X_c = model_df[feature_cols].copy()
