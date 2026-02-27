@@ -1,0 +1,3277 @@
+country,feature,importance
+Angola,temperature,0.014557164743995515
+Angola,precipitation,0.0010493901836610435
+Angola,gdp_per_capita,0.08832263072165035
+Angola,water_access,0.01718243101479962
+Angola,sanitation_access,0.005339855649680649
+Angola,political_stability,0.0007419290883675253
+Angola,ccri_score,0.0
+Angola,cassava_production,0.014379214148285526
+Angola,cassava_area,0.0030877079949608644
+Angola,cassava_yield,0.012072966539108533
+Angola,cassava_volatility,0.000636933862777531
+Angola,maize_production,0.013062443662536127
+Angola,maize_area,0.0086973213308462
+Angola,maize_yield,0.006344381056887334
+Angola,maize_volatility,0.0009306770593142683
+Angola,rice_production,0.0011446728955243094
+Angola,rice_area,0.0204421029086357
+Angola,rice_yield,0.0004993893482397857
+Angola,rice_volatility,0.0042914053737436965
+Angola,sorghum_production,0.015923170006307705
+Angola,sorghum_area,0.006391471211951485
+Angola,sorghum_yield,0.0011189598342555666
+Angola,sorghum_volatility,0.028595051046489607
+Angola,wheat_production,0.005592066505593387
+Angola,wheat_area,0.006427102263158793
+Angola,wheat_yield,0.008261473034707789
+Angola,wheat_volatility,0.0003205618271008139
+Angola,yams_production,0.0
+Angola,yams_area,0.0
+Angola,yams_yield,0.0
+Angola,yams_volatility,0.0
+Angola,gdp_per_capita_lag1,0.00869378870198003
+Angola,water_access_lag1,0.011727245331963945
+Angola,sanitation_access_lag1,0.004503514153662673
+Angola,political_stability_lag1,0.0011259610233837203
+Angola,temperature_lag1,0.0024859556565174803
+Angola,precipitation_lag1,0.004314407997526677
+Angola,cassava_production_lag1,0.024430542352351606
+Angola,cassava_area_lag1,0.0015820502333843804
+Angola,cassava_yield_lag1,0.07899374750867542
+Angola,cassava_volatility_lag1,0.006158186682565897
+Angola,maize_production_lag1,0.02083585916000963
+Angola,maize_area_lag1,0.02100517406817502
+Angola,maize_yield_lag1,0.00168731770299839
+Angola,maize_volatility_lag1,0.0008841060120701922
+Angola,rice_production_lag1,0.0082439828596766
+Angola,rice_area_lag1,0.04127265264783961
+Angola,rice_yield_lag1,0.012574264624030858
+Angola,rice_volatility_lag1,0.041869605019447226
+Angola,sorghum_production_lag1,0.0013614418584119178
+Angola,sorghum_area_lag1,0.0014971349154113331
+Angola,sorghum_yield_lag1,0.0008664872802966013
+Angola,sorghum_volatility_lag1,0.01676253645654164
+Angola,wheat_production_lag1,0.0004643914006842189
+Angola,wheat_area_lag1,0.0131901948199817
+Angola,wheat_yield_lag1,0.017189626444951294
+Angola,wheat_volatility_lag1,0.010915093259344038
+Angola,yams_production_lag1,0.0
+Angola,yams_area_lag1,0.0
+Angola,yams_yield_lag1,0.0
+Angola,yams_volatility_lag1,0.0
+Angola,gdp_per_capita_lag2,0.0018551342690407084
+Angola,water_access_lag2,0.02228116387029534
+Angola,sanitation_access_lag2,0.01334665380668739
+Angola,political_stability_lag2,0.0011768286880212361
+Angola,temperature_lag2,0.0002705775912754906
+Angola,precipitation_lag2,0.0011109158755275086
+Angola,cassava_production_lag2,0.025646820615247246
+Angola,cassava_area_lag2,0.0008916841919360196
+Angola,cassava_yield_lag2,0.13053577920914167
+Angola,cassava_volatility_lag2,0.015333697258140879
+Angola,maize_production_lag2,0.015867158081082227
+Angola,maize_area_lag2,0.025137298335069287
+Angola,maize_yield_lag2,0.006419289620721954
+Angola,maize_volatility_lag2,0.00048338050018471434
+Angola,rice_production_lag2,0.0017289446613332105
+Angola,rice_area_lag2,0.0003930809290187882
+Angola,rice_yield_lag2,0.04168467102143062
+Angola,rice_volatility_lag2,0.009006629676036696
+Angola,sorghum_production_lag2,0.0004357221127920156
+Angola,sorghum_area_lag2,0.0013006913775700471
+Angola,sorghum_yield_lag2,0.0006331767529936706
+Angola,sorghum_volatility_lag2,0.01942119754146898
+Angola,wheat_production_lag2,0.002477683303077252
+Angola,wheat_area_lag2,0.005078882285232206
+Angola,wheat_yield_lag2,0.009252206977857428
+Angola,wheat_volatility_lag2,0.0081829899643555
+Angola,yams_production_lag2,0.0
+Angola,yams_area_lag2,0.0
+Angola,yams_yield_lag2,0.0
+Angola,yams_volatility_lag2,0.0
+Benin,temperature,0.00021772519197846174
+Benin,precipitation,0.0025914062229433683
+Benin,gdp_per_capita,0.05316514563898851
+Benin,water_access,0.009728152863899026
+Benin,sanitation_access,0.02373042899776098
+Benin,political_stability,0.01983178381590707
+Benin,ccri_score,0.0
+Benin,cassava_production,0.006993238457627996
+Benin,cassava_area,0.0012196900234303157
+Benin,cassava_yield,0.001103289745183431
+Benin,cassava_volatility,0.0005326276254371009
+Benin,maize_production,0.01950826229456887
+Benin,maize_area,0.0409339626002132
+Benin,maize_yield,0.002742144659741759
+Benin,maize_volatility,0.0015053763718024262
+Benin,rice_production,0.019639794448433025
+Benin,rice_area,0.03482772316337751
+Benin,rice_yield,0.006398314073786322
+Benin,rice_volatility,0.000569034055711811
+Benin,sorghum_production,0.0009093635719249943
+Benin,sorghum_area,0.00401537454532051
+Benin,sorghum_yield,0.0009247673055372154
+Benin,sorghum_volatility,0.0018449658740594995
+Benin,wheat_production,0.0
+Benin,wheat_area,0.0
+Benin,wheat_yield,0.0
+Benin,wheat_volatility,0.0
+Benin,yams_production,0.02371001086673745
+Benin,yams_area,0.024869409789893188
+Benin,yams_yield,0.003998978867765975
+Benin,yams_volatility,0.0001387610315059518
+Benin,gdp_per_capita_lag1,0.024317610978985056
+Benin,water_access_lag1,0.024064705978291405
+Benin,sanitation_access_lag1,0.0377643889242004
+Benin,political_stability_lag1,0.03019197719408004
+Benin,temperature_lag1,0.0007642345644984429
+Benin,precipitation_lag1,0.001412419656311034
+Benin,cassava_production_lag1,0.021688695352741417
+Benin,cassava_area_lag1,0.002259559060605582
+Benin,cassava_yield_lag1,0.002589832748062813
+Benin,cassava_volatility_lag1,0.002587426946846495
+Benin,maize_production_lag1,0.024085397840553354
+Benin,maize_area_lag1,0.022220656708065313
+Benin,maize_yield_lag1,0.0005827806514189468
+Benin,maize_volatility_lag1,0.0025736971317939145
+Benin,rice_production_lag1,0.046376215301997696
+Benin,rice_area_lag1,0.025665211373588334
+Benin,rice_yield_lag1,0.010033673902036532
+Benin,rice_volatility_lag1,0.033326551579759646
+Benin,sorghum_production_lag1,0.0004642085206234029
+Benin,sorghum_area_lag1,0.0018997157497570793
+Benin,sorghum_yield_lag1,0.007964816610065668
+Benin,sorghum_volatility_lag1,0.0007594471641562511
+Benin,wheat_production_lag1,0.0
+Benin,wheat_area_lag1,0.0
+Benin,wheat_yield_lag1,0.0
+Benin,wheat_volatility_lag1,0.0
+Benin,yams_production_lag1,0.024591232676218912
+Benin,yams_area_lag1,0.0220428144703724
+Benin,yams_yield_lag1,0.00048023561546686993
+Benin,yams_volatility_lag1,0.0011588208816801012
+Benin,gdp_per_capita_lag2,0.0002643626487062577
+Benin,water_access_lag2,0.01669896458040361
+Benin,sanitation_access_lag2,0.030476856831238002
+Benin,political_stability_lag2,0.016309381493857023
+Benin,temperature_lag2,0.0006541626455550502
+Benin,precipitation_lag2,0.002121086982580437
+Benin,cassava_production_lag2,0.004627705992754632
+Benin,cassava_area_lag2,0.0027973980816490395
+Benin,cassava_yield_lag2,0.0015642585881113918
+Benin,cassava_volatility_lag2,0.0031031533921408406
+Benin,maize_production_lag2,0.025734552110143832
+Benin,maize_area_lag2,0.029517647654750703
+Benin,maize_yield_lag2,0.0004858367783802341
+Benin,maize_volatility_lag2,0.0044990579211414816
+Benin,rice_production_lag2,0.05251785942884179
+Benin,rice_area_lag2,0.043816493201890336
+Benin,rice_yield_lag2,0.002868402965834055
+Benin,rice_volatility_lag2,0.013709347327408344
+Benin,sorghum_production_lag2,0.0007567415987562641
+Benin,sorghum_area_lag2,0.013789018467801778
+Benin,sorghum_yield_lag2,0.01141470822797542
+Benin,sorghum_volatility_lag2,0.00036463825243312033
+Benin,wheat_production_lag2,0.0
+Benin,wheat_area_lag2,0.0
+Benin,wheat_yield_lag2,0.0
+Benin,wheat_volatility_lag2,0.0
+Benin,yams_production_lag2,0.026206444377175522
+Benin,yams_area_lag2,0.016363660130521998
+Benin,yams_yield_lag2,0.00016833162592953124
+Benin,yams_volatility_lag2,0.0016538690083062217
+Burkina Faso,temperature,0.0002401883972872326
+Burkina Faso,precipitation,0.0007958501271443427
+Burkina Faso,gdp_per_capita,0.022931247169385806
+Burkina Faso,water_access,0.023047774758984133
+Burkina Faso,sanitation_access,0.038511061060783905
+Burkina Faso,political_stability,0.025185287332273928
+Burkina Faso,ccri_score,0.0
+Burkina Faso,cassava_production,0.005543267149533023
+Burkina Faso,cassava_area,0.012737400039743881
+Burkina Faso,cassava_yield,0.014089785899112054
+Burkina Faso,cassava_volatility,0.005196739990557035
+Burkina Faso,maize_production,0.0014200345427035426
+Burkina Faso,maize_area,0.02131870443498915
+Burkina Faso,maize_yield,0.00033595917957940456
+Burkina Faso,maize_volatility,0.0017030466162592938
+Burkina Faso,rice_production,0.023257240996647586
+Burkina Faso,rice_area,0.03867592104484354
+Burkina Faso,rice_yield,0.000449039786713966
+Burkina Faso,rice_volatility,0.0007519633374173129
+Burkina Faso,sorghum_production,0.00044467584110334383
+Burkina Faso,sorghum_area,0.0021205547767122615
+Burkina Faso,sorghum_yield,0.0007286465237800931
+Burkina Faso,sorghum_volatility,0.0009577965251719807
+Burkina Faso,wheat_production,0.0
+Burkina Faso,wheat_area,0.0
+Burkina Faso,wheat_yield,0.0
+Burkina Faso,wheat_volatility,0.0
+Burkina Faso,yams_production,0.0019686336571849003
+Burkina Faso,yams_area,0.0018736525765504447
+Burkina Faso,yams_yield,0.007086957225196254
+Burkina Faso,yams_volatility,0.0011502746867657694
+Burkina Faso,gdp_per_capita_lag1,0.02740807183763128
+Burkina Faso,water_access_lag1,0.07729989630551791
+Burkina Faso,sanitation_access_lag1,0.032556835228616444
+Burkina Faso,political_stability_lag1,0.05938666633659447
+Burkina Faso,temperature_lag1,0.00017182229950833634
+Burkina Faso,precipitation_lag1,0.00024264099020630678
+Burkina Faso,cassava_production_lag1,0.04028906063773722
+Burkina Faso,cassava_area_lag1,0.029144531323103358
+Burkina Faso,cassava_yield_lag1,0.021793366103298708
+Burkina Faso,cassava_volatility_lag1,0.00033542363603206887
+Burkina Faso,maize_production_lag1,0.04522224744023563
+Burkina Faso,maize_area_lag1,0.011074622591504244
+Burkina Faso,maize_yield_lag1,0.000445738625229691
+Burkina Faso,maize_volatility_lag1,0.009633469858162371
+Burkina Faso,rice_production_lag1,0.02661803619000196
+Burkina Faso,rice_area_lag1,0.023000003181264272
+Burkina Faso,rice_yield_lag1,0.0005116651779747725
+Burkina Faso,rice_volatility_lag1,0.0010287201902977525
+Burkina Faso,sorghum_production_lag1,0.0007744900913387263
+Burkina Faso,sorghum_area_lag1,0.0004293086648770305
+Burkina Faso,sorghum_yield_lag1,0.0009440971310968928
+Burkina Faso,sorghum_volatility_lag1,0.0024080606037712865
+Burkina Faso,wheat_production_lag1,0.0
+Burkina Faso,wheat_area_lag1,0.0
+Burkina Faso,wheat_yield_lag1,0.0
+Burkina Faso,wheat_volatility_lag1,0.0
+Burkina Faso,yams_production_lag1,0.0027709460706732366
+Burkina Faso,yams_area_lag1,0.00038092278498740327
+Burkina Faso,yams_yield_lag1,0.0010454675720288813
+Burkina Faso,yams_volatility_lag1,0.0013066569051664594
+Burkina Faso,gdp_per_capita_lag2,0.020309165881408027
+Burkina Faso,water_access_lag2,0.042911044657583504
+Burkina Faso,sanitation_access_lag2,0.017739778099103223
+Burkina Faso,political_stability_lag2,0.051631852000565956
+Burkina Faso,temperature_lag2,0.0014082103238041456
+Burkina Faso,precipitation_lag2,0.0005322983917091467
+Burkina Faso,cassava_production_lag2,0.015179279692636046
+Burkina Faso,cassava_area_lag2,0.013944338748996738
+Burkina Faso,cassava_yield_lag2,0.05107894135564785
+Burkina Faso,cassava_volatility_lag2,0.002202174061146028
+Burkina Faso,maize_production_lag2,0.0348816200202037
+Burkina Faso,maize_area_lag2,0.015385388447273196
+Burkina Faso,maize_yield_lag2,0.0005104611459359493
+Burkina Faso,maize_volatility_lag2,0.001294850901176459
+Burkina Faso,rice_production_lag2,0.024281181769873483
+Burkina Faso,rice_area_lag2,0.02485141744910688
+Burkina Faso,rice_yield_lag2,0.0006240821353850099
+Burkina Faso,rice_volatility_lag2,0.005037320683298406
+Burkina Faso,sorghum_production_lag2,0.00017441741437551083
+Burkina Faso,sorghum_area_lag2,0.0010242067315080609
+Burkina Faso,sorghum_yield_lag2,0.0005107496190039833
+Burkina Faso,sorghum_volatility_lag2,0.0016792994402266275
+Burkina Faso,wheat_production_lag2,0.0
+Burkina Faso,wheat_area_lag2,0.0
+Burkina Faso,wheat_yield_lag2,0.0
+Burkina Faso,wheat_volatility_lag2,0.0
+Burkina Faso,yams_production_lag2,0.0015391719002438842
+Burkina Faso,yams_area_lag2,0.0010445834915664798
+Burkina Faso,yams_yield_lag2,0.0003652404365081083
+Burkina Faso,yams_volatility_lag2,0.0011144537484328908
+Burundi,temperature,0.0008727011534151438
+Burundi,precipitation,0.0004344902573185233
+Burundi,gdp_per_capita,0.0008094642753206202
+Burundi,water_access,0.037573042662528235
+Burundi,sanitation_access,0.0
+Burundi,political_stability,0.00037344613101855927
+Burundi,ccri_score,0.0
+Burundi,cassava_production,0.009125002404743378
+Burundi,cassava_area,0.023955111057814046
+Burundi,cassava_yield,0.0023697714659111913
+Burundi,cassava_volatility,0.005012519091921831
+Burundi,maize_production,0.03764259123930224
+Burundi,maize_area,0.0007102137453202004
+Burundi,maize_yield,0.0031298181786148026
+Burundi,maize_volatility,0.013699033753636437
+Burundi,rice_production,0.0034337340399287373
+Burundi,rice_area,0.010040039994411866
+Burundi,rice_yield,0.04240875217985932
+Burundi,rice_volatility,0.023909105591180674
+Burundi,sorghum_production,0.014009668856546238
+Burundi,sorghum_area,0.0005902319992882473
+Burundi,sorghum_yield,0.021454226941395368
+Burundi,sorghum_volatility,0.0007965839689420505
+Burundi,wheat_production,0.0011347756838750625
+Burundi,wheat_area,0.00033648238388164016
+Burundi,wheat_yield,0.017136742029725476
+Burundi,wheat_volatility,0.03865393529890416
+Burundi,yams_production,0.014233928058564223
+Burundi,yams_area,0.058698018212614854
+Burundi,yams_yield,0.02609126286769594
+Burundi,yams_volatility,0.027059074172619893
+Burundi,gdp_per_capita_lag1,0.0005495487117191903
+Burundi,water_access_lag1,0.01356038737070468
+Burundi,sanitation_access_lag1,0.0
+Burundi,political_stability_lag1,0.004940015686187301
+Burundi,temperature_lag1,0.0016153978162730457
+Burundi,precipitation_lag1,0.0001600625405719461
+Burundi,cassava_production_lag1,0.007163477997369616
+Burundi,cassava_area_lag1,0.018212221468756815
+Burundi,cassava_yield_lag1,0.0005743483793524795
+Burundi,cassava_volatility_lag1,0.0017047235325474734
+Burundi,maize_production_lag1,0.027736672634318848
+Burundi,maize_area_lag1,0.0004154833810798495
+Burundi,maize_yield_lag1,0.006560395935325905
+Burundi,maize_volatility_lag1,0.004886357287238196
+Burundi,rice_production_lag1,0.002745551430545709
+Burundi,rice_area_lag1,0.014229929158799866
+Burundi,rice_yield_lag1,0.009784163273049856
+Burundi,rice_volatility_lag1,0.03491333315772736
+Burundi,sorghum_production_lag1,0.009511088933291213
+Burundi,sorghum_area_lag1,0.0049572065703531775
+Burundi,sorghum_yield_lag1,0.02526573185315204
+Burundi,sorghum_volatility_lag1,0.0025452570478100107
+Burundi,wheat_production_lag1,0.0005515527687417353
+Burundi,wheat_area_lag1,0.00020646823844513434
+Burundi,wheat_yield_lag1,0.00918464994259976
+Burundi,wheat_volatility_lag1,0.023322122710486618
+Burundi,yams_production_lag1,0.00740242187486328
+Burundi,yams_area_lag1,0.04519156219006804
+Burundi,yams_yield_lag1,0.030660631368866362
+Burundi,yams_volatility_lag1,0.011678165545360449
+Burundi,gdp_per_capita_lag2,0.000828024870070788
+Burundi,water_access_lag2,0.010222160587779144
+Burundi,sanitation_access_lag2,4.119864717624035e-05
+Burundi,political_stability_lag2,0.0002956089178209369
+Burundi,temperature_lag2,0.0016234513376568807
+Burundi,precipitation_lag2,0.004641658112223549
+Burundi,cassava_production_lag2,0.002531740096456845
+Burundi,cassava_area_lag2,0.038287453776949636
+Burundi,cassava_yield_lag2,0.0011303210207310622
+Burundi,cassava_volatility_lag2,0.0022786868584238353
+Burundi,maize_production_lag2,0.010212002654612301
+Burundi,maize_area_lag2,0.0008327260070346797
+Burundi,maize_yield_lag2,0.002055507016502883
+Burundi,maize_volatility_lag2,0.0010953156305594893
+Burundi,rice_production_lag2,0.0011134573404364219
+Burundi,rice_area_lag2,0.02517725009901675
+Burundi,rice_yield_lag2,0.016197712651247816
+Burundi,rice_volatility_lag2,0.009054371144574554
+Burundi,sorghum_production_lag2,0.006133612881699891
+Burundi,sorghum_area_lag2,0.0041629446435433575
+Burundi,sorghum_yield_lag2,0.005693105448585701
+Burundi,sorghum_volatility_lag2,0.0017881905369970677
+Burundi,wheat_production_lag2,0.0019749520371984664
+Burundi,wheat_area_lag2,0.00024053335582908372
+Burundi,wheat_yield_lag2,0.0017444835526319443
+Burundi,wheat_volatility_lag2,0.0029681206525158112
+Burundi,yams_production_lag2,0.009660052550940297
+Burundi,yams_area_lag2,0.0406197371037805
+Burundi,yams_yield_lag2,0.03583169976205313
+Burundi,yams_volatility_lag2,0.005641224203046052
+Cameroon,temperature,0.0010485144460575231
+Cameroon,precipitation,0.0002610838481668635
+Cameroon,gdp_per_capita,0.03753192069925976
+Cameroon,water_access,0.006459443449865504
+Cameroon,sanitation_access,0.010651033376319665
+Cameroon,political_stability,0.029195651055274087
+Cameroon,ccri_score,0.0
+Cameroon,cassava_production,0.015207337201225302
+Cameroon,cassava_area,0.023796124383360304
+Cameroon,cassava_yield,0.0004247097853103828
+Cameroon,cassava_volatility,0.0012745198655125182
+Cameroon,maize_production,0.006517764542517026
+Cameroon,maize_area,0.0011168056765744514
+Cameroon,maize_yield,0.008318534849500469
+Cameroon,maize_volatility,0.00040918063453787475
+Cameroon,rice_production,0.023899059388327884
+Cameroon,rice_area,0.005018656060626297
+Cameroon,rice_yield,0.0033300518549106246
+Cameroon,rice_volatility,0.0012657186206712235
+Cameroon,sorghum_production,0.01291220594295393
+Cameroon,sorghum_area,0.006494264991608691
+Cameroon,sorghum_yield,0.0016803899966867167
+Cameroon,sorghum_volatility,0.0007028289160048364
+Cameroon,wheat_production,0.0044966827926713445
+Cameroon,wheat_area,0.006530107563322591
+Cameroon,wheat_yield,0.05887570376235467
+Cameroon,wheat_volatility,0.001271399366521946
+Cameroon,yams_production,0.003129704818521401
+Cameroon,yams_area,0.030700845867473157
+Cameroon,yams_yield,0.005340002582779707
+Cameroon,yams_volatility,0.000318232392085942
+Cameroon,gdp_per_capita_lag1,0.03518098748045983
+Cameroon,water_access_lag1,0.019588715982221224
+Cameroon,sanitation_access_lag1,0.019215498065837708
+Cameroon,political_stability_lag1,0.024595854542113063
+Cameroon,temperature_lag1,0.0006566825079968417
+Cameroon,precipitation_lag1,0.0012594881416793826
+Cameroon,cassava_production_lag1,0.023212707121138716
+Cameroon,cassava_area_lag1,0.010518475450112523
+Cameroon,cassava_yield_lag1,0.0007517249851393703
+Cameroon,cassava_volatility_lag1,0.001004321951666207
+Cameroon,maize_production_lag1,0.006940597966963519
+Cameroon,maize_area_lag1,0.02482922919537656
+Cameroon,maize_yield_lag1,0.004731959529294922
+Cameroon,maize_volatility_lag1,0.0008119118889981037
+Cameroon,rice_production_lag1,0.014712187232467073
+Cameroon,rice_area_lag1,0.0012863267632554148
+Cameroon,rice_yield_lag1,0.0016037538376923591
+Cameroon,rice_volatility_lag1,0.003680341085290092
+Cameroon,sorghum_production_lag1,0.01676965396857844
+Cameroon,sorghum_area_lag1,0.011736536266802539
+Cameroon,sorghum_yield_lag1,0.005556368886869407
+Cameroon,sorghum_volatility_lag1,0.0009810055593517785
+Cameroon,wheat_production_lag1,0.0007435307066944299
+Cameroon,wheat_area_lag1,0.0070324888929574735
+Cameroon,wheat_yield_lag1,0.05288904051397036
+Cameroon,wheat_volatility_lag1,0.002039009126546943
+Cameroon,yams_production_lag1,0.015025173575485821
+Cameroon,yams_area_lag1,0.02046924118693662
+Cameroon,yams_yield_lag1,0.009581895842095867
+Cameroon,yams_volatility_lag1,0.0004899250398008474
+Cameroon,gdp_per_capita_lag2,0.007789877128469038
+Cameroon,water_access_lag2,0.011845296336369916
+Cameroon,sanitation_access_lag2,0.006133342702013458
+Cameroon,political_stability_lag2,0.04232808185428097
+Cameroon,temperature_lag2,0.0022995850561158236
+Cameroon,precipitation_lag2,0.000709640479141535
+Cameroon,cassava_production_lag2,0.03101475033275349
+Cameroon,cassava_area_lag2,0.010079241839858531
+Cameroon,cassava_yield_lag2,0.007704750831277945
+Cameroon,cassava_volatility_lag2,0.0011084220970060074
+Cameroon,maize_production_lag2,0.02112326818400765
+Cameroon,maize_area_lag2,0.01411662620883005
+Cameroon,maize_yield_lag2,0.011549044547875063
+Cameroon,maize_volatility_lag2,0.0016621767113085121
+Cameroon,rice_production_lag2,0.041613378657185146
+Cameroon,rice_area_lag2,0.01657939976203169
+Cameroon,rice_yield_lag2,0.0012819254816246013
+Cameroon,rice_volatility_lag2,0.012269741870956717
+Cameroon,sorghum_production_lag2,0.019533086934282497
+Cameroon,sorghum_area_lag2,0.015354260683321163
+Cameroon,sorghum_yield_lag2,0.004840238068374044
+Cameroon,sorghum_volatility_lag2,0.0001163012846699036
+Cameroon,wheat_production_lag2,0.003002202277183558
+Cameroon,wheat_area_lag2,0.0012211315122073842
+Cameroon,wheat_yield_lag2,0.012742282314922885
+Cameroon,wheat_volatility_lag2,0.0009138951393095438
+Cameroon,yams_production_lag2,0.017081007943224265
+Cameroon,yams_area_lag2,0.03245628235948158
+Cameroon,yams_yield_lag2,0.004544375947042316
+Cameroon,yams_volatility_lag2,0.0009132734300786
+Central African Republic,temperature,0.000719989878628613
+Central African Republic,precipitation,0.0014326398780673418
+Central African Republic,gdp_per_capita,0.005067712403656881
+Central African Republic,water_access,0.014733130722441552
+Central African Republic,sanitation_access,0.010903223281284664
+Central African Republic,political_stability,0.0003693632531188692
+Central African Republic,ccri_score,0.0
+Central African Republic,cassava_production,0.015001290958058664
+Central African Republic,cassava_area,0.0022263645102796837
+Central African Republic,cassava_yield,0.010196706566371188
+Central African Republic,cassava_volatility,0.02214252785007759
+Central African Republic,maize_production,0.00579526200746329
+Central African Republic,maize_area,0.007553083706338195
+Central African Republic,maize_yield,0.03313111708962655
+Central African Republic,maize_volatility,0.00023083092442934341
+Central African Republic,rice_production,0.0013574663328134622
+Central African Republic,rice_area,0.001946456428612962
+Central African Republic,rice_yield,0.03424143006056664
+Central African Republic,rice_volatility,0.0006837902828260346
+Central African Republic,sorghum_production,0.01612177289073733
+Central African Republic,sorghum_area,0.010486482178104556
+Central African Republic,sorghum_yield,0.005931244508533189
+Central African Republic,sorghum_volatility,0.0008077171926835272
+Central African Republic,wheat_production,0.0
+Central African Republic,wheat_area,0.0
+Central African Republic,wheat_yield,0.0
+Central African Republic,wheat_volatility,0.0
+Central African Republic,yams_production,0.019790637701260237
+Central African Republic,yams_area,0.036611990901059564
+Central African Republic,yams_yield,0.037953556382178656
+Central African Republic,yams_volatility,0.0007862391195280828
+Central African Republic,gdp_per_capita_lag1,0.004080510849532287
+Central African Republic,water_access_lag1,0.02601451226418861
+Central African Republic,sanitation_access_lag1,0.05928561811680737
+Central African Republic,political_stability_lag1,0.005292475598513357
+Central African Republic,temperature_lag1,0.0005238469027076892
+Central African Republic,precipitation_lag1,0.0003471591427101989
+Central African Republic,cassava_production_lag1,0.036586259707197456
+Central African Republic,cassava_area_lag1,0.0020212460989767343
+Central African Republic,cassava_yield_lag1,0.01331455860869784
+Central African Republic,cassava_volatility_lag1,0.04398578253055591
+Central African Republic,maize_production_lag1,0.005819343425993861
+Central African Republic,maize_area_lag1,0.0027232506913059734
+Central African Republic,maize_yield_lag1,0.04812766945825141
+Central African Republic,maize_volatility_lag1,0.0004958510865725169
+Central African Republic,rice_production_lag1,0.0003615722323471991
+Central African Republic,rice_area_lag1,0.0025896392664765
+Central African Republic,rice_yield_lag1,0.04058416581806548
+Central African Republic,rice_volatility_lag1,0.0010495370048193378
+Central African Republic,sorghum_production_lag1,0.004562100170045873
+Central African Republic,sorghum_area_lag1,0.004538207561666615
+Central African Republic,sorghum_yield_lag1,0.0025371781810318277
+Central African Republic,sorghum_volatility_lag1,0.0011204957085000538
+Central African Republic,wheat_production_lag1,0.0
+Central African Republic,wheat_area_lag1,0.0
+Central African Republic,wheat_yield_lag1,0.0
+Central African Republic,wheat_volatility_lag1,0.0
+Central African Republic,yams_production_lag1,0.020731584157926596
+Central African Republic,yams_area_lag1,0.02590697317887376
+Central African Republic,yams_yield_lag1,0.058738735784642365
+Central African Republic,yams_volatility_lag1,0.0015814669306816918
+Central African Republic,gdp_per_capita_lag2,0.0010888789052124204
+Central African Republic,water_access_lag2,0.049545669974065225
+Central African Republic,sanitation_access_lag2,0.03270892097815881
+Central African Republic,political_stability_lag2,0.010021340501437654
+Central African Republic,temperature_lag2,0.0005064738418687058
+Central African Republic,precipitation_lag2,0.0011719636657871026
+Central African Republic,cassava_production_lag2,0.03538849133712406
+Central African Republic,cassava_area_lag2,0.0022373478634196468
+Central African Republic,cassava_yield_lag2,0.0008819881342174909
+Central African Republic,cassava_volatility_lag2,0.02672642692412104
+Central African Republic,maize_production_lag2,0.002871777487202491
+Central African Republic,maize_area_lag2,0.0018597205008675836
+Central African Republic,maize_yield_lag2,0.019416533604793243
+Central African Republic,maize_volatility_lag2,0.0003961337711712682
+Central African Republic,rice_production_lag2,0.0006136682634445568
+Central African Republic,rice_area_lag2,0.0019030019578023675
+Central African Republic,rice_yield_lag2,0.009002938958666702
+Central African Republic,rice_volatility_lag2,0.0004851090596795634
+Central African Republic,sorghum_production_lag2,0.004290700639268004
+Central African Republic,sorghum_area_lag2,0.004700892125785258
+Central African Republic,sorghum_yield_lag2,0.0012252952473213198
+Central African Republic,sorghum_volatility_lag2,0.00045032727232333173
+Central African Republic,wheat_production_lag2,0.0
+Central African Republic,wheat_area_lag2,0.0
+Central African Republic,wheat_yield_lag2,0.0
+Central African Republic,wheat_volatility_lag2,0.0
+Central African Republic,yams_production_lag2,0.028310224567728363
+Central African Republic,yams_area_lag2,0.00045498369689309646
+Central African Republic,yams_yield_lag2,0.05055470305004221
+Central African Republic,yams_volatility_lag2,0.00404472018576327
+Chad,temperature,0.007180747940283569
+Chad,precipitation,0.0005144196243338928
+Chad,gdp_per_capita,0.005222730990201281
+Chad,water_access,0.03695754582196428
+Chad,sanitation_access,0.01967481206335522
+Chad,political_stability,0.0011544619168643358
+Chad,ccri_score,0.0
+Chad,cassava_production,0.00045728827454280394
+Chad,cassava_area,0.0008022774415726467
+Chad,cassava_yield,0.00161787440144226
+Chad,cassava_volatility,0.004186465934278367
+Chad,maize_production,0.010230883669395143
+Chad,maize_area,0.02233575214201662
+Chad,maize_yield,0.015481402699936763
+Chad,maize_volatility,0.005630843015289294
+Chad,rice_production,0.01938348056631546
+Chad,rice_area,0.030338017902686344
+Chad,rice_yield,0.0005228404678101409
+Chad,rice_volatility,0.0023948969784256652
+Chad,sorghum_production,0.018869326603487484
+Chad,sorghum_area,0.011790086326366817
+Chad,sorghum_yield,0.0008735863725625917
+Chad,sorghum_volatility,0.0009685637127219368
+Chad,wheat_production,0.00044813741159990383
+Chad,wheat_area,0.013195332489140083
+Chad,wheat_yield,0.0008019333348977894
+Chad,wheat_volatility,0.05483234865638021
+Chad,yams_production,0.015192472750552166
+Chad,yams_area,0.024144626652312973
+Chad,yams_yield,0.0008677068848148968
+Chad,yams_volatility,0.001039267261047414
+Chad,gdp_per_capita_lag1,0.005183101267569911
+Chad,water_access_lag1,0.04188533795624627
+Chad,sanitation_access_lag1,0.006173054779151546
+Chad,political_stability_lag1,0.0005829267942011649
+Chad,temperature_lag1,0.0010449700805265482
+Chad,precipitation_lag1,0.0006298463886798833
+Chad,cassava_production_lag1,0.001868508836715675
+Chad,cassava_area_lag1,0.0005008566641390955
+Chad,cassava_yield_lag1,0.0011072450036101154
+Chad,cassava_volatility_lag1,0.0011095817201593197
+Chad,maize_production_lag1,0.029771707414801136
+Chad,maize_area_lag1,0.016471538528500494
+Chad,maize_yield_lag1,0.02781501118559669
+Chad,maize_volatility_lag1,0.005909603034382273
+Chad,rice_production_lag1,0.030529259813565468
+Chad,rice_area_lag1,0.027053167033828287
+Chad,rice_yield_lag1,0.0005542365024298173
+Chad,rice_volatility_lag1,0.0018841800791080281
+Chad,sorghum_production_lag1,0.01672449892231647
+Chad,sorghum_area_lag1,0.014473365889076077
+Chad,sorghum_yield_lag1,0.0006876766164887504
+Chad,sorghum_volatility_lag1,0.0025796267298127044
+Chad,wheat_production_lag1,0.00032905999462781656
+Chad,wheat_area_lag1,0.005609892174348542
+Chad,wheat_yield_lag1,0.0005197072102643502
+Chad,wheat_volatility_lag1,0.03383517453571126
+Chad,yams_production_lag1,0.020471624734798317
+Chad,yams_area_lag1,0.022778018198349393
+Chad,yams_yield_lag1,0.005201308637050715
+Chad,yams_volatility_lag1,0.004078781183985473
+Chad,gdp_per_capita_lag2,0.005241842111203718
+Chad,water_access_lag2,0.03944782813174915
+Chad,sanitation_access_lag2,0.012874758635028917
+Chad,political_stability_lag2,0.001314307836453937
+Chad,temperature_lag2,0.0016907375809600753
+Chad,precipitation_lag2,0.0004543696375080549
+Chad,cassava_production_lag2,0.0014430457228246177
+Chad,cassava_area_lag2,0.00030199509483867445
+Chad,cassava_yield_lag2,0.0032894888287745665
+Chad,cassava_volatility_lag2,0.0013339536822285132
+Chad,maize_production_lag2,0.02890897500268968
+Chad,maize_area_lag2,0.02732027996198241
+Chad,maize_yield_lag2,0.02877849770389347
+Chad,maize_volatility_lag2,0.001684780983520546
+Chad,rice_production_lag2,0.03948641944593358
+Chad,rice_area_lag2,0.033514731077878855
+Chad,rice_yield_lag2,0.0006681071735195954
+Chad,rice_volatility_lag2,0.0023285466651076668
+Chad,sorghum_production_lag2,0.018253491804411777
+Chad,sorghum_area_lag2,0.020445814413825678
+Chad,sorghum_yield_lag2,0.0001424354625105491
+Chad,sorghum_volatility_lag2,0.004678919014542462
+Chad,wheat_production_lag2,0.0006800853559993837
+Chad,wheat_area_lag2,0.006712605598870146
+Chad,wheat_yield_lag2,0.00048600433460696557
+Chad,wheat_volatility_lag2,0.00346767344776419
+Chad,yams_production_lag2,0.024794385884566415
+Chad,yams_area_lag2,0.028344977863564432
+Chad,yams_yield_lag2,0.004812983358199765
+Chad,yams_volatility_lag2,0.0026249599684023683
+Comoros,temperature,0.0016152336940956804
+Comoros,precipitation,0.0006515191471607786
+Comoros,gdp_per_capita,0.07521349640286425
+Comoros,water_access,0.01409489471094831
+Comoros,sanitation_access,0.001040077043672623
+Comoros,political_stability,0.004296018402962206
+Comoros,ccri_score,0.0
+Comoros,cassava_production,0.006069811584999732
+Comoros,cassava_area,0.002549529378567989
+Comoros,cassava_yield,0.012145331609915006
+Comoros,cassava_volatility,0.00011470365512722882
+Comoros,maize_production,0.02567323158423185
+Comoros,maize_area,0.03260519511263769
+Comoros,maize_yield,0.020264557668561584
+Comoros,maize_volatility,0.0009312186957728748
+Comoros,rice_production,0.002701145440995778
+Comoros,rice_area,0.006965725100651905
+Comoros,rice_yield,0.000734133179816227
+Comoros,rice_volatility,0.011750356030702317
+Comoros,sorghum_production,0.0
+Comoros,sorghum_area,0.0
+Comoros,sorghum_yield,0.0
+Comoros,sorghum_volatility,0.0
+Comoros,wheat_production,0.0
+Comoros,wheat_area,0.0
+Comoros,wheat_yield,0.0
+Comoros,wheat_volatility,0.0
+Comoros,yams_production,0.02535918325879174
+Comoros,yams_area,0.028476569723731558
+Comoros,yams_yield,0.031025889688887687
+Comoros,yams_volatility,0.002286335859062127
+Comoros,gdp_per_capita_lag1,0.036409578185112
+Comoros,water_access_lag1,0.03148764948842601
+Comoros,sanitation_access_lag1,0.0013556487965905757
+Comoros,political_stability_lag1,0.0007908909058710807
+Comoros,temperature_lag1,0.0004271071693624146
+Comoros,precipitation_lag1,0.00021290724749590116
+Comoros,cassava_production_lag1,0.002052031624746572
+Comoros,cassava_area_lag1,0.0022135692652800925
+Comoros,cassava_yield_lag1,0.03141955280157587
+Comoros,cassava_volatility_lag1,0.0010195541502570884
+Comoros,maize_production_lag1,0.04254638501536024
+Comoros,maize_area_lag1,0.026813502619857217
+Comoros,maize_yield_lag1,0.04003156206043322
+Comoros,maize_volatility_lag1,0.006228931177298778
+Comoros,rice_production_lag1,0.0028351940334812712
+Comoros,rice_area_lag1,0.003062023400240311
+Comoros,rice_yield_lag1,0.0008675735240778929
+Comoros,rice_volatility_lag1,0.036310956420914864
+Comoros,sorghum_production_lag1,0.0
+Comoros,sorghum_area_lag1,0.0
+Comoros,sorghum_yield_lag1,0.0
+Comoros,sorghum_volatility_lag1,0.0
+Comoros,wheat_production_lag1,0.0
+Comoros,wheat_area_lag1,0.0
+Comoros,wheat_yield_lag1,0.0
+Comoros,wheat_volatility_lag1,0.0
+Comoros,yams_production_lag1,0.02626677416367642
+Comoros,yams_area_lag1,0.036226073776220384
+Comoros,yams_yield_lag1,0.039710615392161155
+Comoros,yams_volatility_lag1,0.002020164264467226
+Comoros,gdp_per_capita_lag2,0.017906955080759384
+Comoros,water_access_lag2,0.0192084467418288
+Comoros,sanitation_access_lag2,0.009399796630879989
+Comoros,political_stability_lag2,0.0003717979488699185
+Comoros,temperature_lag2,0.004570226347781358
+Comoros,precipitation_lag2,0.0008489684694795243
+Comoros,cassava_production_lag2,0.006835687144898822
+Comoros,cassava_area_lag2,0.007324956647052268
+Comoros,cassava_yield_lag2,0.0474129714132136
+Comoros,cassava_volatility_lag2,0.00270062533471558
+Comoros,maize_production_lag2,0.026127511510356267
+Comoros,maize_area_lag2,0.02791527533178196
+Comoros,maize_yield_lag2,0.03890388534510895
+Comoros,maize_volatility_lag2,0.011620679674185898
+Comoros,rice_production_lag2,0.022897361932340946
+Comoros,rice_area_lag2,0.016160208738173414
+Comoros,rice_yield_lag2,0.001365123873430453
+Comoros,rice_volatility_lag2,0.004748114928985155
+Comoros,sorghum_production_lag2,0.0
+Comoros,sorghum_area_lag2,0.0
+Comoros,sorghum_yield_lag2,0.0
+Comoros,sorghum_volatility_lag2,0.0
+Comoros,wheat_production_lag2,0.0
+Comoros,wheat_area_lag2,0.0
+Comoros,wheat_yield_lag2,0.0
+Comoros,wheat_volatility_lag2,0.0
+Comoros,yams_production_lag2,0.0196279381140832
+Comoros,yams_area_lag2,0.014609686569358639
+Comoros,yams_yield_lag2,0.01722707837517836
+Comoros,yams_volatility_lag2,0.005344301390473972
+Congo,temperature,0.0016247780911579416
+Congo,precipitation,0.002723175802649142
+Congo,gdp_per_capita,0.010301602493741574
+Congo,water_access,0.0025541172204903285
+Congo,sanitation_access,0.04234883638744465
+Congo,political_stability,0.010166034981609695
+Congo,ccri_score,0.0
+Congo,cassava_production,0.039140282305363275
+Congo,cassava_area,0.038018403485862884
+Congo,cassava_yield,0.016677431497523168
+Congo,cassava_volatility,0.0026240514328689257
+Congo,maize_production,0.01256933517327008
+Congo,maize_area,0.006595281726620808
+Congo,maize_yield,0.03495811019968024
+Congo,maize_volatility,0.0019397429610066295
+Congo,rice_production,0.002661260216479757
+Congo,rice_area,0.002999473285609641
+Congo,rice_yield,0.00714678389593097
+Congo,rice_volatility,0.02099421095453293
+Congo,sorghum_production,0.0
+Congo,sorghum_area,0.0
+Congo,sorghum_yield,0.0
+Congo,sorghum_volatility,0.0
+Congo,wheat_production,0.0
+Congo,wheat_area,0.0
+Congo,wheat_yield,0.0
+Congo,wheat_volatility,0.0
+Congo,yams_production,0.02380794204465471
+Congo,yams_area,0.05410937566728579
+Congo,yams_yield,0.005653095405750343
+Congo,yams_volatility,0.025635935073902782
+Congo,gdp_per_capita_lag1,0.0027135486668631507
+Congo,water_access_lag1,0.017773298600684648
+Congo,sanitation_access_lag1,0.022809946846032273
+Congo,political_stability_lag1,0.015885132570591178
+Congo,temperature_lag1,0.0024174545539268
+Congo,precipitation_lag1,0.001937588461324752
+Congo,cassava_production_lag1,0.015924629049351546
+Congo,cassava_area_lag1,0.021084036598131458
+Congo,cassava_yield_lag1,0.0429015689177178
+Congo,cassava_volatility_lag1,0.0017387346659898397
+Congo,maize_production_lag1,0.023989438850874928
+Congo,maize_area_lag1,0.0015334534986657371
+Congo,maize_yield_lag1,0.07074384888215138
+Congo,maize_volatility_lag1,0.0022756043916616776
+Congo,rice_production_lag1,0.0010065284512567679
+Congo,rice_area_lag1,0.004335212287613149
+Congo,rice_yield_lag1,0.014368627546514901
+Congo,rice_volatility_lag1,0.008503181137797017
+Congo,sorghum_production_lag1,0.0
+Congo,sorghum_area_lag1,0.0
+Congo,sorghum_yield_lag1,0.0
+Congo,sorghum_volatility_lag1,0.0
+Congo,wheat_production_lag1,0.0
+Congo,wheat_area_lag1,0.0
+Congo,wheat_yield_lag1,0.0
+Congo,wheat_volatility_lag1,0.0
+Congo,yams_production_lag1,0.04443509472720267
+Congo,yams_area_lag1,0.028912152421184625
+Congo,yams_yield_lag1,0.006787731994475887
+Congo,yams_volatility_lag1,0.0037335703839321164
+Congo,gdp_per_capita_lag2,0.0031668817552192364
+Congo,water_access_lag2,0.03558827128670258
+Congo,sanitation_access_lag2,0.010368923460033916
+Congo,political_stability_lag2,0.03537554734696652
+Congo,temperature_lag2,0.0011026111555649623
+Congo,precipitation_lag2,0.0014358971836641984
+Congo,cassava_production_lag2,0.01201958809344975
+Congo,cassava_area_lag2,0.011605331536742156
+Congo,cassava_yield_lag2,0.033260622059184335
+Congo,cassava_volatility_lag2,0.0026022230103767245
+Congo,maize_production_lag2,0.017338968533246017
+Congo,maize_area_lag2,0.008971535752208602
+Congo,maize_yield_lag2,0.027940921911231428
+Congo,maize_volatility_lag2,0.005467119570228723
+Congo,rice_production_lag2,0.0019385495548710748
+Congo,rice_area_lag2,0.0040468483203249484
+Congo,rice_yield_lag2,0.009619086941664336
+Congo,rice_volatility_lag2,0.0011313188910977707
+Congo,sorghum_production_lag2,0.0
+Congo,sorghum_area_lag2,0.0
+Congo,sorghum_yield_lag2,0.0
+Congo,sorghum_volatility_lag2,0.0
+Congo,wheat_production_lag2,0.0
+Congo,wheat_area_lag2,0.0
+Congo,wheat_yield_lag2,0.0
+Congo,wheat_volatility_lag2,0.0
+Congo,yams_production_lag2,0.022864648190344714
+Congo,yams_area_lag2,0.022549107906978616
+Congo,yams_yield_lag2,0.005754571272543669
+Congo,yams_volatility_lag2,0.0047917824599751566
+Democratic Republic of the Congo,temperature,0.0059030951732162605
+Democratic Republic of the Congo,precipitation,0.002014596685406501
+Democratic Republic of the Congo,gdp_per_capita,0.011060752697758905
+Democratic Republic of the Congo,water_access,0.0005235157105241242
+Democratic Republic of the Congo,sanitation_access,0.03651315990219323
+Democratic Republic of the Congo,political_stability,0.000792124952561228
+Democratic Republic of the Congo,ccri_score,0.0
+Democratic Republic of the Congo,cassava_production,0.018616414660453263
+Democratic Republic of the Congo,cassava_area,0.009663060912040505
+Democratic Republic of the Congo,cassava_yield,0.001317689607288437
+Democratic Republic of the Congo,cassava_volatility,0.004829805558305667
+Democratic Republic of the Congo,maize_production,0.021759865137777282
+Democratic Republic of the Congo,maize_area,0.03153333720364652
+Democratic Republic of the Congo,maize_yield,0.004596626676279313
+Democratic Republic of the Congo,maize_volatility,0.00851996651302111
+Democratic Republic of the Congo,rice_production,0.031236109995918655
+Democratic Republic of the Congo,rice_area,0.01452683838804088
+Democratic Republic of the Congo,rice_yield,0.0130614500449782
+Democratic Republic of the Congo,rice_volatility,0.009155299786351575
+Democratic Republic of the Congo,sorghum_production,0.006075228165887143
+Democratic Republic of the Congo,sorghum_area,0.0010434015518645354
+Democratic Republic of the Congo,sorghum_yield,0.009589834450480892
+Democratic Republic of the Congo,sorghum_volatility,0.014690104978600536
+Democratic Republic of the Congo,wheat_production,0.033645796652798605
+Democratic Republic of the Congo,wheat_area,0.0007183296941366393
+Democratic Republic of the Congo,wheat_yield,0.0003310350754214737
+Democratic Republic of the Congo,wheat_volatility,0.043302905321381695
+Democratic Republic of the Congo,yams_production,0.021561968886060837
+Democratic Republic of the Congo,yams_area,0.02989748375384642
+Democratic Republic of the Congo,yams_yield,0.0007134658176928585
+Democratic Republic of the Congo,yams_volatility,0.0009858659005161517
+Democratic Republic of the Congo,gdp_per_capita_lag1,0.010165005700024458
+Democratic Republic of the Congo,water_access_lag1,0.0005609569954785582
+Democratic Republic of the Congo,sanitation_access_lag1,0.08559495985334134
+Democratic Republic of the Congo,political_stability_lag1,0.002601853571437577
+Democratic Republic of the Congo,temperature_lag1,0.0014679926648569553
+Democratic Republic of the Congo,precipitation_lag1,0.0007001032396504132
+Democratic Republic of the Congo,cassava_production_lag1,0.036101163420137534
+Democratic Republic of the Congo,cassava_area_lag1,0.013374598194745426
+Democratic Republic of the Congo,cassava_yield_lag1,0.0003658751425746122
+Democratic Republic of the Congo,cassava_volatility_lag1,0.020035568219456734
+Democratic Republic of the Congo,maize_production_lag1,0.01844162734373433
+Democratic Republic of the Congo,maize_area_lag1,0.021360813610796073
+Democratic Republic of the Congo,maize_yield_lag1,5.302365380030845e-05
+Democratic Republic of the Congo,maize_volatility_lag1,0.0006093440339727529
+Democratic Republic of the Congo,rice_production_lag1,0.031145020688656398
+Democratic Republic of the Congo,rice_area_lag1,0.019633329326679327
+Democratic Republic of the Congo,rice_yield_lag1,0.00011943199487107763
+Democratic Republic of the Congo,rice_volatility_lag1,0.00862010933603485
+Democratic Republic of the Congo,sorghum_production_lag1,0.0034102518519301076
+Democratic Republic of the Congo,sorghum_area_lag1,0.0016786512323711065
+Democratic Republic of the Congo,sorghum_yield_lag1,0.004664535603555724
+Democratic Republic of the Congo,sorghum_volatility_lag1,0.003932822622355005
+Democratic Republic of the Congo,wheat_production_lag1,0.03880708694565749
+Democratic Republic of the Congo,wheat_area_lag1,0.008667256500579347
+Democratic Republic of the Congo,wheat_yield_lag1,0.0006411030892353229
+Democratic Republic of the Congo,wheat_volatility_lag1,0.004808941619289299
+Democratic Republic of the Congo,yams_production_lag1,0.01920692953654663
+Democratic Republic of the Congo,yams_area_lag1,0.039836235582216106
+Democratic Republic of the Congo,yams_yield_lag1,7.219120306497757e-05
+Democratic Republic of the Congo,yams_volatility_lag1,0.004676964054024868
+Democratic Republic of the Congo,gdp_per_capita_lag2,0.009485526195541202
+Democratic Republic of the Congo,water_access_lag2,0.0008279194850457468
+Democratic Republic of the Congo,sanitation_access_lag2,0.04250161283432714
+Democratic Republic of the Congo,political_stability_lag2,0.003025347839226747
+Democratic Republic of the Congo,temperature_lag2,0.0013390495117898535
+Democratic Republic of the Congo,precipitation_lag2,0.012766825446340573
+Democratic Republic of the Congo,cassava_production_lag2,0.00024484382793006946
+Democratic Republic of the Congo,cassava_area_lag2,0.00031224026595718686
+Democratic Republic of the Congo,cassava_yield_lag2,0.00019927411419721743
+Democratic Republic of the Congo,cassava_volatility_lag2,0.0050222443267943185
+Democratic Republic of the Congo,maize_production_lag2,0.009324683358181221
+Democratic Republic of the Congo,maize_area_lag2,0.03468093299893206
+Democratic Republic of the Congo,maize_yield_lag2,0.000135823002409023
+Democratic Republic of the Congo,maize_volatility_lag2,0.0047440756021524776
+Democratic Republic of the Congo,rice_production_lag2,0.0005389790848679771
+Democratic Republic of the Congo,rice_area_lag2,0.005020621331519972
+Democratic Republic of the Congo,rice_yield_lag2,3.4497667597833025e-05
+Democratic Republic of the Congo,rice_volatility_lag2,0.005624933946766866
+Democratic Republic of the Congo,sorghum_production_lag2,0.0017737495666914954
+Democratic Republic of the Congo,sorghum_area_lag2,0.0037905632626999315
+Democratic Republic of the Congo,sorghum_yield_lag2,0.00010237804433711712
+Democratic Republic of the Congo,sorghum_volatility_lag2,0.0003784435812625871
+Democratic Republic of the Congo,wheat_production_lag2,0.017814100044389672
+Democratic Republic of the Congo,wheat_area_lag2,0.00478551363659201
+Democratic Republic of the Congo,wheat_yield_lag2,0.00045873896218865805
+Democratic Republic of the Congo,wheat_volatility_lag2,0.0009008736967211525
+Democratic Republic of the Congo,yams_production_lag2,0.011754935668634583
+Democratic Republic of the Congo,yams_area_lag2,0.03220655684651914
+Democratic Republic of the Congo,yams_yield_lag2,0.000295866860098587
+Democratic Republic of the Congo,yams_volatility_lag2,0.0003759723047634303
+Eswatini,temperature,0.004853866245553689
+Eswatini,precipitation,0.000404050763860557
+Eswatini,gdp_per_capita,0.023196930110583068
+Eswatini,water_access,0.003799704964927866
+Eswatini,sanitation_access,0.010467234719513108
+Eswatini,political_stability,0.0011097965618096569
+Eswatini,ccri_score,0.0
+Eswatini,cassava_production,0.0
+Eswatini,cassava_area,0.0
+Eswatini,cassava_yield,0.0
+Eswatini,cassava_volatility,0.0
+Eswatini,maize_production,0.002323550743524599
+Eswatini,maize_area,0.0009777551749964625
+Eswatini,maize_yield,0.00044207756045992427
+Eswatini,maize_volatility,0.0009007928198302209
+Eswatini,rice_production,0.026715604266335638
+Eswatini,rice_area,0.021609033467012467
+Eswatini,rice_yield,0.10900436715368995
+Eswatini,rice_volatility,0.003306623216755908
+Eswatini,sorghum_production,0.0014995348311652812
+Eswatini,sorghum_area,0.00350039666744138
+Eswatini,sorghum_yield,0.013059110348459938
+Eswatini,sorghum_volatility,0.0016803364841114473
+Eswatini,wheat_production,0.015443333679348342
+Eswatini,wheat_area,0.02176086886886908
+Eswatini,wheat_yield,0.020727004404559445
+Eswatini,wheat_volatility,0.004541348496000593
+Eswatini,yams_production,0.0
+Eswatini,yams_area,0.0
+Eswatini,yams_yield,0.0
+Eswatini,yams_volatility,0.0
+Eswatini,gdp_per_capita_lag1,0.023611444120412387
+Eswatini,water_access_lag1,0.013868674812011445
+Eswatini,sanitation_access_lag1,0.03974526534768655
+Eswatini,political_stability_lag1,0.002435305837266211
+Eswatini,temperature_lag1,0.0005172710988680453
+Eswatini,precipitation_lag1,0.0002737939195882554
+Eswatini,cassava_production_lag1,0.0
+Eswatini,cassava_area_lag1,0.0
+Eswatini,cassava_yield_lag1,0.0
+Eswatini,cassava_volatility_lag1,0.0
+Eswatini,maize_production_lag1,0.00993786962357285
+Eswatini,maize_area_lag1,0.0006797213478779702
+Eswatini,maize_yield_lag1,0.00262662046863001
+Eswatini,maize_volatility_lag1,0.0014776782788558317
+Eswatini,rice_production_lag1,0.033473883343332254
+Eswatini,rice_area_lag1,0.027267670932523674
+Eswatini,rice_yield_lag1,0.07460670150642977
+Eswatini,rice_volatility_lag1,0.011327832426239564
+Eswatini,sorghum_production_lag1,0.0025747244862160705
+Eswatini,sorghum_area_lag1,0.003466349644345305
+Eswatini,sorghum_yield_lag1,0.028991480702732678
+Eswatini,sorghum_volatility_lag1,0.0029013975068326466
+Eswatini,wheat_production_lag1,0.015138300292888469
+Eswatini,wheat_area_lag1,0.02587675055373344
+Eswatini,wheat_yield_lag1,0.016868264475133694
+Eswatini,wheat_volatility_lag1,0.002921199694809426
+Eswatini,yams_production_lag1,0.0
+Eswatini,yams_area_lag1,0.0
+Eswatini,yams_yield_lag1,0.0
+Eswatini,yams_volatility_lag1,0.0
+Eswatini,gdp_per_capita_lag2,0.016814945805504647
+Eswatini,water_access_lag2,0.014298308973356197
+Eswatini,sanitation_access_lag2,0.0433176388836506
+Eswatini,political_stability_lag2,0.0021205525743102074
+Eswatini,temperature_lag2,0.0005574853263403827
+Eswatini,precipitation_lag2,0.0006947527166627007
+Eswatini,cassava_production_lag2,0.0
+Eswatini,cassava_area_lag2,0.0
+Eswatini,cassava_yield_lag2,0.0
+Eswatini,cassava_volatility_lag2,0.0
+Eswatini,maize_production_lag2,0.0010344964421276142
+Eswatini,maize_area_lag2,0.0009032314617461809
+Eswatini,maize_yield_lag2,0.0008772051372017281
+Eswatini,maize_volatility_lag2,0.00138613460977558
+Eswatini,rice_production_lag2,0.02347150554214422
+Eswatini,rice_area_lag2,0.018657910039245572
+Eswatini,rice_yield_lag2,0.09233309441793015
+Eswatini,rice_volatility_lag2,0.00189424992747264
+Eswatini,sorghum_production_lag2,0.008253302180708442
+Eswatini,sorghum_area_lag2,0.031156471346922628
+Eswatini,sorghum_yield_lag2,0.016164876714969616
+Eswatini,sorghum_volatility_lag2,0.003140131267902899
+Eswatini,wheat_production_lag2,0.02424006228991674
+Eswatini,wheat_area_lag2,0.03807297985843016
+Eswatini,wheat_yield_lag2,0.02588056128652809
+Eswatini,wheat_volatility_lag2,0.002818581228357809
+Eswatini,yams_production_lag2,0.0
+Eswatini,yams_area_lag2,0.0
+Eswatini,yams_yield_lag2,0.0
+Eswatini,yams_volatility_lag2,0.0
+Ethiopia,temperature,0.00040356440070335133
+Ethiopia,precipitation,0.004206876270584736
+Ethiopia,gdp_per_capita,0.018509007140911568
+Ethiopia,water_access,0.035373993098459205
+Ethiopia,sanitation_access,0.01634302872980627
+Ethiopia,political_stability,0.0006483180219502491
+Ethiopia,ccri_score,0.0
+Ethiopia,cassava_production,0.0
+Ethiopia,cassava_area,0.0
+Ethiopia,cassava_yield,0.0
+Ethiopia,cassava_volatility,0.0
+Ethiopia,maize_production,0.01763834627179017
+Ethiopia,maize_area,0.0110165299319566
+Ethiopia,maize_yield,0.01016806963380069
+Ethiopia,maize_volatility,0.0007502387078853441
+Ethiopia,rice_production,0.012405793842080442
+Ethiopia,rice_area,0.01511555250486745
+Ethiopia,rice_yield,0.016711116738578634
+Ethiopia,rice_volatility,0.002627193742610263
+Ethiopia,sorghum_production,0.015123648705702606
+Ethiopia,sorghum_area,0.0018297603538162369
+Ethiopia,sorghum_yield,0.014648112488374575
+Ethiopia,sorghum_volatility,0.0011665851437671704
+Ethiopia,wheat_production,0.03191377165043313
+Ethiopia,wheat_area,0.012004575541039125
+Ethiopia,wheat_yield,0.021607319653913815
+Ethiopia,wheat_volatility,0.0008307143791296159
+Ethiopia,yams_production,0.015362440390439871
+Ethiopia,yams_area,0.01482868089370431
+Ethiopia,yams_yield,0.004637189701692471
+Ethiopia,yams_volatility,0.010796654132260284
+Ethiopia,gdp_per_capita_lag1,0.011131859959071115
+Ethiopia,water_access_lag1,0.018227877764416162
+Ethiopia,sanitation_access_lag1,0.021589144903346007
+Ethiopia,political_stability_lag1,0.0023586699163501653
+Ethiopia,temperature_lag1,0.0008238135970547472
+Ethiopia,precipitation_lag1,0.006012232350457851
+Ethiopia,cassava_production_lag1,0.0
+Ethiopia,cassava_area_lag1,0.0
+Ethiopia,cassava_yield_lag1,0.0
+Ethiopia,cassava_volatility_lag1,0.0
+Ethiopia,maize_production_lag1,0.016326473097932642
+Ethiopia,maize_area_lag1,0.01381723824239341
+Ethiopia,maize_yield_lag1,0.02044504276935796
+Ethiopia,maize_volatility_lag1,0.0007159528687749729
+Ethiopia,rice_production_lag1,0.025290166869095087
+Ethiopia,rice_area_lag1,0.02044773543495071
+Ethiopia,rice_yield_lag1,0.020919782658702687
+Ethiopia,rice_volatility_lag1,0.0057633572889190365
+Ethiopia,sorghum_production_lag1,0.008834344550524
+Ethiopia,sorghum_area_lag1,0.018838516259482373
+Ethiopia,sorghum_yield_lag1,0.041720160675020296
+Ethiopia,sorghum_volatility_lag1,0.0011943651067794266
+Ethiopia,wheat_production_lag1,0.01589659086858852
+Ethiopia,wheat_area_lag1,0.013019189020835487
+Ethiopia,wheat_yield_lag1,0.0548139546331177
+Ethiopia,wheat_volatility_lag1,0.0011103563002929817
+Ethiopia,yams_production_lag1,0.0016376551402084755
+Ethiopia,yams_area_lag1,0.014539290897729347
+Ethiopia,yams_yield_lag1,0.003926053388406749
+Ethiopia,yams_volatility_lag1,0.0019766771716147056
+Ethiopia,gdp_per_capita_lag2,0.015978038571086605
+Ethiopia,water_access_lag2,0.014986019084784186
+Ethiopia,sanitation_access_lag2,0.03573413023911002
+Ethiopia,political_stability_lag2,0.004120487625705552
+Ethiopia,temperature_lag2,0.00021052797544291298
+Ethiopia,precipitation_lag2,0.0006975395468913792
+Ethiopia,cassava_production_lag2,0.0
+Ethiopia,cassava_area_lag2,0.0
+Ethiopia,cassava_yield_lag2,0.0
+Ethiopia,cassava_volatility_lag2,0.0
+Ethiopia,maize_production_lag2,0.020208384447691272
+Ethiopia,maize_area_lag2,0.013380333314001822
+Ethiopia,maize_yield_lag2,0.011141723336653767
+Ethiopia,maize_volatility_lag2,0.004089609582180402
+Ethiopia,rice_production_lag2,0.02676844843824649
+Ethiopia,rice_area_lag2,0.024629874471046607
+Ethiopia,rice_yield_lag2,0.012733885809039353
+Ethiopia,rice_volatility_lag2,0.00636739795035823
+Ethiopia,sorghum_production_lag2,0.03262569735455875
+Ethiopia,sorghum_area_lag2,0.009252614319493167
+Ethiopia,sorghum_yield_lag2,0.025075869265817792
+Ethiopia,sorghum_volatility_lag2,0.0007685622832072335
+Ethiopia,wheat_production_lag2,0.031018584463474747
+Ethiopia,wheat_area_lag2,0.013338717913798008
+Ethiopia,wheat_yield_lag2,0.014292517394824464
+Ethiopia,wheat_volatility_lag2,0.0006165378249919845
+Ethiopia,yams_production_lag2,0.005109494346552818
+Ethiopia,yams_area_lag2,0.0019838353115935047
+Ethiopia,yams_yield_lag2,0.006126506513969125
+Ethiopia,yams_volatility_lag2,0.0007010788117990223
+Gabon,temperature,0.0006021351412803373
+Gabon,precipitation,0.0008551656482816496
+Gabon,gdp_per_capita,0.0055370348424128675
+Gabon,water_access,0.006365164697711074
+Gabon,sanitation_access,0.016701931143704784
+Gabon,political_stability,0.00751165816705994
+Gabon,ccri_score,0.0
+Gabon,cassava_production,0.02927568324293438
+Gabon,cassava_area,0.015345686953234417
+Gabon,cassava_yield,0.006635119311413495
+Gabon,cassava_volatility,0.0015413297926347475
+Gabon,maize_production,0.020785027723722673
+Gabon,maize_area,0.014660578530013594
+Gabon,maize_yield,0.0038135705320006858
+Gabon,maize_volatility,0.02326623537207402
+Gabon,rice_production,0.013783718830133528
+Gabon,rice_area,0.024292329679834544
+Gabon,rice_yield,0.015783166192437477
+Gabon,rice_volatility,0.0029680260397137326
+Gabon,sorghum_production,0.0
+Gabon,sorghum_area,0.0
+Gabon,sorghum_yield,0.0
+Gabon,sorghum_volatility,0.0
+Gabon,wheat_production,0.0
+Gabon,wheat_area,0.0
+Gabon,wheat_yield,0.0
+Gabon,wheat_volatility,0.0
+Gabon,yams_production,0.020395070391364126
+Gabon,yams_area,0.022984784075947395
+Gabon,yams_yield,0.07497394938258894
+Gabon,yams_volatility,0.002153213470439592
+Gabon,gdp_per_capita_lag1,0.00751938816164563
+Gabon,water_access_lag1,0.010469429829547232
+Gabon,sanitation_access_lag1,0.024753522738158167
+Gabon,political_stability_lag1,0.002980439927046364
+Gabon,temperature_lag1,0.005152417551897802
+Gabon,precipitation_lag1,0.00140971663118391
+Gabon,cassava_production_lag1,0.02307072819226951
+Gabon,cassava_area_lag1,0.01777994397530546
+Gabon,cassava_yield_lag1,0.01627334379072246
+Gabon,cassava_volatility_lag1,0.0005566934459283647
+Gabon,maize_production_lag1,0.028674588882821133
+Gabon,maize_area_lag1,0.014743776223139524
+Gabon,maize_yield_lag1,0.0031730853810018056
+Gabon,maize_volatility_lag1,0.016650448151226967
+Gabon,rice_production_lag1,0.014268713627007082
+Gabon,rice_area_lag1,0.01752703137781605
+Gabon,rice_yield_lag1,0.013905225016786177
+Gabon,rice_volatility_lag1,0.0026049945446941247
+Gabon,sorghum_production_lag1,0.0
+Gabon,sorghum_area_lag1,0.0
+Gabon,sorghum_yield_lag1,0.0
+Gabon,sorghum_volatility_lag1,0.0
+Gabon,wheat_production_lag1,0.0
+Gabon,wheat_area_lag1,0.0
+Gabon,wheat_yield_lag1,0.0
+Gabon,wheat_volatility_lag1,0.0
+Gabon,yams_production_lag1,0.022426232541933395
+Gabon,yams_area_lag1,0.03200788076272919
+Gabon,yams_yield_lag1,0.07118022934946446
+Gabon,yams_volatility_lag1,0.0010272908731139062
+Gabon,gdp_per_capita_lag2,0.0037518910645131342
+Gabon,water_access_lag2,0.010520567051557224
+Gabon,sanitation_access_lag2,0.016844317365290174
+Gabon,political_stability_lag2,0.0033239407394289404
+Gabon,temperature_lag2,0.0055325834498153835
+Gabon,precipitation_lag2,0.00046606587674793715
+Gabon,cassava_production_lag2,0.010378844612247294
+Gabon,cassava_area_lag2,0.00527223542805181
+Gabon,cassava_yield_lag2,0.013204826328708634
+Gabon,cassava_volatility_lag2,0.0014455895045873976
+Gabon,maize_production_lag2,0.02244896939672478
+Gabon,maize_area_lag2,0.0168025394951091
+Gabon,maize_yield_lag2,0.015007722466868493
+Gabon,maize_volatility_lag2,0.002895650698046831
+Gabon,rice_production_lag2,0.022183136524185052
+Gabon,rice_area_lag2,0.017782823511583105
+Gabon,rice_yield_lag2,0.022535917622576927
+Gabon,rice_volatility_lag2,0.005449795307066445
+Gabon,sorghum_production_lag2,0.0
+Gabon,sorghum_area_lag2,0.0
+Gabon,sorghum_yield_lag2,0.0
+Gabon,sorghum_volatility_lag2,0.0
+Gabon,wheat_production_lag2,0.0
+Gabon,wheat_area_lag2,0.0
+Gabon,wheat_yield_lag2,0.0
+Gabon,wheat_volatility_lag2,0.0
+Gabon,yams_production_lag2,0.03369715789242715
+Gabon,yams_area_lag2,0.004812705086197473
+Gabon,yams_yield_lag2,0.08664614979162877
+Gabon,yams_volatility_lag2,0.0006108706502613501
+Gambia,temperature,0.003997909873773253
+Gambia,precipitation,0.0012546305817053194
+Gambia,gdp_per_capita,0.00681011899998456
+Gambia,water_access,0.025323792907019537
+Gambia,sanitation_access,0.000248722187695233
+Gambia,political_stability,0.006199084735461004
+Gambia,ccri_score,0.0
+Gambia,cassava_production,0.05858678371458721
+Gambia,cassava_area,0.01619210993619992
+Gambia,cassava_yield,0.07886020030896244
+Gambia,cassava_volatility,0.005608073207446703
+Gambia,maize_production,0.010013308736399074
+Gambia,maize_area,0.001465389484614846
+Gambia,maize_yield,0.02166799405854057
+Gambia,maize_volatility,0.0012935584893141354
+Gambia,rice_production,0.0014774581965401722
+Gambia,rice_area,0.007120375139986932
+Gambia,rice_yield,0.006299341641509459
+Gambia,rice_volatility,0.002597675834076775
+Gambia,sorghum_production,0.008910556383990971
+Gambia,sorghum_area,0.012288849969482788
+Gambia,sorghum_yield,0.0007922314608969792
+Gambia,sorghum_volatility,0.005018798600590985
+Gambia,wheat_production,0.0
+Gambia,wheat_area,0.0
+Gambia,wheat_yield,0.0
+Gambia,wheat_volatility,0.0
+Gambia,yams_production,0.0
+Gambia,yams_area,0.0
+Gambia,yams_yield,0.0
+Gambia,yams_volatility,0.0
+Gambia,gdp_per_capita_lag1,0.002352849098212149
+Gambia,water_access_lag1,0.08985256699789397
+Gambia,sanitation_access_lag1,0.000416075263241293
+Gambia,political_stability_lag1,0.00431378111689264
+Gambia,temperature_lag1,0.0015241519938071408
+Gambia,precipitation_lag1,0.0005792942125283188
+Gambia,cassava_production_lag1,0.04082194040300033
+Gambia,cassava_area_lag1,0.05551407117737515
+Gambia,cassava_yield_lag1,0.089664005871946
+Gambia,cassava_volatility_lag1,0.004985942624184527
+Gambia,maize_production_lag1,0.002830000761508197
+Gambia,maize_area_lag1,0.0014970654924530177
+Gambia,maize_yield_lag1,0.013153669877830138
+Gambia,maize_volatility_lag1,0.002641847170195029
+Gambia,rice_production_lag1,0.002321326606713853
+Gambia,rice_area_lag1,0.004972110555644573
+Gambia,rice_yield_lag1,0.005514082097820976
+Gambia,rice_volatility_lag1,0.0037376984639551814
+Gambia,sorghum_production_lag1,0.007506250459118508
+Gambia,sorghum_area_lag1,0.0038175232525126533
+Gambia,sorghum_yield_lag1,0.0018685341224409502
+Gambia,sorghum_volatility_lag1,0.0046026706179880875
+Gambia,wheat_production_lag1,0.0
+Gambia,wheat_area_lag1,0.0
+Gambia,wheat_yield_lag1,0.0
+Gambia,wheat_volatility_lag1,0.0
+Gambia,yams_production_lag1,0.0
+Gambia,yams_area_lag1,0.0
+Gambia,yams_yield_lag1,0.0
+Gambia,yams_volatility_lag1,0.0
+Gambia,gdp_per_capita_lag2,0.002801279620876733
+Gambia,water_access_lag2,0.07618211403936773
+Gambia,sanitation_access_lag2,0.002701447413226565
+Gambia,political_stability_lag2,0.0016460668475343095
+Gambia,temperature_lag2,0.0028025447331114957
+Gambia,precipitation_lag2,0.000691176046538044
+Gambia,cassava_production_lag2,0.07394700406211435
+Gambia,cassava_area_lag2,0.05979120020779041
+Gambia,cassava_yield_lag2,0.09374391100662313
+Gambia,cassava_volatility_lag2,0.008761695967417004
+Gambia,maize_production_lag2,0.0018144958768057957
+Gambia,maize_area_lag2,0.0026417351297516422
+Gambia,maize_yield_lag2,0.004070898515737253
+Gambia,maize_volatility_lag2,0.0026620966404323526
+Gambia,rice_production_lag2,0.0043531851336615565
+Gambia,rice_area_lag2,0.005979807577148378
+Gambia,rice_yield_lag2,0.011713814032207321
+Gambia,rice_volatility_lag2,0.006019742560730858
+Gambia,sorghum_production_lag2,0.00199126610386783
+Gambia,sorghum_area_lag2,0.0020000928858851757
+Gambia,sorghum_yield_lag2,0.0005652087421455491
+Gambia,sorghum_volatility_lag2,0.0066047941709849135
+Gambia,wheat_production_lag2,0.0
+Gambia,wheat_area_lag2,0.0
+Gambia,wheat_yield_lag2,0.0
+Gambia,wheat_volatility_lag2,0.0
+Gambia,yams_production_lag2,0.0
+Gambia,yams_area_lag2,0.0
+Gambia,yams_yield_lag2,0.0
+Gambia,yams_volatility_lag2,0.0
+Ghana,temperature,0.0004591413768350102
+Ghana,precipitation,0.00038238308393582257
+Ghana,gdp_per_capita,0.027035034198325692
+Ghana,water_access,0.007961469563663932
+Ghana,sanitation_access,0.023797763742936188
+Ghana,political_stability,0.0006120678164420702
+Ghana,ccri_score,0.0
+Ghana,cassava_production,0.04161624028927225
+Ghana,cassava_area,0.011466978438911495
+Ghana,cassava_yield,0.0191564400034928
+Ghana,cassava_volatility,0.0010372843116798808
+Ghana,maize_production,0.006996413913010363
+Ghana,maize_area,0.00227226353996446
+Ghana,maize_yield,0.003190978944685484
+Ghana,maize_volatility,0.002259958222193615
+Ghana,rice_production,0.01725560749005421
+Ghana,rice_area,0.03374389628330193
+Ghana,rice_yield,0.01686289995196169
+Ghana,rice_volatility,0.0012677341759352349
+Ghana,sorghum_production,0.002429303895658745
+Ghana,sorghum_area,0.0048587137383870145
+Ghana,sorghum_yield,0.0021951142328848943
+Ghana,sorghum_volatility,0.0009814536771464199
+Ghana,wheat_production,0.0
+Ghana,wheat_area,0.0
+Ghana,wheat_yield,0.0
+Ghana,wheat_volatility,0.0
+Ghana,yams_production,0.013364182706332817
+Ghana,yams_area,0.016802504705732472
+Ghana,yams_yield,0.025573097262044202
+Ghana,yams_volatility,0.0023659751267372355
+Ghana,gdp_per_capita_lag1,0.015324659753495857
+Ghana,water_access_lag1,0.03425576713365533
+Ghana,sanitation_access_lag1,0.03816692682697618
+Ghana,political_stability_lag1,0.0007827811463601942
+Ghana,temperature_lag1,0.0007532535364158521
+Ghana,precipitation_lag1,0.00032530904762890687
+Ghana,cassava_production_lag1,0.04063627020669599
+Ghana,cassava_area_lag1,0.015413193998947592
+Ghana,cassava_yield_lag1,0.03525826218818626
+Ghana,cassava_volatility_lag1,0.0010439177417497785
+Ghana,maize_production_lag1,0.024092478368923184
+Ghana,maize_area_lag1,0.0094630966676079
+Ghana,maize_yield_lag1,0.008030579593935364
+Ghana,maize_volatility_lag1,0.0009980813814423504
+Ghana,rice_production_lag1,0.012513954515624174
+Ghana,rice_area_lag1,0.009879737351383292
+Ghana,rice_yield_lag1,0.021241855124252043
+Ghana,rice_volatility_lag1,0.0014102662432143257
+Ghana,sorghum_production_lag1,0.0013048386624240514
+Ghana,sorghum_area_lag1,0.0072741964730622735
+Ghana,sorghum_yield_lag1,0.0012927424658344016
+Ghana,sorghum_volatility_lag1,0.0006306975414451785
+Ghana,wheat_production_lag1,0.0
+Ghana,wheat_area_lag1,0.0
+Ghana,wheat_yield_lag1,0.0
+Ghana,wheat_volatility_lag1,0.0
+Ghana,yams_production_lag1,0.017150108374218025
+Ghana,yams_area_lag1,0.03432633142920241
+Ghana,yams_yield_lag1,0.028522317003803983
+Ghana,yams_volatility_lag1,0.0020809074271327175
+Ghana,gdp_per_capita_lag2,0.011252469021416913
+Ghana,water_access_lag2,0.017722953415566168
+Ghana,sanitation_access_lag2,0.021856286774709462
+Ghana,political_stability_lag2,0.0018487619495250421
+Ghana,temperature_lag2,0.0010205815286100837
+Ghana,precipitation_lag2,0.0002891516226644972
+Ghana,cassava_production_lag2,0.026514401467447733
+Ghana,cassava_area_lag2,0.01867937124308199
+Ghana,cassava_yield_lag2,0.03477644553710501
+Ghana,cassava_volatility_lag2,0.0010492713762859946
+Ghana,maize_production_lag2,0.01662645762314444
+Ghana,maize_area_lag2,0.00906708907492529
+Ghana,maize_yield_lag2,0.015490814152314476
+Ghana,maize_volatility_lag2,0.0010741178809787304
+Ghana,rice_production_lag2,0.035789848527465716
+Ghana,rice_area_lag2,0.034705593311267414
+Ghana,rice_yield_lag2,0.015065330814519894
+Ghana,rice_volatility_lag2,0.0011394952515490049
+Ghana,sorghum_production_lag2,0.0007177754200187036
+Ghana,sorghum_area_lag2,0.008801004330599983
+Ghana,sorghum_yield_lag2,0.0035499972865741646
+Ghana,sorghum_volatility_lag2,0.0015893536391822615
+Ghana,wheat_production_lag2,0.0
+Ghana,wheat_area_lag2,0.0
+Ghana,wheat_yield_lag2,0.0
+Ghana,wheat_volatility_lag2,0.0
+Ghana,yams_production_lag2,0.019434264867759045
+Ghana,yams_area_lag2,0.03461888586998567
+Ghana,yams_yield_lag2,0.017655696111544782
+Ghana,yams_volatility_lag2,0.001547151006614042
+Guinea,temperature,0.0008995229177336012
+Guinea,precipitation,9.388185731323564e-05
+Guinea,gdp_per_capita,0.030884204247181437
+Guinea,water_access,0.009996422397269273
+Guinea,sanitation_access,0.027933167746770855
+Guinea,political_stability,0.006313525775887381
+Guinea,ccri_score,0.0
+Guinea,cassava_production,0.037958064000466925
+Guinea,cassava_area,0.024907200443735105
+Guinea,cassava_yield,0.0026857692433580266
+Guinea,cassava_volatility,0.007834605623840585
+Guinea,maize_production,0.018629573009701417
+Guinea,maize_area,0.004964822307689335
+Guinea,maize_yield,0.0038500939670575705
+Guinea,maize_volatility,0.008266968287050385
+Guinea,rice_production,0.021640224380395756
+Guinea,rice_area,0.010801240797000872
+Guinea,rice_yield,0.000888372488636304
+Guinea,rice_volatility,0.0009656148914661606
+Guinea,sorghum_production,0.012236546202359005
+Guinea,sorghum_area,0.001942411886843641
+Guinea,sorghum_yield,0.013572897880690249
+Guinea,sorghum_volatility,0.0015395471790964448
+Guinea,wheat_production,0.0
+Guinea,wheat_area,0.0
+Guinea,wheat_yield,0.0
+Guinea,wheat_volatility,0.0
+Guinea,yams_production,0.0056320912448710875
+Guinea,yams_area,0.013241939413693093
+Guinea,yams_yield,0.00596304348413843
+Guinea,yams_volatility,0.019715470960183903
+Guinea,gdp_per_capita_lag1,0.011552414852223861
+Guinea,water_access_lag1,0.021715881809069377
+Guinea,sanitation_access_lag1,0.03898643232341915
+Guinea,political_stability_lag1,0.005769995191724876
+Guinea,temperature_lag1,0.0003614460085699777
+Guinea,precipitation_lag1,0.00020706981993293415
+Guinea,cassava_production_lag1,0.025673229264302704
+Guinea,cassava_area_lag1,0.04761998042527787
+Guinea,cassava_yield_lag1,0.0014209710622342796
+Guinea,cassava_volatility_lag1,0.014385796969686917
+Guinea,maize_production_lag1,0.03053180619885083
+Guinea,maize_area_lag1,0.007869197241363961
+Guinea,maize_yield_lag1,0.0016996517160534532
+Guinea,maize_volatility_lag1,0.015833730499000286
+Guinea,rice_production_lag1,0.028709765057681542
+Guinea,rice_area_lag1,0.010383166890750258
+Guinea,rice_yield_lag1,0.003192192173976956
+Guinea,rice_volatility_lag1,0.0008303235053551336
+Guinea,sorghum_production_lag1,0.0015163641479793088
+Guinea,sorghum_area_lag1,0.0005696609237582176
+Guinea,sorghum_yield_lag1,0.05055119530303889
+Guinea,sorghum_volatility_lag1,0.002702741071072218
+Guinea,wheat_production_lag1,0.0
+Guinea,wheat_area_lag1,0.0
+Guinea,wheat_yield_lag1,0.0
+Guinea,wheat_volatility_lag1,0.0
+Guinea,yams_production_lag1,0.002818356860494422
+Guinea,yams_area_lag1,0.026248753573811342
+Guinea,yams_yield_lag1,0.012741829355629295
+Guinea,yams_volatility_lag1,0.001543789483455835
+Guinea,gdp_per_capita_lag2,0.0216026225674174
+Guinea,water_access_lag2,0.02127646480968474
+Guinea,sanitation_access_lag2,0.01974572959928964
+Guinea,political_stability_lag2,0.004494076111879038
+Guinea,temperature_lag2,0.000750568747537786
+Guinea,precipitation_lag2,0.0005387952367709319
+Guinea,cassava_production_lag2,0.012702015795381827
+Guinea,cassava_area_lag2,0.03982224318941422
+Guinea,cassava_yield_lag2,0.0019780829030924445
+Guinea,cassava_volatility_lag2,0.021602965250567235
+Guinea,maize_production_lag2,0.02721909367704796
+Guinea,maize_area_lag2,0.018962574051227556
+Guinea,maize_yield_lag2,0.001233581296212724
+Guinea,maize_volatility_lag2,0.005082347569756528
+Guinea,rice_production_lag2,0.023586542549344197
+Guinea,rice_area_lag2,0.016967466885283625
+Guinea,rice_yield_lag2,0.009207789015140177
+Guinea,rice_volatility_lag2,0.0017922229978503987
+Guinea,sorghum_production_lag2,0.0011204237863244532
+Guinea,sorghum_area_lag2,0.0006301384936382268
+Guinea,sorghum_yield_lag2,0.025997767117436826
+Guinea,sorghum_volatility_lag2,0.002222824068450784
+Guinea,wheat_production_lag2,0.0
+Guinea,wheat_area_lag2,0.0
+Guinea,wheat_yield_lag2,0.0
+Guinea,wheat_volatility_lag2,0.0
+Guinea,yams_production_lag2,0.011469483823635863
+Guinea,yams_area_lag2,0.009210664617937228
+Guinea,yams_yield_lag2,0.039485279288243684
+Guinea,yams_volatility_lag2,0.0025052721882906654
+Guinea-Bissau,temperature,0.0005322849467935076
+Guinea-Bissau,precipitation,0.001134105321091033
+Guinea-Bissau,gdp_per_capita,0.035246228937160944
+Guinea-Bissau,water_access,0.01515232422212193
+Guinea-Bissau,sanitation_access,0.08137828649932957
+Guinea-Bissau,political_stability,0.0011756778624456108
+Guinea-Bissau,ccri_score,0.0
+Guinea-Bissau,cassava_production,0.0027685022422466255
+Guinea-Bissau,cassava_area,0.011190423744173261
+Guinea-Bissau,cassava_yield,0.010997047390974258
+Guinea-Bissau,cassava_volatility,0.0022639034325263115
+Guinea-Bissau,maize_production,0.0010494317865835283
+Guinea-Bissau,maize_area,0.005484824356136577
+Guinea-Bissau,maize_yield,0.006873946225818881
+Guinea-Bissau,maize_volatility,0.026108550739434983
+Guinea-Bissau,rice_production,0.009702210731382664
+Guinea-Bissau,rice_area,0.030471444661560345
+Guinea-Bissau,rice_yield,0.008578004396069367
+Guinea-Bissau,rice_volatility,0.020815317052155963
+Guinea-Bissau,sorghum_production,0.0010801656477472594
+Guinea-Bissau,sorghum_area,0.001356752536876142
+Guinea-Bissau,sorghum_yield,0.0059188592750447
+Guinea-Bissau,sorghum_volatility,0.0017869928864401915
+Guinea-Bissau,wheat_production,0.0
+Guinea-Bissau,wheat_area,0.0
+Guinea-Bissau,wheat_yield,0.0
+Guinea-Bissau,wheat_volatility,0.0
+Guinea-Bissau,yams_production,0.0
+Guinea-Bissau,yams_area,0.0
+Guinea-Bissau,yams_yield,0.0
+Guinea-Bissau,yams_volatility,0.0
+Guinea-Bissau,gdp_per_capita_lag1,0.025469598201547376
+Guinea-Bissau,water_access_lag1,0.028219330172381697
+Guinea-Bissau,sanitation_access_lag1,0.062027373370539346
+Guinea-Bissau,political_stability_lag1,0.00018807579378208683
+Guinea-Bissau,temperature_lag1,0.0004444126277577129
+Guinea-Bissau,precipitation_lag1,0.0011455314977258026
+Guinea-Bissau,cassava_production_lag1,0.00037018452977619233
+Guinea-Bissau,cassava_area_lag1,0.006610009359102614
+Guinea-Bissau,cassava_yield_lag1,0.01742014325280386
+Guinea-Bissau,cassava_volatility_lag1,0.000719839146429206
+Guinea-Bissau,maize_production_lag1,0.04882375244463733
+Guinea-Bissau,maize_area_lag1,0.001175490591606021
+Guinea-Bissau,maize_yield_lag1,0.00709804006266999
+Guinea-Bissau,maize_volatility_lag1,0.014414618734628619
+Guinea-Bissau,rice_production_lag1,0.02884375610129397
+Guinea-Bissau,rice_area_lag1,0.04154368033526371
+Guinea-Bissau,rice_yield_lag1,0.009960847650554293
+Guinea-Bissau,rice_volatility_lag1,0.0028284921072597585
+Guinea-Bissau,sorghum_production_lag1,0.0016216280474667005
+Guinea-Bissau,sorghum_area_lag1,0.002001905447667141
+Guinea-Bissau,sorghum_yield_lag1,0.005279313293728138
+Guinea-Bissau,sorghum_volatility_lag1,0.0013144396401362907
+Guinea-Bissau,wheat_production_lag1,0.0
+Guinea-Bissau,wheat_area_lag1,0.0
+Guinea-Bissau,wheat_yield_lag1,0.0
+Guinea-Bissau,wheat_volatility_lag1,0.0
+Guinea-Bissau,yams_production_lag1,0.0
+Guinea-Bissau,yams_area_lag1,0.0
+Guinea-Bissau,yams_yield_lag1,0.0
+Guinea-Bissau,yams_volatility_lag1,0.0
+Guinea-Bissau,gdp_per_capita_lag2,0.05124175657904967
+Guinea-Bissau,water_access_lag2,0.033457006206590215
+Guinea-Bissau,sanitation_access_lag2,0.05973316654730506
+Guinea-Bissau,political_stability_lag2,0.0013957875067064245
+Guinea-Bissau,temperature_lag2,0.0014354004357770066
+Guinea-Bissau,precipitation_lag2,0.0011481748648514002
+Guinea-Bissau,cassava_production_lag2,0.0010870181194209472
+Guinea-Bissau,cassava_area_lag2,0.013974807903197585
+Guinea-Bissau,cassava_yield_lag2,0.0565264741395761
+Guinea-Bissau,cassava_volatility_lag2,0.008778016779493811
+Guinea-Bissau,maize_production_lag2,0.04355787578074769
+Guinea-Bissau,maize_area_lag2,0.013213920968197176
+Guinea-Bissau,maize_yield_lag2,0.0008943142416168048
+Guinea-Bissau,maize_volatility_lag2,0.016507321883223677
+Guinea-Bissau,rice_production_lag2,0.03993468049774421
+Guinea-Bissau,rice_area_lag2,0.047862933664841456
+Guinea-Bissau,rice_yield_lag2,0.007339631683614376
+Guinea-Bissau,rice_volatility_lag2,0.006034782421059355
+Guinea-Bissau,sorghum_production_lag2,0.001701018717295922
+Guinea-Bissau,sorghum_area_lag2,0.00153156799892781
+Guinea-Bissau,sorghum_yield_lag2,0.0028542420598256417
+Guinea-Bissau,sorghum_volatility_lag2,0.0012043536980662429
+Guinea-Bissau,wheat_production_lag2,0.0
+Guinea-Bissau,wheat_area_lag2,0.0
+Guinea-Bissau,wheat_yield_lag2,0.0
+Guinea-Bissau,wheat_volatility_lag2,0.0
+Guinea-Bissau,yams_production_lag2,0.0
+Guinea-Bissau,yams_area_lag2,0.0
+Guinea-Bissau,yams_yield_lag2,0.0
+Guinea-Bissau,yams_volatility_lag2,0.0
+Kenya,temperature,0.0014410272029155497
+Kenya,precipitation,0.00439128428412092
+Kenya,gdp_per_capita,0.05175227009437069
+Kenya,water_access,0.07415071896077174
+Kenya,sanitation_access,0.01750517372900928
+Kenya,political_stability,0.002299581669732866
+Kenya,ccri_score,0.0
+Kenya,cassava_production,0.0005228945492671246
+Kenya,cassava_area,0.000107503061461839
+Kenya,cassava_yield,0.005223091024360065
+Kenya,cassava_volatility,0.002011854648600781
+Kenya,maize_production,0.002159907517921031
+Kenya,maize_area,0.013743744181749196
+Kenya,maize_yield,0.0008966143672227375
+Kenya,maize_volatility,0.0010338421050123678
+Kenya,rice_production,0.009952823680531641
+Kenya,rice_area,0.010387193612937749
+Kenya,rice_yield,0.005473497641625868
+Kenya,rice_volatility,0.004974924656679926
+Kenya,sorghum_production,0.0015214163538207523
+Kenya,sorghum_area,0.010070231395660633
+Kenya,sorghum_yield,0.0006560757006739498
+Kenya,sorghum_volatility,0.002324728788456866
+Kenya,wheat_production,0.0021646258081174886
+Kenya,wheat_area,0.0002517179212584557
+Kenya,wheat_yield,0.0021953806775793466
+Kenya,wheat_volatility,0.0026331352083850466
+Kenya,yams_production,0.006621630363519616
+Kenya,yams_area,0.0013671355501849137
+Kenya,yams_yield,0.004015262315609398
+Kenya,yams_volatility,0.004968127422477619
+Kenya,gdp_per_capita_lag1,0.03634479479712206
+Kenya,water_access_lag1,0.08278140376848736
+Kenya,sanitation_access_lag1,0.038580206522725674
+Kenya,political_stability_lag1,0.0023819377827942302
+Kenya,temperature_lag1,0.0014690690721428936
+Kenya,precipitation_lag1,0.0023182766704195916
+Kenya,cassava_production_lag1,0.00534554299085026
+Kenya,cassava_area_lag1,0.0005386807407458373
+Kenya,cassava_yield_lag1,0.0045936001895285775
+Kenya,cassava_volatility_lag1,0.00373849678697643
+Kenya,maize_production_lag1,0.0012300170845486028
+Kenya,maize_area_lag1,0.0244729696630109
+Kenya,maize_yield_lag1,0.0013776341715128738
+Kenya,maize_volatility_lag1,0.0003171411472539079
+Kenya,rice_production_lag1,0.010971339158555462
+Kenya,rice_area_lag1,0.04590541665802446
+Kenya,rice_yield_lag1,0.005543484884875504
+Kenya,rice_volatility_lag1,0.0019789057707751685
+Kenya,sorghum_production_lag1,0.00876804657452537
+Kenya,sorghum_area_lag1,0.0093951180791576
+Kenya,sorghum_yield_lag1,0.0005611839043761174
+Kenya,sorghum_volatility_lag1,0.002422282315014254
+Kenya,wheat_production_lag1,0.001079290352162963
+Kenya,wheat_area_lag1,0.0012711757767148208
+Kenya,wheat_yield_lag1,0.0004447528376015312
+Kenya,wheat_volatility_lag1,0.004447591756682408
+Kenya,yams_production_lag1,0.007020788738557068
+Kenya,yams_area_lag1,0.0014158607692471578
+Kenya,yams_yield_lag1,0.0032088170877669487
+Kenya,yams_volatility_lag1,0.0016278799371546417
+Kenya,gdp_per_capita_lag2,0.07027544417032798
+Kenya,water_access_lag2,0.06626697802182281
+Kenya,sanitation_access_lag2,0.0370974774421326
+Kenya,political_stability_lag2,0.0015040497429753314
+Kenya,temperature_lag2,0.002628096672884386
+Kenya,precipitation_lag2,0.0016018137380957745
+Kenya,cassava_production_lag2,0.00020198582420574975
+Kenya,cassava_area_lag2,0.0004308346170874159
+Kenya,cassava_yield_lag2,0.008762107560863304
+Kenya,cassava_volatility_lag2,0.005131603343549946
+Kenya,maize_production_lag2,0.021625079936355655
+Kenya,maize_area_lag2,0.04947373696793014
+Kenya,maize_yield_lag2,0.0003942502253321178
+Kenya,maize_volatility_lag2,0.0005962349238779436
+Kenya,rice_production_lag2,0.06849684810791161
+Kenya,rice_area_lag2,0.030416281332607688
+Kenya,rice_yield_lag2,0.009749675111971555
+Kenya,rice_volatility_lag2,0.0025839369691841568
+Kenya,sorghum_production_lag2,0.0009875057297718478
+Kenya,sorghum_area_lag2,0.029663205485916496
+Kenya,sorghum_yield_lag2,0.0015091041323968537
+Kenya,sorghum_volatility_lag2,0.0013953535907142956
+Kenya,wheat_production_lag2,0.0009675474377142516
+Kenya,wheat_area_lag2,0.0006116587082915128
+Kenya,wheat_yield_lag2,0.0006155106702711566
+Kenya,wheat_volatility_lag2,0.005869489083619688
+Kenya,yams_production_lag2,0.018370381572460757
+Kenya,yams_area_lag2,0.0007605550226677537
+Kenya,yams_yield_lag2,0.0022985888094718848
+Kenya,yams_volatility_lag2,0.0013455445642412602
+Madagascar,temperature,0.0020309014323754955
+Madagascar,precipitation,0.0004907004794851843
+Madagascar,gdp_per_capita,0.00037965076788935923
+Madagascar,water_access,0.05532205619136044
+Madagascar,sanitation_access,0.052662239250756804
+Madagascar,political_stability,0.0040981762092744374
+Madagascar,ccri_score,0.0
+Madagascar,cassava_production,0.006187908143221035
+Madagascar,cassava_area,0.010195551700257037
+Madagascar,cassava_yield,0.012760462535221307
+Madagascar,cassava_volatility,0.0005227644818628515
+Madagascar,maize_production,0.025970187101720558
+Madagascar,maize_area,0.021501082693897878
+Madagascar,maize_yield,0.014361640855463306
+Madagascar,maize_volatility,0.0030048779860425198
+Madagascar,rice_production,0.003964403019354831
+Madagascar,rice_area,0.005128655095444817
+Madagascar,rice_yield,0.002705628779442083
+Madagascar,rice_volatility,0.0017958247923180017
+Madagascar,sorghum_production,0.011912751553154376
+Madagascar,sorghum_area,0.019737420767265028
+Madagascar,sorghum_yield,0.002393843076804084
+Madagascar,sorghum_volatility,0.0005703823576442772
+Madagascar,wheat_production,0.028415876321891333
+Madagascar,wheat_area,0.02732156225308412
+Madagascar,wheat_yield,0.0036509199283355264
+Madagascar,wheat_volatility,0.002859199331757997
+Madagascar,yams_production,0.0
+Madagascar,yams_area,0.0
+Madagascar,yams_yield,0.0
+Madagascar,yams_volatility,0.0
+Madagascar,gdp_per_capita_lag1,0.0009860540405593322
+Madagascar,water_access_lag1,0.047910307401116924
+Madagascar,sanitation_access_lag1,0.056459236472792836
+Madagascar,political_stability_lag1,0.01117349203525892
+Madagascar,temperature_lag1,0.01390813730293948
+Madagascar,precipitation_lag1,0.001039806101752763
+Madagascar,cassava_production_lag1,0.004792575866629377
+Madagascar,cassava_area_lag1,0.0066416207098717915
+Madagascar,cassava_yield_lag1,0.01209581318382928
+Madagascar,cassava_volatility_lag1,0.0021538558440755864
+Madagascar,maize_production_lag1,0.00841833103975959
+Madagascar,maize_area_lag1,0.01912129705305951
+Madagascar,maize_yield_lag1,0.009718955372461284
+Madagascar,maize_volatility_lag1,0.0013582374947641407
+Madagascar,rice_production_lag1,0.0019203228942198006
+Madagascar,rice_area_lag1,0.007699365642318557
+Madagascar,rice_yield_lag1,0.0029194179706855537
+Madagascar,rice_volatility_lag1,0.0012856154084797317
+Madagascar,sorghum_production_lag1,0.017066213782843048
+Madagascar,sorghum_area_lag1,0.04181256416052188
+Madagascar,sorghum_yield_lag1,0.006874480085811818
+Madagascar,sorghum_volatility_lag1,0.007345015815257536
+Madagascar,wheat_production_lag1,0.035460092047811816
+Madagascar,wheat_area_lag1,0.029879579461151603
+Madagascar,wheat_yield_lag1,0.01585543863369082
+Madagascar,wheat_volatility_lag1,0.0036955044860427673
+Madagascar,yams_production_lag1,0.0
+Madagascar,yams_area_lag1,0.0
+Madagascar,yams_yield_lag1,0.0
+Madagascar,yams_volatility_lag1,0.0
+Madagascar,gdp_per_capita_lag2,0.0012702815223649263
+Madagascar,water_access_lag2,0.0761234783791078
+Madagascar,sanitation_access_lag2,0.03132856812961954
+Madagascar,political_stability_lag2,0.0026695728054282105
+Madagascar,temperature_lag2,0.001008672518294534
+Madagascar,precipitation_lag2,0.0016112668072209664
+Madagascar,cassava_production_lag2,0.0068626878007326106
+Madagascar,cassava_area_lag2,0.003962586982809599
+Madagascar,cassava_yield_lag2,0.020997728468304847
+Madagascar,cassava_volatility_lag2,0.0019969353422197313
+Madagascar,maize_production_lag2,0.004903904896341899
+Madagascar,maize_area_lag2,0.010707362264606885
+Madagascar,maize_yield_lag2,0.020730235772168946
+Madagascar,maize_volatility_lag2,0.0015771027153864295
+Madagascar,rice_production_lag2,0.004500955420343284
+Madagascar,rice_area_lag2,0.0024464372651550794
+Madagascar,rice_yield_lag2,0.006834086152081316
+Madagascar,rice_volatility_lag2,0.0009851678119155998
+Madagascar,sorghum_production_lag2,0.015118105448647166
+Madagascar,sorghum_area_lag2,0.02192865689713232
+Madagascar,sorghum_yield_lag2,0.0035595989224758225
+Madagascar,sorghum_volatility_lag2,0.0034366813190260053
+Madagascar,wheat_production_lag2,0.02276309847072097
+Madagascar,wheat_area_lag2,0.03054968417836913
+Madagascar,wheat_yield_lag2,0.010057941042024354
+Madagascar,wheat_volatility_lag2,0.00453320525447158
+Madagascar,yams_production_lag2,0.0
+Madagascar,yams_area_lag2,0.0
+Madagascar,yams_yield_lag2,0.0
+Madagascar,yams_volatility_lag2,0.0
+Malawi,temperature,0.0018598039809328841
+Malawi,precipitation,0.0007814402096770691
+Malawi,gdp_per_capita,0.01047055248546486
+Malawi,water_access,0.014884991436539196
+Malawi,sanitation_access,0.006522591161190695
+Malawi,political_stability,0.0056039495753349156
+Malawi,ccri_score,0.0
+Malawi,cassava_production,0.03455053181187966
+Malawi,cassava_area,0.03163144776365172
+Malawi,cassava_yield,0.021017246679139005
+Malawi,cassava_volatility,0.0026717170014199485
+Malawi,maize_production,0.005284663758837448
+Malawi,maize_area,0.0034454876662411444
+Malawi,maize_yield,0.00240547477249819
+Malawi,maize_volatility,0.00026970599318405943
+Malawi,rice_production,0.0015493894503210088
+Malawi,rice_area,0.0056219970166869766
+Malawi,rice_yield,0.0005319956014104629
+Malawi,rice_volatility,0.0014180542152667736
+Malawi,sorghum_production,0.010344516167080427
+Malawi,sorghum_area,0.019768390516453026
+Malawi,sorghum_yield,0.00048461707849309414
+Malawi,sorghum_volatility,0.001048725149501861
+Malawi,wheat_production,0.030279848300781297
+Malawi,wheat_area,0.0292425564412517
+Malawi,wheat_yield,0.0010324335831489106
+Malawi,wheat_volatility,0.0015340308222209361
+Malawi,yams_production,0.0
+Malawi,yams_area,0.0
+Malawi,yams_yield,0.0
+Malawi,yams_volatility,0.0
+Malawi,gdp_per_capita_lag1,0.006235888747732755
+Malawi,water_access_lag1,0.03821647871499141
+Malawi,sanitation_access_lag1,0.05286078310054363
+Malawi,political_stability_lag1,0.0012829904176886156
+Malawi,temperature_lag1,0.0015173394719614273
+Malawi,precipitation_lag1,0.001098189086751909
+Malawi,cassava_production_lag1,0.06797611972224682
+Malawi,cassava_area_lag1,0.052180438794652985
+Malawi,cassava_yield_lag1,0.03330841725372339
+Malawi,cassava_volatility_lag1,0.0070214071124926145
+Malawi,maize_production_lag1,0.0021328987179425065
+Malawi,maize_area_lag1,0.0004319565108758466
+Malawi,maize_yield_lag1,0.00125935428821929
+Malawi,maize_volatility_lag1,0.0016008985930434998
+Malawi,rice_production_lag1,0.00253323346897955
+Malawi,rice_area_lag1,0.0025540570999037374
+Malawi,rice_yield_lag1,0.0012456588453131688
+Malawi,rice_volatility_lag1,0.0009908009251713243
+Malawi,sorghum_production_lag1,0.013498593347263192
+Malawi,sorghum_area_lag1,0.03231919727410877
+Malawi,sorghum_yield_lag1,0.0009755164356360436
+Malawi,sorghum_volatility_lag1,0.000883395341107504
+Malawi,wheat_production_lag1,0.010905718074120975
+Malawi,wheat_area_lag1,0.055784230693367666
+Malawi,wheat_yield_lag1,0.001062507924649573
+Malawi,wheat_volatility_lag1,0.0013907478615524725
+Malawi,yams_production_lag1,0.0
+Malawi,yams_area_lag1,0.0
+Malawi,yams_yield_lag1,0.0
+Malawi,yams_volatility_lag1,0.0
+Malawi,gdp_per_capita_lag2,0.020529396813490038
+Malawi,water_access_lag2,0.03338735850521281
+Malawi,sanitation_access_lag2,0.031720076438758446
+Malawi,political_stability_lag2,0.0018249100029593156
+Malawi,temperature_lag2,0.0009882630514104153
+Malawi,precipitation_lag2,0.0004544412199945244
+Malawi,cassava_production_lag2,0.03734423085747199
+Malawi,cassava_area_lag2,0.01985111811147409
+Malawi,cassava_yield_lag2,0.023000419853883212
+Malawi,cassava_volatility_lag2,0.009792849894131823
+Malawi,maize_production_lag2,0.011465990039933005
+Malawi,maize_area_lag2,0.005693312866989754
+Malawi,maize_yield_lag2,0.007687056238736727
+Malawi,maize_volatility_lag2,0.0022825131236113303
+Malawi,rice_production_lag2,0.002634213492625566
+Malawi,rice_area_lag2,0.009911913938885028
+Malawi,rice_yield_lag2,0.00036358354939459574
+Malawi,rice_volatility_lag2,0.0007707795032130391
+Malawi,sorghum_production_lag2,0.008204148833309359
+Malawi,sorghum_area_lag2,0.03335860923963799
+Malawi,sorghum_yield_lag2,0.0013333383979698583
+Malawi,sorghum_volatility_lag2,0.0010113173171296026
+Malawi,wheat_production_lag2,0.021092448536533415
+Malawi,wheat_area_lag2,0.07393023278943914
+Malawi,wheat_yield_lag2,0.003125809920204141
+Malawi,wheat_volatility_lag2,0.0027186910009530264
+Malawi,yams_production_lag2,0.0
+Malawi,yams_area_lag2,0.0
+Malawi,yams_yield_lag2,0.0
+Malawi,yams_volatility_lag2,0.0
+Mali,temperature,0.0004592851956014597
+Mali,precipitation,0.0007366275338998788
+Mali,gdp_per_capita,0.011836790462592338
+Mali,water_access,0.00585759396594431
+Mali,sanitation_access,0.01688499606385214
+Mali,political_stability,0.061075581449082296
+Mali,ccri_score,0.0
+Mali,cassava_production,0.0029905122940540223
+Mali,cassava_area,0.002744554331153347
+Mali,cassava_yield,0.00028790429909148407
+Mali,cassava_volatility,0.0006792603094470873
+Mali,maize_production,0.021349188142406942
+Mali,maize_area,0.024282389995518825
+Mali,maize_yield,0.0023094396522315174
+Mali,maize_volatility,0.0011783114221217063
+Mali,rice_production,0.02346811718895236
+Mali,rice_area,0.024119299462928935
+Mali,rice_yield,0.0008158211407162424
+Mali,rice_volatility,0.0012874690494356312
+Mali,sorghum_production,0.0068354058130155795
+Mali,sorghum_area,0.021334020429073314
+Mali,sorghum_yield,0.00091995528480814
+Mali,sorghum_volatility,0.0011056474268121472
+Mali,wheat_production,0.0018659890023537864
+Mali,wheat_area,0.001927364009418036
+Mali,wheat_yield,0.016365335827446145
+Mali,wheat_volatility,0.014347422998228774
+Mali,yams_production,0.00033979606388640567
+Mali,yams_area,0.015469344405948928
+Mali,yams_yield,0.0003659500638408018
+Mali,yams_volatility,0.002756679358480483
+Mali,gdp_per_capita_lag1,0.018614279015247762
+Mali,water_access_lag1,0.027201486951652153
+Mali,sanitation_access_lag1,0.022409646637792255
+Mali,political_stability_lag1,0.11049623121544476
+Mali,temperature_lag1,0.0015145672130606417
+Mali,precipitation_lag1,0.0009148351560740799
+Mali,cassava_production_lag1,0.003825391042832523
+Mali,cassava_area_lag1,0.0014408546229131706
+Mali,cassava_yield_lag1,0.008248846661745041
+Mali,cassava_volatility_lag1,0.0034452204052283436
+Mali,maize_production_lag1,0.02046063077145765
+Mali,maize_area_lag1,0.02085127473379502
+Mali,maize_yield_lag1,0.000414654615736015
+Mali,maize_volatility_lag1,0.0003360787640532743
+Mali,rice_production_lag1,0.03152566242222728
+Mali,rice_area_lag1,0.03038750698761386
+Mali,rice_yield_lag1,0.001097670563791071
+Mali,rice_volatility_lag1,0.0004812451184104066
+Mali,sorghum_production_lag1,0.017464560502198582
+Mali,sorghum_area_lag1,0.014014741928285189
+Mali,sorghum_yield_lag1,0.000907299623428856
+Mali,sorghum_volatility_lag1,0.001004233695387296
+Mali,wheat_production_lag1,0.004227618928274806
+Mali,wheat_area_lag1,0.0009609216394203723
+Mali,wheat_yield_lag1,0.0046430831611097585
+Mali,wheat_volatility_lag1,0.022912747576387272
+Mali,yams_production_lag1,0.001932052336229753
+Mali,yams_area_lag1,0.020259573562032722
+Mali,yams_yield_lag1,0.0016654570600207743
+Mali,yams_volatility_lag1,0.0013813219249566172
+Mali,gdp_per_capita_lag2,0.02688494554419484
+Mali,water_access_lag2,0.02273988185376157
+Mali,sanitation_access_lag2,0.036919420866076164
+Mali,political_stability_lag2,0.08185027148166527
+Mali,temperature_lag2,0.002160799385556047
+Mali,precipitation_lag2,0.000482648971895196
+Mali,cassava_production_lag2,0.002085939236964667
+Mali,cassava_area_lag2,0.0031874327947379005
+Mali,cassava_yield_lag2,0.003794755383349738
+Mali,cassava_volatility_lag2,0.001574532885347644
+Mali,maize_production_lag2,0.014261693749738808
+Mali,maize_area_lag2,0.029344092615375312
+Mali,maize_yield_lag2,0.0006248193813732807
+Mali,maize_volatility_lag2,0.00017884858707394372
+Mali,rice_production_lag2,0.014757413556913854
+Mali,rice_area_lag2,0.015788255731952017
+Mali,rice_yield_lag2,0.001569735692575045
+Mali,rice_volatility_lag2,0.0007675869664544084
+Mali,sorghum_production_lag2,0.012583300234875996
+Mali,sorghum_area_lag2,0.012911516597908986
+Mali,sorghum_yield_lag2,0.0015088732553997558
+Mali,sorghum_volatility_lag2,0.0005074732516153059
+Mali,wheat_production_lag2,0.005106474565317815
+Mali,wheat_area_lag2,0.004800783930559851
+Mali,wheat_yield_lag2,0.0015202368228994015
+Mali,wheat_volatility_lag2,0.004306726430801009
+Mali,yams_production_lag2,0.006370918475013711
+Mali,yams_area_lag2,0.0058788394281286405
+Mali,yams_yield_lag2,0.0030578777581111226
+Mali,yams_volatility_lag2,0.0014381570852122626
+Mauritania,temperature,0.0011441834007220068
+Mauritania,precipitation,0.0003972004730111552
+Mauritania,gdp_per_capita,0.0042512439292834645
+Mauritania,water_access,0.05264993384443838
+Mauritania,sanitation_access,0.021065067187048703
+Mauritania,political_stability,0.028131424480761086
+Mauritania,ccri_score,0.0
+Mauritania,cassava_production,0.0
+Mauritania,cassava_area,0.0
+Mauritania,cassava_yield,0.0
+Mauritania,cassava_volatility,0.0
+Mauritania,maize_production,0.0005775369032516421
+Mauritania,maize_area,0.001977666692488192
+Mauritania,maize_yield,0.0012103622142852024
+Mauritania,maize_volatility,0.008483284163465447
+Mauritania,rice_production,0.028140782692466604
+Mauritania,rice_area,0.04094156990325195
+Mauritania,rice_yield,0.0062339042445855005
+Mauritania,rice_volatility,0.016331606614356377
+Mauritania,sorghum_production,0.0018637010152533031
+Mauritania,sorghum_area,0.0009258886679231793
+Mauritania,sorghum_yield,0.0007030500508036447
+Mauritania,sorghum_volatility,0.0035128258266084933
+Mauritania,wheat_production,0.009851521327398395
+Mauritania,wheat_area,0.009549521735921584
+Mauritania,wheat_yield,0.0042297754983621205
+Mauritania,wheat_volatility,0.0023244815337848264
+Mauritania,yams_production,0.026186327653148808
+Mauritania,yams_area,0.01985535706069516
+Mauritania,yams_yield,0.000431350162974853
+Mauritania,yams_volatility,0.004192204840662965
+Mauritania,gdp_per_capita_lag1,0.007661967171410617
+Mauritania,water_access_lag1,0.039067208588399266
+Mauritania,sanitation_access_lag1,0.04084218284818817
+Mauritania,political_stability_lag1,0.053087315693888984
+Mauritania,temperature_lag1,0.00038291187830759565
+Mauritania,precipitation_lag1,0.0004960132935836332
+Mauritania,cassava_production_lag1,0.0
+Mauritania,cassava_area_lag1,0.0
+Mauritania,cassava_yield_lag1,0.0
+Mauritania,cassava_volatility_lag1,0.0
+Mauritania,maize_production_lag1,0.001512411207722487
+Mauritania,maize_area_lag1,0.0022897315657289643
+Mauritania,maize_yield_lag1,0.00037663240179457673
+Mauritania,maize_volatility_lag1,0.001958219299422315
+Mauritania,rice_production_lag1,0.021304240380588913
+Mauritania,rice_area_lag1,0.009399124638525021
+Mauritania,rice_yield_lag1,0.0008402555192963346
+Mauritania,rice_volatility_lag1,0.03350939678566178
+Mauritania,sorghum_production_lag1,0.0017086833573432495
+Mauritania,sorghum_area_lag1,0.0021038436788193226
+Mauritania,sorghum_yield_lag1,0.0018073927004842501
+Mauritania,sorghum_volatility_lag1,0.002627426222079379
+Mauritania,wheat_production_lag1,0.017426737793503247
+Mauritania,wheat_area_lag1,0.01448690422367992
+Mauritania,wheat_yield_lag1,0.00810035523881513
+Mauritania,wheat_volatility_lag1,0.001531618272005412
+Mauritania,yams_production_lag1,0.027847974954248254
+Mauritania,yams_area_lag1,0.005260437135231278
+Mauritania,yams_yield_lag1,0.0017309480753824622
+Mauritania,yams_volatility_lag1,0.0025996708930710586
+Mauritania,gdp_per_capita_lag2,0.02734277245416951
+Mauritania,water_access_lag2,0.02785115191956666
+Mauritania,sanitation_access_lag2,0.04340641097706879
+Mauritania,political_stability_lag2,0.04166096385084742
+Mauritania,temperature_lag2,0.0010829549241996661
+Mauritania,precipitation_lag2,0.000631045859360179
+Mauritania,cassava_production_lag2,0.0
+Mauritania,cassava_area_lag2,0.0
+Mauritania,cassava_yield_lag2,0.0
+Mauritania,cassava_volatility_lag2,0.0
+Mauritania,maize_production_lag2,0.0018674760242138556
+Mauritania,maize_area_lag2,0.006022357483406996
+Mauritania,maize_yield_lag2,0.009301735823437851
+Mauritania,maize_volatility_lag2,0.0009692922214009605
+Mauritania,rice_production_lag2,0.01189405935233094
+Mauritania,rice_area_lag2,0.006148450159843053
+Mauritania,rice_yield_lag2,0.004573389481291949
+Mauritania,rice_volatility_lag2,0.02145186179534907
+Mauritania,sorghum_production_lag2,0.0007829228911380076
+Mauritania,sorghum_area_lag2,0.0020969783297198606
+Mauritania,sorghum_yield_lag2,0.0007080719263950059
+Mauritania,sorghum_volatility_lag2,0.010843015769414844
+Mauritania,wheat_production_lag2,0.06342467771941315
+Mauritania,wheat_area_lag2,0.039350149248930474
+Mauritania,wheat_yield_lag2,0.004561990297539566
+Mauritania,wheat_volatility_lag2,0.01638419013963199
+Mauritania,yams_production_lag2,0.033861962109251936
+Mauritania,yams_area_lag2,0.02240757752286934
+Mauritania,yams_yield_lag2,0.004864649140221516
+Mauritania,yams_volatility_lag2,0.001388516644852655
+Mozambique,temperature,0.000945994694510487
+Mozambique,precipitation,0.001330748771572141
+Mozambique,gdp_per_capita,0.03768204458914454
+Mozambique,water_access,0.09814793169354369
+Mozambique,sanitation_access,0.0568793209526655
+Mozambique,political_stability,0.03213034376401667
+Mozambique,ccri_score,0.0
+Mozambique,cassava_production,0.003325121037579942
+Mozambique,cassava_area,0.015440114102616006
+Mozambique,cassava_yield,0.01492100426481529
+Mozambique,cassava_volatility,0.0008697148587325015
+Mozambique,maize_production,0.004303925042559792
+Mozambique,maize_area,0.0006207669306270077
+Mozambique,maize_yield,0.00036218668826164735
+Mozambique,maize_volatility,0.002039451887568506
+Mozambique,rice_production,0.00033229946583574756
+Mozambique,rice_area,0.0014066094218683684
+Mozambique,rice_yield,0.0015643253238724379
+Mozambique,rice_volatility,0.0023612458132901753
+Mozambique,sorghum_production,0.0018977477704108145
+Mozambique,sorghum_area,0.01719081775004573
+Mozambique,sorghum_yield,0.003352679886869153
+Mozambique,sorghum_volatility,0.004977887058338392
+Mozambique,wheat_production,0.010512345161832626
+Mozambique,wheat_area,0.009321975425784676
+Mozambique,wheat_yield,0.001523734821598118
+Mozambique,wheat_volatility,0.0009427330397878831
+Mozambique,yams_production,0.0
+Mozambique,yams_area,0.0
+Mozambique,yams_yield,0.0
+Mozambique,yams_volatility,0.0
+Mozambique,gdp_per_capita_lag1,0.042559110514368434
+Mozambique,water_access_lag1,0.07615659047555674
+Mozambique,sanitation_access_lag1,0.09633431619391356
+Mozambique,political_stability_lag1,0.04100184534454145
+Mozambique,temperature_lag1,0.0012542758201290172
+Mozambique,precipitation_lag1,0.002104021944335432
+Mozambique,cassava_production_lag1,0.0019059771627152574
+Mozambique,cassava_area_lag1,0.003930531961671807
+Mozambique,cassava_yield_lag1,0.009015619905477334
+Mozambique,cassava_volatility_lag1,0.001289148131524668
+Mozambique,maize_production_lag1,0.0013290264302458468
+Mozambique,maize_area_lag1,0.001317958437298976
+Mozambique,maize_yield_lag1,0.001842315944314423
+Mozambique,maize_volatility_lag1,0.0030023404472881406
+Mozambique,rice_production_lag1,0.0005724633384949421
+Mozambique,rice_area_lag1,0.0003487495900245653
+Mozambique,rice_yield_lag1,0.0038764332054074062
+Mozambique,rice_volatility_lag1,0.001465103567270039
+Mozambique,sorghum_production_lag1,0.0016322739309380576
+Mozambique,sorghum_area_lag1,0.024500196096078956
+Mozambique,sorghum_yield_lag1,0.0016995465957956365
+Mozambique,sorghum_volatility_lag1,0.006306162841510392
+Mozambique,wheat_production_lag1,0.011903355042750656
+Mozambique,wheat_area_lag1,0.024003568650941963
+Mozambique,wheat_yield_lag1,0.0006382687610243826
+Mozambique,wheat_volatility_lag1,0.0015341677684100753
+Mozambique,yams_production_lag1,0.0
+Mozambique,yams_area_lag1,0.0
+Mozambique,yams_yield_lag1,0.0
+Mozambique,yams_volatility_lag1,0.0
+Mozambique,gdp_per_capita_lag2,0.03887611333535866
+Mozambique,water_access_lag2,0.08142348474070717
+Mozambique,sanitation_access_lag2,0.07229198878058767
+Mozambique,political_stability_lag2,0.02332341549660008
+Mozambique,temperature_lag2,0.0008091404543193976
+Mozambique,precipitation_lag2,0.000706395937158215
+Mozambique,cassava_production_lag2,0.0010698665912560045
+Mozambique,cassava_area_lag2,0.0008904878383516766
+Mozambique,cassava_yield_lag2,0.002133378468916227
+Mozambique,cassava_volatility_lag2,0.0014186358741483255
+Mozambique,maize_production_lag2,0.003521880416317128
+Mozambique,maize_area_lag2,0.0009940631697943115
+Mozambique,maize_yield_lag2,0.00051602088224455
+Mozambique,maize_volatility_lag2,0.00443648459520888
+Mozambique,rice_production_lag2,0.0009116465793223868
+Mozambique,rice_area_lag2,0.0005095019609298795
+Mozambique,rice_yield_lag2,0.0017211009526799125
+Mozambique,rice_volatility_lag2,0.0026480322385334237
+Mozambique,sorghum_production_lag2,0.0007896580056605546
+Mozambique,sorghum_area_lag2,0.014225882804927816
+Mozambique,sorghum_yield_lag2,0.0009802686758294504
+Mozambique,sorghum_volatility_lag2,0.0012211484461884556
+Mozambique,wheat_production_lag2,0.015795568496574344
+Mozambique,wheat_area_lag2,0.03288902224142171
+Mozambique,wheat_yield_lag2,0.002988382259716175
+Mozambique,wheat_volatility_lag2,0.007001992437471678
+Mozambique,yams_production_lag2,0.0
+Mozambique,yams_area_lag2,0.0
+Mozambique,yams_yield_lag2,0.0
+Mozambique,yams_volatility_lag2,0.0
+Niger,temperature,0.006755428851671474
+Niger,precipitation,0.0009735439761868826
+Niger,gdp_per_capita,0.018658398360125495
+Niger,water_access,0.029109308858231375
+Niger,sanitation_access,0.02253746929515201
+Niger,political_stability,0.36165216290014257
+Niger,ccri_score,0.0
+Niger,cassava_production,0.0006386298736326857
+Niger,cassava_area,0.0022752185089503383
+Niger,cassava_yield,0.0010244636612289002
+Niger,cassava_volatility,0.0005109786806729097
+Niger,maize_production,0.008782222679738036
+Niger,maize_area,0.0015139266501706774
+Niger,maize_yield,0.009825524110525688
+Niger,maize_volatility,0.001593820357862449
+Niger,rice_production,0.009303313876123815
+Niger,rice_area,0.0020582839218168257
+Niger,rice_yield,0.001099197259346377
+Niger,rice_volatility,0.004282358022545578
+Niger,sorghum_production,0.002139091522299422
+Niger,sorghum_area,0.009683559696587636
+Niger,sorghum_yield,0.0011457268470980405
+Niger,sorghum_volatility,0.0005460478968016206
+Niger,wheat_production,0.0017349525143674396
+Niger,wheat_area,0.007407938190129158
+Niger,wheat_yield,0.015801073257086344
+Niger,wheat_volatility,0.003955041308897927
+Niger,yams_production,0.0
+Niger,yams_area,0.0
+Niger,yams_yield,0.0
+Niger,yams_volatility,0.0
+Niger,gdp_per_capita_lag1,0.007622478969325615
+Niger,water_access_lag1,0.014287880680736987
+Niger,sanitation_access_lag1,0.038855564707364405
+Niger,political_stability_lag1,0.05966155852671208
+Niger,temperature_lag1,0.0034352053501674473
+Niger,precipitation_lag1,0.00077908697002432
+Niger,cassava_production_lag1,0.0019225695413169945
+Niger,cassava_area_lag1,0.0069103601737588085
+Niger,cassava_yield_lag1,0.0005305279930386508
+Niger,cassava_volatility_lag1,0.0007140557205851396
+Niger,maize_production_lag1,0.025481744089492664
+Niger,maize_area_lag1,0.004869027407057442
+Niger,maize_yield_lag1,0.002698836930615286
+Niger,maize_volatility_lag1,0.027213894554643497
+Niger,rice_production_lag1,0.004768678695580987
+Niger,rice_area_lag1,0.001605625379269291
+Niger,rice_yield_lag1,0.00033647596739799405
+Niger,rice_volatility_lag1,0.0016550139732500687
+Niger,sorghum_production_lag1,0.00956962953118007
+Niger,sorghum_area_lag1,0.01370847113665108
+Niger,sorghum_yield_lag1,0.005040773306387633
+Niger,sorghum_volatility_lag1,0.0004376939850852636
+Niger,wheat_production_lag1,0.001965418487051349
+Niger,wheat_area_lag1,0.0025754936488849496
+Niger,wheat_yield_lag1,0.004804916284150508
+Niger,wheat_volatility_lag1,0.015333106953583342
+Niger,yams_production_lag1,0.0
+Niger,yams_area_lag1,0.0
+Niger,yams_yield_lag1,0.0
+Niger,yams_volatility_lag1,0.0
+Niger,gdp_per_capita_lag2,0.009986483374564844
+Niger,water_access_lag2,0.013778675688226924
+Niger,sanitation_access_lag2,0.008579934367334181
+Niger,political_stability_lag2,0.014025193904350865
+Niger,temperature_lag2,0.0029004277556564095
+Niger,precipitation_lag2,0.0008205412602529963
+Niger,cassava_production_lag2,0.0021371298563805556
+Niger,cassava_area_lag2,0.008047966336729093
+Niger,cassava_yield_lag2,0.00028074261196511547
+Niger,cassava_volatility_lag2,0.00186077558850807
+Niger,maize_production_lag2,0.04523980564459652
+Niger,maize_area_lag2,0.0009039096277063253
+Niger,maize_yield_lag2,0.02399951769422337
+Niger,maize_volatility_lag2,0.01213883672945878
+Niger,rice_production_lag2,0.0021964134243010365
+Niger,rice_area_lag2,0.001485845040287395
+Niger,rice_yield_lag2,0.00542648100141439
+Niger,rice_volatility_lag2,0.0019491123579793645
+Niger,sorghum_production_lag2,0.01952512905411734
+Niger,sorghum_area_lag2,0.009264483205281922
+Niger,sorghum_yield_lag2,0.010186805288942362
+Niger,sorghum_volatility_lag2,0.003374588886306131
+Niger,wheat_production_lag2,0.0024938823670060816
+Niger,wheat_area_lag2,0.0013680003087362896
+Niger,wheat_yield_lag2,0.0006392017804431056
+Niger,wheat_volatility_lag2,0.015598346804526994
+Niger,yams_production_lag2,0.0
+Niger,yams_area_lag2,0.0
+Niger,yams_yield_lag2,0.0
+Niger,yams_volatility_lag2,0.0
+Nigeria,temperature,0.0005626218441434925
+Nigeria,precipitation,0.00033259538998045893
+Nigeria,gdp_per_capita,0.019845195337113018
+Nigeria,water_access,0.011902972192653113
+Nigeria,sanitation_access,0.02187928885296293
+Nigeria,political_stability,0.0014196143438366443
+Nigeria,ccri_score,0.0
+Nigeria,cassava_production,0.02813160866943258
+Nigeria,cassava_area,0.021139848351126606
+Nigeria,cassava_yield,0.03747924855487206
+Nigeria,cassava_volatility,0.0009419696838070875
+Nigeria,maize_production,0.01514589163872792
+Nigeria,maize_area,0.03136667774614
+Nigeria,maize_yield,0.0018353322225572455
+Nigeria,maize_volatility,0.0002789848458713788
+Nigeria,rice_production,0.03242774049567217
+Nigeria,rice_area,0.017316543744865173
+Nigeria,rice_yield,0.010717044436855753
+Nigeria,rice_volatility,0.006585190522619989
+Nigeria,sorghum_production,0.010698012717856873
+Nigeria,sorghum_area,0.009985517963483334
+Nigeria,sorghum_yield,0.0003228299154006501
+Nigeria,sorghum_volatility,0.00191352844255802
+Nigeria,wheat_production,0.003171811989627282
+Nigeria,wheat_area,0.003611801841442378
+Nigeria,wheat_yield,0.0010653968867285956
+Nigeria,wheat_volatility,0.0014923508867113267
+Nigeria,yams_production,0.010185627212613324
+Nigeria,yams_area,0.03731678880416113
+Nigeria,yams_yield,0.012973996829689707
+Nigeria,yams_volatility,0.001784450816668324
+Nigeria,gdp_per_capita_lag1,0.02249510939391851
+Nigeria,water_access_lag1,0.030986466684947967
+Nigeria,sanitation_access_lag1,0.035095292641204076
+Nigeria,political_stability_lag1,0.001358781644958219
+Nigeria,temperature_lag1,0.0006179301768233227
+Nigeria,precipitation_lag1,0.00047397529431947674
+Nigeria,cassava_production_lag1,0.024854002815139983
+Nigeria,cassava_area_lag1,0.019833974744884682
+Nigeria,cassava_yield_lag1,0.02915781794854893
+Nigeria,cassava_volatility_lag1,0.00038064988016574285
+Nigeria,maize_production_lag1,0.027859337844999894
+Nigeria,maize_area_lag1,0.023690508030296063
+Nigeria,maize_yield_lag1,0.000769192243190793
+Nigeria,maize_volatility_lag1,0.00041774989835512556
+Nigeria,rice_production_lag1,0.037908884558402384
+Nigeria,rice_area_lag1,0.017860098689131753
+Nigeria,rice_yield_lag1,0.006184341135861382
+Nigeria,rice_volatility_lag1,0.005894957146555568
+Nigeria,sorghum_production_lag1,0.002104380940429042
+Nigeria,sorghum_area_lag1,0.000843452134752619
+Nigeria,sorghum_yield_lag1,0.0010897607505156411
+Nigeria,sorghum_volatility_lag1,0.0033348649345590893
+Nigeria,wheat_production_lag1,0.0020938265980972185
+Nigeria,wheat_area_lag1,0.002055712826301409
+Nigeria,wheat_yield_lag1,0.003316213062797736
+Nigeria,wheat_volatility_lag1,0.0062165369693153415
+Nigeria,yams_production_lag1,0.01026879116943612
+Nigeria,yams_area_lag1,0.028679931882556676
+Nigeria,yams_yield_lag1,0.008663451003625179
+Nigeria,yams_volatility_lag1,0.0038659459011318874
+Nigeria,gdp_per_capita_lag2,0.018932101581116145
+Nigeria,water_access_lag2,0.028637907549007212
+Nigeria,sanitation_access_lag2,0.023105403380092114
+Nigeria,political_stability_lag2,0.006251029831241293
+Nigeria,temperature_lag2,0.0005420667968711046
+Nigeria,precipitation_lag2,0.0004691756224476998
+Nigeria,cassava_production_lag2,0.017680054788455933
+Nigeria,cassava_area_lag2,0.020700975759496296
+Nigeria,cassava_yield_lag2,0.01423829318130563
+Nigeria,cassava_volatility_lag2,0.001168305705216987
+Nigeria,maize_production_lag2,0.027241727575065152
+Nigeria,maize_area_lag2,0.01657287006417984
+Nigeria,maize_yield_lag2,0.002330364813541263
+Nigeria,maize_volatility_lag2,0.0014352936951723216
+Nigeria,rice_production_lag2,0.023526706546824715
+Nigeria,rice_area_lag2,0.006074179539556768
+Nigeria,rice_yield_lag2,0.01729134255462422
+Nigeria,rice_volatility_lag2,0.0018303685274088056
+Nigeria,sorghum_production_lag2,0.0010315007583516836
+Nigeria,sorghum_area_lag2,0.01741449545927538
+Nigeria,sorghum_yield_lag2,0.0001977789567547982
+Nigeria,sorghum_volatility_lag2,0.0009054336535708195
+Nigeria,wheat_production_lag2,0.0008911145735731156
+Nigeria,wheat_area_lag2,0.003207809742451332
+Nigeria,wheat_yield_lag2,0.0009344739148077053
+Nigeria,wheat_volatility_lag2,0.002845865469183368
+Nigeria,yams_production_lag2,0.005183458027727937
+Nigeria,yams_area_lag2,0.020832043999991782
+Nigeria,yams_yield_lag2,0.000235600149908037
+Nigeria,yams_volatility_lag2,0.006089835657380143
+Rwanda,temperature,0.0005771307029091587
+Rwanda,precipitation,0.000520969775969994
+Rwanda,gdp_per_capita,0.02729931449690088
+Rwanda,water_access,0.03446556906783701
+Rwanda,sanitation_access,0.021995441843133564
+Rwanda,political_stability,0.001585116143578006
+Rwanda,ccri_score,0.0
+Rwanda,cassava_production,0.005609234416559346
+Rwanda,cassava_area,0.0022296076780801543
+Rwanda,cassava_yield,0.001966991824516688
+Rwanda,cassava_volatility,0.0004088124578355859
+Rwanda,maize_production,0.0028373619791407676
+Rwanda,maize_area,0.018084679669962793
+Rwanda,maize_yield,0.0017225011408132694
+Rwanda,maize_volatility,0.0009201077155028344
+Rwanda,rice_production,0.023599529402381345
+Rwanda,rice_area,0.046494068342460615
+Rwanda,rice_yield,0.010544961363553495
+Rwanda,rice_volatility,0.0006248886183593136
+Rwanda,sorghum_production,0.0013233121637641612
+Rwanda,sorghum_area,0.0015316646126478902
+Rwanda,sorghum_yield,0.0008115887899051056
+Rwanda,sorghum_volatility,0.00031759486548371837
+Rwanda,wheat_production,0.0019348383069152939
+Rwanda,wheat_area,0.0033006079693343082
+Rwanda,wheat_yield,0.021829894852906956
+Rwanda,wheat_volatility,0.001909684863179788
+Rwanda,yams_production,0.0011312305338409192
+Rwanda,yams_area,0.03278078256532934
+Rwanda,yams_yield,0.026022259485896485
+Rwanda,yams_volatility,0.004727613419352347
+Rwanda,gdp_per_capita_lag1,0.022468378636212472
+Rwanda,water_access_lag1,0.04335029279323981
+Rwanda,sanitation_access_lag1,0.02652113729182834
+Rwanda,political_stability_lag1,0.012029059245264791
+Rwanda,temperature_lag1,0.0003911374468334504
+Rwanda,precipitation_lag1,0.0007416434912403648
+Rwanda,cassava_production_lag1,0.000505419599929769
+Rwanda,cassava_area_lag1,0.0018411636605410245
+Rwanda,cassava_yield_lag1,0.005653440506173114
+Rwanda,cassava_volatility_lag1,0.0014919605833345372
+Rwanda,maize_production_lag1,0.005784149763567728
+Rwanda,maize_area_lag1,0.013178641801824263
+Rwanda,maize_yield_lag1,0.0027332758416044457
+Rwanda,maize_volatility_lag1,0.0031318032832275255
+Rwanda,rice_production_lag1,0.016192376865520174
+Rwanda,rice_area_lag1,0.02701339259011309
+Rwanda,rice_yield_lag1,0.006352046601175316
+Rwanda,rice_volatility_lag1,0.0007315722229472055
+Rwanda,sorghum_production_lag1,0.0007172191653471005
+Rwanda,sorghum_area_lag1,0.003309293809018659
+Rwanda,sorghum_yield_lag1,0.0007540651741016922
+Rwanda,sorghum_volatility_lag1,0.00035078460475446534
+Rwanda,wheat_production_lag1,0.0014265210513070168
+Rwanda,wheat_area_lag1,0.003579306137236136
+Rwanda,wheat_yield_lag1,0.011260751470600744
+Rwanda,wheat_volatility_lag1,0.0033725187815903178
+Rwanda,yams_production_lag1,0.021944587589000208
+Rwanda,yams_area_lag1,0.041016656397817625
+Rwanda,yams_yield_lag1,0.03361818977099487
+Rwanda,yams_volatility_lag1,0.007726842148709609
+Rwanda,gdp_per_capita_lag2,0.02065515186056142
+Rwanda,water_access_lag2,0.031930977067302614
+Rwanda,sanitation_access_lag2,0.046865419445293995
+Rwanda,political_stability_lag2,0.01665895218600139
+Rwanda,temperature_lag2,0.0043674557995933136
+Rwanda,precipitation_lag2,0.0002626464990392811
+Rwanda,cassava_production_lag2,0.004862013999528515
+Rwanda,cassava_area_lag2,0.014870403675917982
+Rwanda,cassava_yield_lag2,0.026694566729986813
+Rwanda,cassava_volatility_lag2,0.0009969730851352296
+Rwanda,maize_production_lag2,0.021396646559361646
+Rwanda,maize_area_lag2,0.05431508063477417
+Rwanda,maize_yield_lag2,0.003764073362991149
+Rwanda,maize_volatility_lag2,0.004947826696738581
+Rwanda,rice_production_lag2,0.005789953097329729
+Rwanda,rice_area_lag2,0.00575662648486053
+Rwanda,rice_yield_lag2,0.0015638290467467134
+Rwanda,rice_volatility_lag2,0.0005180960724480325
+Rwanda,sorghum_production_lag2,0.0017270855630435874
+Rwanda,sorghum_area_lag2,0.004032127072512046
+Rwanda,sorghum_yield_lag2,0.0013514976916037757
+Rwanda,sorghum_volatility_lag2,0.00510219650308087
+Rwanda,wheat_production_lag2,0.0020060396792839687
+Rwanda,wheat_area_lag2,0.002369276091067549
+Rwanda,wheat_yield_lag2,0.01844462825737396
+Rwanda,wheat_volatility_lag2,0.0018536877692630677
+Rwanda,yams_production_lag2,0.022217776267730017
+Rwanda,yams_area_lag2,0.03580118811456376
+Rwanda,yams_yield_lag2,0.00922441233831537
+Rwanda,yams_volatility_lag2,0.011358404955443935
+Senegal,temperature,0.0003263784876168296
+Senegal,precipitation,0.001369686693477074
+Senegal,gdp_per_capita,0.05551176557953315
+Senegal,water_access,0.015700749315350274
+Senegal,sanitation_access,0.02880778135032779
+Senegal,political_stability,0.0007085003032502529
+Senegal,ccri_score,0.0
+Senegal,cassava_production,0.0022322807608397203
+Senegal,cassava_area,0.001857559453653825
+Senegal,cassava_yield,0.012276644670569978
+Senegal,cassava_volatility,0.004422440205793453
+Senegal,maize_production,0.006989035129324323
+Senegal,maize_area,0.0036352690874136943
+Senegal,maize_yield,0.003099221863581369
+Senegal,maize_volatility,0.008554747889377637
+Senegal,rice_production,0.06248780643989007
+Senegal,rice_area,0.05378760860780089
+Senegal,rice_yield,0.060332941957732
+Senegal,rice_volatility,0.006302216237372849
+Senegal,sorghum_production,0.004836582992763967
+Senegal,sorghum_area,0.004633065806041079
+Senegal,sorghum_yield,0.004340651253182271
+Senegal,sorghum_volatility,0.0023639419111861765
+Senegal,wheat_production,0.0
+Senegal,wheat_area,0.0
+Senegal,wheat_yield,0.0
+Senegal,wheat_volatility,0.0
+Senegal,yams_production,0.0005892573036859229
+Senegal,yams_area,0.0004971341411927693
+Senegal,yams_yield,0.00019896974831103595
+Senegal,yams_volatility,0.0007060606092198734
+Senegal,gdp_per_capita_lag1,0.030392022868500138
+Senegal,water_access_lag1,0.05047418120751359
+Senegal,sanitation_access_lag1,0.07177678002273268
+Senegal,political_stability_lag1,0.0007876445309032795
+Senegal,temperature_lag1,0.0009758781012533725
+Senegal,precipitation_lag1,0.004871992553717968
+Senegal,cassava_production_lag1,0.005473983796716951
+Senegal,cassava_area_lag1,0.001363173972850597
+Senegal,cassava_yield_lag1,0.014268541360185506
+Senegal,cassava_volatility_lag1,0.0018101341423040816
+Senegal,maize_production_lag1,0.004999352189863191
+Senegal,maize_area_lag1,0.001337899675535089
+Senegal,maize_yield_lag1,0.005680471284182238
+Senegal,maize_volatility_lag1,0.01461966500107511
+Senegal,rice_production_lag1,0.03376845350903931
+Senegal,rice_area_lag1,0.03972285496850456
+Senegal,rice_yield_lag1,0.04816311541049146
+Senegal,rice_volatility_lag1,0.0016353688557353664
+Senegal,sorghum_production_lag1,0.0063754567643996354
+Senegal,sorghum_area_lag1,0.0015832814536970775
+Senegal,sorghum_yield_lag1,0.007396819233189763
+Senegal,sorghum_volatility_lag1,0.0012456521457940256
+Senegal,wheat_production_lag1,0.0
+Senegal,wheat_area_lag1,0.0
+Senegal,wheat_yield_lag1,0.0
+Senegal,wheat_volatility_lag1,0.0
+Senegal,yams_production_lag1,3.278999092685479e-05
+Senegal,yams_area_lag1,0.0005915977732552465
+Senegal,yams_yield_lag1,0.0009607005338275672
+Senegal,yams_volatility_lag1,0.0001641005523053977
+Senegal,gdp_per_capita_lag2,0.055338855981767895
+Senegal,water_access_lag2,0.05708703284004583
+Senegal,sanitation_access_lag2,0.058588807932612244
+Senegal,political_stability_lag2,0.0010808875855048722
+Senegal,temperature_lag2,0.000915104897474576
+Senegal,precipitation_lag2,0.006328919488827234
+Senegal,cassava_production_lag2,0.002681016640241343
+Senegal,cassava_area_lag2,0.0014854388582513712
+Senegal,cassava_yield_lag2,0.006687749811203694
+Senegal,cassava_volatility_lag2,0.002238376893946075
+Senegal,maize_production_lag2,0.00840371948330139
+Senegal,maize_area_lag2,0.0044116963354174634
+Senegal,maize_yield_lag2,0.0023478789093670663
+Senegal,maize_volatility_lag2,0.004490841459381756
+Senegal,rice_production_lag2,0.011527241012553353
+Senegal,rice_area_lag2,0.028314141401470646
+Senegal,rice_yield_lag2,0.02511182317235301
+Senegal,rice_volatility_lag2,0.016317588268047183
+Senegal,sorghum_production_lag2,0.0022565183899561914
+Senegal,sorghum_area_lag2,0.003637604633157438
+Senegal,sorghum_yield_lag2,0.0012196300070619448
+Senegal,sorghum_volatility_lag2,0.0016656341740379252
+Senegal,wheat_production_lag2,0.0
+Senegal,wheat_area_lag2,0.0
+Senegal,wheat_yield_lag2,0.0
+Senegal,wheat_volatility_lag2,0.0
+Senegal,yams_production_lag2,0.00034885287492523147
+Senegal,yams_area_lag2,3.784424757760765e-05
+Senegal,yams_yield_lag2,0.0002422029944224429
+Senegal,yams_volatility_lag2,0.00019438201010607602
+Sierra Leone,temperature,0.0009374610810006966
+Sierra Leone,precipitation,0.001173879962900475
+Sierra Leone,gdp_per_capita,0.015870815938492065
+Sierra Leone,water_access,0.04803324457582612
+Sierra Leone,sanitation_access,0.06416443629835099
+Sierra Leone,political_stability,0.001953221479036657
+Sierra Leone,ccri_score,0.0
+Sierra Leone,cassava_production,0.006007646192510988
+Sierra Leone,cassava_area,0.006681006160374667
+Sierra Leone,cassava_yield,0.021082926059115673
+Sierra Leone,cassava_volatility,0.004441791802881484
+Sierra Leone,maize_production,0.002385709654971312
+Sierra Leone,maize_area,0.004615456638920939
+Sierra Leone,maize_yield,0.0017937056713442318
+Sierra Leone,maize_volatility,0.0004843232869460775
+Sierra Leone,rice_production,0.004944900650860111
+Sierra Leone,rice_area,0.0008238173459490818
+Sierra Leone,rice_yield,0.003265199682455878
+Sierra Leone,rice_volatility,0.004093709042298719
+Sierra Leone,sorghum_production,0.04957149188054272
+Sierra Leone,sorghum_area,0.027124848002933778
+Sierra Leone,sorghum_yield,0.005652830453125656
+Sierra Leone,sorghum_volatility,0.013158294968882663
+Sierra Leone,wheat_production,0.0
+Sierra Leone,wheat_area,0.0
+Sierra Leone,wheat_yield,0.0
+Sierra Leone,wheat_volatility,0.0
+Sierra Leone,yams_production,0.0
+Sierra Leone,yams_area,0.0
+Sierra Leone,yams_yield,0.0
+Sierra Leone,yams_volatility,0.0
+Sierra Leone,gdp_per_capita_lag1,0.011524181585217747
+Sierra Leone,water_access_lag1,0.034367682414276235
+Sierra Leone,sanitation_access_lag1,0.049637098018937634
+Sierra Leone,political_stability_lag1,0.0010631295805909212
+Sierra Leone,temperature_lag1,0.0006708717186336728
+Sierra Leone,precipitation_lag1,0.0003644376971737066
+Sierra Leone,cassava_production_lag1,0.0038956935146855515
+Sierra Leone,cassava_area_lag1,0.004770954062557893
+Sierra Leone,cassava_yield_lag1,0.03964196340643341
+Sierra Leone,cassava_volatility_lag1,0.0021389087183382523
+Sierra Leone,maize_production_lag1,0.0011858650056827515
+Sierra Leone,maize_area_lag1,0.009443459287430636
+Sierra Leone,maize_yield_lag1,0.0038913860521910615
+Sierra Leone,maize_volatility_lag1,0.0005106135131373726
+Sierra Leone,rice_production_lag1,0.0013183242480206852
+Sierra Leone,rice_area_lag1,0.0010558801725204267
+Sierra Leone,rice_yield_lag1,0.003021334098680893
+Sierra Leone,rice_volatility_lag1,0.0015549128853791683
+Sierra Leone,sorghum_production_lag1,0.06933421539119157
+Sierra Leone,sorghum_area_lag1,0.06205552028890175
+Sierra Leone,sorghum_yield_lag1,0.006431225818909141
+Sierra Leone,sorghum_volatility_lag1,0.001098977778764959
+Sierra Leone,wheat_production_lag1,0.0
+Sierra Leone,wheat_area_lag1,0.0
+Sierra Leone,wheat_yield_lag1,0.0
+Sierra Leone,wheat_volatility_lag1,0.0
+Sierra Leone,yams_production_lag1,0.0
+Sierra Leone,yams_area_lag1,0.0
+Sierra Leone,yams_yield_lag1,0.0
+Sierra Leone,yams_volatility_lag1,0.0
+Sierra Leone,gdp_per_capita_lag2,0.048004925705987515
+Sierra Leone,water_access_lag2,0.05312264760092141
+Sierra Leone,sanitation_access_lag2,0.06575763025730144
+Sierra Leone,political_stability_lag2,0.005953903004250133
+Sierra Leone,temperature_lag2,0.0018036231725782497
+Sierra Leone,precipitation_lag2,0.0011324967810251775
+Sierra Leone,cassava_production_lag2,0.0060022200425985306
+Sierra Leone,cassava_area_lag2,0.006881505135176373
+Sierra Leone,cassava_yield_lag2,0.04989447054841333
+Sierra Leone,cassava_volatility_lag2,0.004832915093264077
+Sierra Leone,maize_production_lag2,0.0009106820911784114
+Sierra Leone,maize_area_lag2,0.005642702751394786
+Sierra Leone,maize_yield_lag2,0.0059794755160703025
+Sierra Leone,maize_volatility_lag2,0.0008459405494512707
+Sierra Leone,rice_production_lag2,0.005578031312536245
+Sierra Leone,rice_area_lag2,0.005611243764496874
+Sierra Leone,rice_yield_lag2,0.002182600585894369
+Sierra Leone,rice_volatility_lag2,0.0012376769968390957
+Sierra Leone,sorghum_production_lag2,0.07535649200272504
+Sierra Leone,sorghum_area_lag2,0.05046365497421377
+Sierra Leone,sorghum_yield_lag2,0.004457312789562224
+Sierra Leone,sorghum_volatility_lag2,0.0011104972367449195
+Sierra Leone,wheat_production_lag2,0.0
+Sierra Leone,wheat_area_lag2,0.0
+Sierra Leone,wheat_yield_lag2,0.0
+Sierra Leone,wheat_volatility_lag2,0.0
+Sierra Leone,yams_production_lag2,0.0
+Sierra Leone,yams_area_lag2,0.0
+Sierra Leone,yams_yield_lag2,0.0
+Sierra Leone,yams_volatility_lag2,0.0
+Somalia,temperature,0.00019966783672509692
+Somalia,precipitation,0.005666625563471773
+Somalia,gdp_per_capita,0.03189692984718231
+Somalia,water_access,0.06274775456977864
+Somalia,sanitation_access,0.024301858518861734
+Somalia,political_stability,0.004760755126917274
+Somalia,ccri_score,0.0
+Somalia,cassava_production,0.03917703060086435
+Somalia,cassava_area,0.03807488649382699
+Somalia,cassava_yield,0.004686956902343982
+Somalia,cassava_volatility,0.0009686183984946345
+Somalia,maize_production,0.009640039879000122
+Somalia,maize_area,0.003807406542017541
+Somalia,maize_yield,0.005398935184261765
+Somalia,maize_volatility,0.0020878570301864244
+Somalia,rice_production,0.026252287079250283
+Somalia,rice_area,0.0027892308600351353
+Somalia,rice_yield,0.03715764253563598
+Somalia,rice_volatility,0.003226144535289081
+Somalia,sorghum_production,0.001084851408772296
+Somalia,sorghum_area,0.001432993951161868
+Somalia,sorghum_yield,0.0008751618118105198
+Somalia,sorghum_volatility,0.0038717727397519254
+Somalia,wheat_production,0.013865433135392513
+Somalia,wheat_area,0.0010314468269393014
+Somalia,wheat_yield,0.006269398104734128
+Somalia,wheat_volatility,0.00517346374319781
+Somalia,yams_production,0.0
+Somalia,yams_area,0.0
+Somalia,yams_yield,0.0
+Somalia,yams_volatility,0.0
+Somalia,gdp_per_capita_lag1,0.022233056332722104
+Somalia,water_access_lag1,0.038569668202869466
+Somalia,sanitation_access_lag1,0.04892300555935636
+Somalia,political_stability_lag1,0.001244198240758268
+Somalia,temperature_lag1,0.0004029249935825989
+Somalia,precipitation_lag1,0.0010716606601667413
+Somalia,cassava_production_lag1,0.04425828813340939
+Somalia,cassava_area_lag1,0.021414680038545755
+Somalia,cassava_yield_lag1,0.0004922487652668424
+Somalia,cassava_volatility_lag1,0.0005766625689941516
+Somalia,maize_production_lag1,0.00031167890118177256
+Somalia,maize_area_lag1,0.003986060038289317
+Somalia,maize_yield_lag1,0.013622559829740142
+Somalia,maize_volatility_lag1,0.0009528964682392917
+Somalia,rice_production_lag1,0.04568995958369733
+Somalia,rice_area_lag1,0.01942220250686017
+Somalia,rice_yield_lag1,0.027802063371964794
+Somalia,rice_volatility_lag1,0.008643991418686246
+Somalia,sorghum_production_lag1,0.0020922626565522905
+Somalia,sorghum_area_lag1,0.0009521901423773615
+Somalia,sorghum_yield_lag1,6.912228945265625e-05
+Somalia,sorghum_volatility_lag1,0.0067419229212533375
+Somalia,wheat_production_lag1,0.002278513601768331
+Somalia,wheat_area_lag1,0.007500437634821551
+Somalia,wheat_yield_lag1,0.033875794130181124
+Somalia,wheat_volatility_lag1,0.008344814217355348
+Somalia,yams_production_lag1,0.0
+Somalia,yams_area_lag1,0.0
+Somalia,yams_yield_lag1,0.0
+Somalia,yams_volatility_lag1,0.0
+Somalia,gdp_per_capita_lag2,0.028837141126368083
+Somalia,water_access_lag2,0.04019200869026338
+Somalia,sanitation_access_lag2,0.023207933166688174
+Somalia,political_stability_lag2,0.003756991812840969
+Somalia,temperature_lag2,0.0005073864535573133
+Somalia,precipitation_lag2,0.0012092081054124611
+Somalia,cassava_production_lag2,0.04494756855641992
+Somalia,cassava_area_lag2,0.02838537209246129
+Somalia,cassava_yield_lag2,0.0017800835077354416
+Somalia,cassava_volatility_lag2,0.0016680918002743511
+Somalia,maize_production_lag2,0.0015153702597761332
+Somalia,maize_area_lag2,0.0029535556114194655
+Somalia,maize_yield_lag2,0.0010513054906834834
+Somalia,maize_volatility_lag2,0.0007517507466286621
+Somalia,rice_production_lag2,0.02138205303766071
+Somalia,rice_area_lag2,0.001997226075297251
+Somalia,rice_yield_lag2,0.029100036459797043
+Somalia,rice_volatility_lag2,0.008463379004205403
+Somalia,sorghum_production_lag2,0.0012392361191476766
+Somalia,sorghum_area_lag2,0.01762327574888297
+Somalia,sorghum_yield_lag2,9.478382669314583e-05
+Somalia,sorghum_volatility_lag2,0.010773797036156807
+Somalia,wheat_production_lag2,0.0045960073633855405
+Somalia,wheat_area_lag2,0.002475231118388625
+Somalia,wheat_yield_lag2,0.022674989544593824
+Somalia,wheat_volatility_lag2,0.0008982048112656788
+Somalia,yams_production_lag2,0.0
+Somalia,yams_area_lag2,0.0
+Somalia,yams_yield_lag2,0.0
+Somalia,yams_volatility_lag2,0.0
+South Africa,temperature,0.00027382887670016173
+South Africa,precipitation,0.008858389771702042
+South Africa,gdp_per_capita,0.011540782545111438
+South Africa,water_access,0.036221581372887904
+South Africa,sanitation_access,0.04869598282345033
+South Africa,political_stability,0.001659846597692958
+South Africa,ccri_score,0.0
+South Africa,cassava_production,0.0
+South Africa,cassava_area,0.0
+South Africa,cassava_yield,0.0
+South Africa,cassava_volatility,0.0
+South Africa,maize_production,0.010297746294155698
+South Africa,maize_area,0.005361951519261919
+South Africa,maize_yield,0.018396028097988668
+South Africa,maize_volatility,0.003923304587055085
+South Africa,rice_production,0.01968108907027159
+South Africa,rice_area,0.027552643432031152
+South Africa,rice_yield,0.07368550783607165
+South Africa,rice_volatility,0.00022667709167196247
+South Africa,sorghum_production,0.001300810875270225
+South Africa,sorghum_area,0.013109973556827161
+South Africa,sorghum_yield,0.00022822060775311677
+South Africa,sorghum_volatility,0.004762581593778063
+South Africa,wheat_production,0.0013495614472402015
+South Africa,wheat_area,0.03686451816873562
+South Africa,wheat_yield,0.0018363672307537562
+South Africa,wheat_volatility,0.00788433621262702
+South Africa,yams_production,0.0
+South Africa,yams_area,0.0
+South Africa,yams_yield,0.0
+South Africa,yams_volatility,0.0
+South Africa,gdp_per_capita_lag1,0.018246520433855967
+South Africa,water_access_lag1,0.02343740149571121
+South Africa,sanitation_access_lag1,0.04018240622618102
+South Africa,political_stability_lag1,0.001731124797068907
+South Africa,temperature_lag1,0.0014781903654898184
+South Africa,precipitation_lag1,0.0008646877815184953
+South Africa,cassava_production_lag1,0.0
+South Africa,cassava_area_lag1,0.0
+South Africa,cassava_yield_lag1,0.0
+South Africa,cassava_volatility_lag1,0.0
+South Africa,maize_production_lag1,0.01604440869252737
+South Africa,maize_area_lag1,0.005971657794860323
+South Africa,maize_yield_lag1,0.030041739694754033
+South Africa,maize_volatility_lag1,0.0018683772084271866
+South Africa,rice_production_lag1,0.02514606250513777
+South Africa,rice_area_lag1,0.05799161427059398
+South Africa,rice_yield_lag1,0.06112321196965292
+South Africa,rice_volatility_lag1,0.0004334301294056338
+South Africa,sorghum_production_lag1,0.0035433897738476
+South Africa,sorghum_area_lag1,0.005602688153903953
+South Africa,sorghum_yield_lag1,0.002195707610607087
+South Africa,sorghum_volatility_lag1,0.0016294838781147228
+South Africa,wheat_production_lag1,0.015511206288968283
+South Africa,wheat_area_lag1,0.014505360171141029
+South Africa,wheat_yield_lag1,0.006001058581512477
+South Africa,wheat_volatility_lag1,0.0013777892006840353
+South Africa,yams_production_lag1,0.0
+South Africa,yams_area_lag1,0.0
+South Africa,yams_yield_lag1,0.0
+South Africa,yams_volatility_lag1,0.0
+South Africa,gdp_per_capita_lag2,0.042717085890347846
+South Africa,water_access_lag2,0.018228143794394656
+South Africa,sanitation_access_lag2,0.0450224811399662
+South Africa,political_stability_lag2,0.000824022751698641
+South Africa,temperature_lag2,0.0008716779737125306
+South Africa,precipitation_lag2,0.0012601400257354046
+South Africa,cassava_production_lag2,0.0
+South Africa,cassava_area_lag2,0.0
+South Africa,cassava_yield_lag2,0.0
+South Africa,cassava_volatility_lag2,0.0
+South Africa,maize_production_lag2,0.005973396998551359
+South Africa,maize_area_lag2,0.04108996812869854
+South Africa,maize_yield_lag2,0.006521440830263729
+South Africa,maize_volatility_lag2,0.0022473970944883685
+South Africa,rice_production_lag2,0.03219896267806489
+South Africa,rice_area_lag2,0.017611032374042577
+South Africa,rice_yield_lag2,0.04875769957106406
+South Africa,rice_volatility_lag2,0.0019669292480463466
+South Africa,sorghum_production_lag2,0.0027384954779395413
+South Africa,sorghum_area_lag2,0.0007997516813220937
+South Africa,sorghum_yield_lag2,0.0009494754257747564
+South Africa,sorghum_volatility_lag2,0.001187864644313145
+South Africa,wheat_production_lag2,0.0019972884112606695
+South Africa,wheat_area_lag2,0.029778422298747328
+South Africa,wheat_yield_lag2,0.02847141373515729
+South Africa,wheat_volatility_lag2,0.00014766319340845554
+South Africa,yams_production_lag2,0.0
+South Africa,yams_area_lag2,0.0
+South Africa,yams_yield_lag2,0.0
+South Africa,yams_volatility_lag2,0.0
+South Sudan,temperature,0.013503774677583812
+South Sudan,precipitation,0.016610766993061365
+South Sudan,gdp_per_capita,0.0
+South Sudan,water_access,4.2506297213365724e-05
+South Sudan,sanitation_access,0.05012709041309924
+South Sudan,political_stability,0.008726289725635548
+South Sudan,ccri_score,0.0
+South Sudan,cassava_production,0.03977237932017295
+South Sudan,cassava_area,0.03147992580883803
+South Sudan,cassava_yield,0.006526623058939726
+South Sudan,cassava_volatility,0.0033126733649662798
+South Sudan,maize_production,0.006211763850511036
+South Sudan,maize_area,0.016178762277873692
+South Sudan,maize_yield,0.0007852342109392109
+South Sudan,maize_volatility,0.0014988649397174782
+South Sudan,rice_production,0.00879543900176306
+South Sudan,rice_area,0.014210066231398817
+South Sudan,rice_yield,0.005170588254183961
+South Sudan,rice_volatility,0.01107128855677041
+South Sudan,sorghum_production,0.005235716155708865
+South Sudan,sorghum_area,0.0016162795319256157
+South Sudan,sorghum_yield,0.0011081985260920824
+South Sudan,sorghum_volatility,0.003361740500349992
+South Sudan,wheat_production,0.0
+South Sudan,wheat_area,0.0
+South Sudan,wheat_yield,0.0
+South Sudan,wheat_volatility,0.0
+South Sudan,yams_production,0.013804056177828926
+South Sudan,yams_area,0.006858802213236807
+South Sudan,yams_yield,0.00838001492937452
+South Sudan,yams_volatility,0.02511737173640806
+South Sudan,gdp_per_capita_lag1,0.0
+South Sudan,water_access_lag1,0.0
+South Sudan,sanitation_access_lag1,0.06680284783807454
+South Sudan,political_stability_lag1,0.005947365868051926
+South Sudan,temperature_lag1,0.013405339934720827
+South Sudan,precipitation_lag1,0.0024845779995717756
+South Sudan,cassava_production_lag1,0.02760196080192019
+South Sudan,cassava_area_lag1,0.005967189418384044
+South Sudan,cassava_yield_lag1,0.005892705949943404
+South Sudan,cassava_volatility_lag1,0.041587592359446625
+South Sudan,maize_production_lag1,0.006276640490134004
+South Sudan,maize_area_lag1,0.0007280081909050096
+South Sudan,maize_yield_lag1,0.00307188064573852
+South Sudan,maize_volatility_lag1,0.02481422153673408
+South Sudan,rice_production_lag1,0.0012839898022407757
+South Sudan,rice_area_lag1,0.009872672118146098
+South Sudan,rice_yield_lag1,0.0006721140004923992
+South Sudan,rice_volatility_lag1,0.014533597756183741
+South Sudan,sorghum_production_lag1,0.0009747824948222227
+South Sudan,sorghum_area_lag1,0.004776649361239967
+South Sudan,sorghum_yield_lag1,0.003956503249302886
+South Sudan,sorghum_volatility_lag1,0.029490628672563378
+South Sudan,wheat_production_lag1,0.0
+South Sudan,wheat_area_lag1,0.0
+South Sudan,wheat_yield_lag1,0.0
+South Sudan,wheat_volatility_lag1,0.0
+South Sudan,yams_production_lag1,0.007610505294014401
+South Sudan,yams_area_lag1,0.013183740467919005
+South Sudan,yams_yield_lag1,0.01413541365087489
+South Sudan,yams_volatility_lag1,0.035771068720069535
+South Sudan,gdp_per_capita_lag2,0.0
+South Sudan,water_access_lag2,0.0
+South Sudan,sanitation_access_lag2,0.05036337917026623
+South Sudan,political_stability_lag2,0.007291190541069831
+South Sudan,temperature_lag2,0.016084748243577175
+South Sudan,precipitation_lag2,0.01781972997539329
+South Sudan,cassava_production_lag2,0.0014725902432519116
+South Sudan,cassava_area_lag2,0.010524178737583096
+South Sudan,cassava_yield_lag2,0.01994996220010382
+South Sudan,cassava_volatility_lag2,0.04128430942208233
+South Sudan,maize_production_lag2,0.005561281645855429
+South Sudan,maize_area_lag2,0.005887375752223081
+South Sudan,maize_yield_lag2,0.011504339437605616
+South Sudan,maize_volatility_lag2,0.013453480471982374
+South Sudan,rice_production_lag2,0.009500752479613782
+South Sudan,rice_area_lag2,0.006882997824964844
+South Sudan,rice_yield_lag2,0.01074905684791556
+South Sudan,rice_volatility_lag2,0.014967010162214533
+South Sudan,sorghum_production_lag2,0.0261868821721335
+South Sudan,sorghum_area_lag2,0.023306996652960037
+South Sudan,sorghum_yield_lag2,0.002901992189662124
+South Sudan,sorghum_volatility_lag2,0.014477054845787929
+South Sudan,wheat_production_lag2,0.0
+South Sudan,wheat_area_lag2,0.0
+South Sudan,wheat_yield_lag2,0.0
+South Sudan,wheat_volatility_lag2,0.0
+South Sudan,yams_production_lag2,0.015085663445163185
+South Sudan,yams_area_lag2,0.0059559529075247815
+South Sudan,yams_yield_lag2,0.008870964168506868
+South Sudan,yams_volatility_lag2,0.019569897087471585
+Togo,temperature,0.0003933272307774851
+Togo,precipitation,0.0010466394036658623
+Togo,gdp_per_capita,0.028508956265500006
+Togo,water_access,0.013076322327328596
+Togo,sanitation_access,0.021717950231244017
+Togo,political_stability,0.00552191504982821
+Togo,ccri_score,0.0
+Togo,cassava_production,0.01118649469424132
+Togo,cassava_area,0.003915597237515148
+Togo,cassava_yield,0.028604354541333726
+Togo,cassava_volatility,0.004434300726607838
+Togo,maize_production,0.017142556685895087
+Togo,maize_area,0.01559296291666527
+Togo,maize_yield,0.0006263991310871449
+Togo,maize_volatility,0.0029741939204326524
+Togo,rice_production,0.019002694542536207
+Togo,rice_area,0.02145123342962218
+Togo,rice_yield,0.028109866384894273
+Togo,rice_volatility,0.0014574652271656622
+Togo,sorghum_production,0.014230403430432458
+Togo,sorghum_area,0.013664378545790116
+Togo,sorghum_yield,0.0012099997996889117
+Togo,sorghum_volatility,0.0008779759781476911
+Togo,wheat_production,0.0
+Togo,wheat_area,0.0
+Togo,wheat_yield,0.0
+Togo,wheat_volatility,0.0
+Togo,yams_production,0.003060453217171185
+Togo,yams_area,0.009579826518147956
+Togo,yams_yield,0.02100373687557605
+Togo,yams_volatility,0.0010543264082288177
+Togo,gdp_per_capita_lag1,0.009787836474063326
+Togo,water_access_lag1,0.02015556522309984
+Togo,sanitation_access_lag1,0.030744345876171832
+Togo,political_stability_lag1,0.0036238666804644074
+Togo,temperature_lag1,0.0016562039347414507
+Togo,precipitation_lag1,0.00029767908080706364
+Togo,cassava_production_lag1,0.03571528647110975
+Togo,cassava_area_lag1,0.038838398998341135
+Togo,cassava_yield_lag1,0.02732322325002514
+Togo,cassava_volatility_lag1,0.004985779721311685
+Togo,maize_production_lag1,0.025551745345734702
+Togo,maize_area_lag1,0.01335965242909862
+Togo,maize_yield_lag1,0.0005538632543334403
+Togo,maize_volatility_lag1,0.0006381575886401479
+Togo,rice_production_lag1,0.004779074950677074
+Togo,rice_area_lag1,0.0008740403801338077
+Togo,rice_yield_lag1,0.02630304579821123
+Togo,rice_volatility_lag1,0.0017584075655784253
+Togo,sorghum_production_lag1,0.036159506976137984
+Togo,sorghum_area_lag1,0.02720510769499478
+Togo,sorghum_yield_lag1,0.013229109301963029
+Togo,sorghum_volatility_lag1,0.0030971854685562165
+Togo,wheat_production_lag1,0.0
+Togo,wheat_area_lag1,0.0
+Togo,wheat_yield_lag1,0.0
+Togo,wheat_volatility_lag1,0.0
+Togo,yams_production_lag1,0.011764070148321574
+Togo,yams_area_lag1,0.017570915432469043
+Togo,yams_yield_lag1,0.01758806698881433
+Togo,yams_volatility_lag1,0.0012657380865437047
+Togo,gdp_per_capita_lag2,0.009142575462333446
+Togo,water_access_lag2,0.026178677927319156
+Togo,sanitation_access_lag2,0.01769723966772307
+Togo,political_stability_lag2,0.0022254987489766717
+Togo,temperature_lag2,0.0008235898013791174
+Togo,precipitation_lag2,0.0009772666367921924
+Togo,cassava_production_lag2,0.023452536999394334
+Togo,cassava_area_lag2,0.03510998930289215
+Togo,cassava_yield_lag2,0.022978629175956274
+Togo,cassava_volatility_lag2,0.0013183306549486103
+Togo,maize_production_lag2,0.018793986974717458
+Togo,maize_area_lag2,0.021391143350634405
+Togo,maize_yield_lag2,0.0019719577243784855
+Togo,maize_volatility_lag2,0.0016720950068252183
+Togo,rice_production_lag2,0.017025278962488687
+Togo,rice_area_lag2,0.017378370359593023
+Togo,rice_yield_lag2,0.01347330053080063
+Togo,rice_volatility_lag2,0.0007814978144178068
+Togo,sorghum_production_lag2,0.0056161881663737145
+Togo,sorghum_area_lag2,0.025801149289395562
+Togo,sorghum_yield_lag2,0.007080392771633258
+Togo,sorghum_volatility_lag2,0.006650172921766006
+Togo,wheat_production_lag2,0.0
+Togo,wheat_area_lag2,0.0
+Togo,wheat_yield_lag2,0.0
+Togo,wheat_volatility_lag2,0.0
+Togo,yams_production_lag2,0.014167926181671765
+Togo,yams_area_lag2,0.0030736596128017935
+Togo,yams_yield_lag2,0.03996555165197362
+Togo,yams_volatility_lag2,0.0009827904629457606
+Uganda,temperature,0.016396224194265018
+Uganda,precipitation,0.00041021913459559907
+Uganda,gdp_per_capita,0.02633609408124179
+Uganda,water_access,0.038041635410796096
+Uganda,sanitation_access,0.021808384412250345
+Uganda,political_stability,0.015039158355031414
+Uganda,ccri_score,0.0
+Uganda,cassava_production,0.0023297476268476103
+Uganda,cassava_area,0.030787880570291252
+Uganda,cassava_yield,0.052456816417625604
+Uganda,cassava_volatility,0.0005190845448551004
+Uganda,maize_production,0.01087892658944494
+Uganda,maize_area,0.02344349814689725
+Uganda,maize_yield,0.00133499489737135
+Uganda,maize_volatility,0.002659216255380605
+Uganda,rice_production,0.0036629281194144863
+Uganda,rice_area,0.0034424550514232134
+Uganda,rice_yield,0.0021900645641285137
+Uganda,rice_volatility,0.0048182952794684755
+Uganda,sorghum_production,0.005578645733142582
+Uganda,sorghum_area,0.002023468213377676
+Uganda,sorghum_yield,0.0025635834161892713
+Uganda,sorghum_volatility,0.0068321378783963325
+Uganda,wheat_production,0.0033868011949326066
+Uganda,wheat_area,0.020328825660960295
+Uganda,wheat_yield,0.0008504891019722151
+Uganda,wheat_volatility,0.0010695059803932756
+Uganda,yams_production,0.0
+Uganda,yams_area,0.0
+Uganda,yams_yield,0.0
+Uganda,yams_volatility,0.0
+Uganda,gdp_per_capita_lag1,0.014198932687963892
+Uganda,water_access_lag1,0.016599311222365586
+Uganda,sanitation_access_lag1,0.0245962685533264
+Uganda,political_stability_lag1,0.00633249050946913
+Uganda,temperature_lag1,0.0202379531038998
+Uganda,precipitation_lag1,0.0007164095554037125
+Uganda,cassava_production_lag1,0.00916141866366533
+Uganda,cassava_area_lag1,0.04422320033551833
+Uganda,cassava_yield_lag1,0.07036070729332518
+Uganda,cassava_volatility_lag1,0.0017511966297503933
+Uganda,maize_production_lag1,0.014854855465045716
+Uganda,maize_area_lag1,0.02222915278957677
+Uganda,maize_yield_lag1,0.004441359326557859
+Uganda,maize_volatility_lag1,0.0014660389498173602
+Uganda,rice_production_lag1,0.0023165740294327102
+Uganda,rice_area_lag1,0.003419366171651988
+Uganda,rice_yield_lag1,0.002838546552071209
+Uganda,rice_volatility_lag1,0.0003575282372905851
+Uganda,sorghum_production_lag1,0.013628085862058801
+Uganda,sorghum_area_lag1,0.00463143036193646
+Uganda,sorghum_yield_lag1,0.018631930743403996
+Uganda,sorghum_volatility_lag1,0.009895704335540956
+Uganda,wheat_production_lag1,0.003653926967405746
+Uganda,wheat_area_lag1,0.029343446551303134
+Uganda,wheat_yield_lag1,0.004202122799761834
+Uganda,wheat_volatility_lag1,0.002138414706799908
+Uganda,yams_production_lag1,0.0
+Uganda,yams_area_lag1,0.0
+Uganda,yams_yield_lag1,0.0
+Uganda,yams_volatility_lag1,0.0
+Uganda,gdp_per_capita_lag2,0.01172234427086259
+Uganda,water_access_lag2,0.030478618983909012
+Uganda,sanitation_access_lag2,0.014623315015384346
+Uganda,political_stability_lag2,0.009671665632148224
+Uganda,temperature_lag2,0.01977024984767274
+Uganda,precipitation_lag2,0.0005416692934071823
+Uganda,cassava_production_lag2,0.002828250475799674
+Uganda,cassava_area_lag2,0.025984403655593482
+Uganda,cassava_yield_lag2,0.09003253480961114
+Uganda,cassava_volatility_lag2,0.001739796301145715
+Uganda,maize_production_lag2,0.037912606024337145
+Uganda,maize_area_lag2,0.03265787645310329
+Uganda,maize_yield_lag2,0.0023372637783099716
+Uganda,maize_volatility_lag2,0.0023372764480434553
+Uganda,rice_production_lag2,0.01090699627408512
+Uganda,rice_area_lag2,0.003540847523190915
+Uganda,rice_yield_lag2,0.0025822938890352697
+Uganda,rice_volatility_lag2,0.0004267534920635608
+Uganda,sorghum_production_lag2,0.0042052711068007505
+Uganda,sorghum_area_lag2,0.0034156053912715923
+Uganda,sorghum_yield_lag2,0.001356733080145213
+Uganda,sorghum_volatility_lag2,0.004641922339963343
+Uganda,wheat_production_lag2,0.0032454995926520062
+Uganda,wheat_area_lag2,0.02777062402497883
+Uganda,wheat_yield_lag2,0.008382668688738331
+Uganda,wheat_volatility_lag2,0.0014714603727113288
+Uganda,yams_production_lag2,0.0
+Uganda,yams_area_lag2,0.0
+Uganda,yams_yield_lag2,0.0
+Uganda,yams_volatility_lag2,0.0
+United Republic of Tanzania,temperature,0.0
+United Republic of Tanzania,precipitation,0.0
+United Republic of Tanzania,gdp_per_capita,0.030690869910717386
+United Republic of Tanzania,water_access,0.05670155058577822
+United Republic of Tanzania,sanitation_access,0.055952387713768065
+United Republic of Tanzania,political_stability,0.0014323516039119067
+United Republic of Tanzania,ccri_score,0.0
+United Republic of Tanzania,cassava_production,0.004310100373805135
+United Republic of Tanzania,cassava_area,0.000302111297774979
+United Republic of Tanzania,cassava_yield,0.001644768675178395
+United Republic of Tanzania,cassava_volatility,0.0009673502285335813
+United Republic of Tanzania,maize_production,0.012101630277400776
+United Republic of Tanzania,maize_area,0.008509443967153113
+United Republic of Tanzania,maize_yield,0.017928538391692866
+United Republic of Tanzania,maize_volatility,0.01612706079598269
+United Republic of Tanzania,rice_production,0.011957341100108447
+United Republic of Tanzania,rice_area,0.00571026980463804
+United Republic of Tanzania,rice_yield,0.00467218103344379
+United Republic of Tanzania,rice_volatility,0.00023054952049696896
+United Republic of Tanzania,sorghum_production,0.0006239233613452868
+United Republic of Tanzania,sorghum_area,0.0016650823146589736
+United Republic of Tanzania,sorghum_yield,0.0014850376919268906
+United Republic of Tanzania,sorghum_volatility,0.007106348626548089
+United Republic of Tanzania,wheat_production,0.0012503636192788055
+United Republic of Tanzania,wheat_area,0.004314550340945208
+United Republic of Tanzania,wheat_yield,0.003702994952258923
+United Republic of Tanzania,wheat_volatility,0.0016846797362883657
+United Republic of Tanzania,yams_production,0.00791448630363401
+United Republic of Tanzania,yams_area,0.003146706519615755
+United Republic of Tanzania,yams_yield,0.02908950626997453
+United Republic of Tanzania,yams_volatility,0.000990415186455871
+United Republic of Tanzania,gdp_per_capita_lag1,0.029749090854218792
+United Republic of Tanzania,water_access_lag1,0.043493103187883075
+United Republic of Tanzania,sanitation_access_lag1,0.040486958847809465
+United Republic of Tanzania,political_stability_lag1,0.0017153209849136413
+United Republic of Tanzania,temperature_lag1,0.0
+United Republic of Tanzania,precipitation_lag1,0.0
+United Republic of Tanzania,cassava_production_lag1,0.0024268894838105366
+United Republic of Tanzania,cassava_area_lag1,0.001066076208336895
+United Republic of Tanzania,cassava_yield_lag1,0.0021140473951236083
+United Republic of Tanzania,cassava_volatility_lag1,0.0019956901219809952
+United Republic of Tanzania,maize_production_lag1,0.021430945925458605
+United Republic of Tanzania,maize_area_lag1,0.005374601046915548
+United Republic of Tanzania,maize_yield_lag1,0.006310022328331936
+United Republic of Tanzania,maize_volatility_lag1,0.011933198736353328
+United Republic of Tanzania,rice_production_lag1,0.01630226764573389
+United Republic of Tanzania,rice_area_lag1,0.010658502467573081
+United Republic of Tanzania,rice_yield_lag1,0.006453275076441753
+United Republic of Tanzania,rice_volatility_lag1,0.013663042422217013
+United Republic of Tanzania,sorghum_production_lag1,0.001726673244114112
+United Republic of Tanzania,sorghum_area_lag1,0.0007935903364976848
+United Republic of Tanzania,sorghum_yield_lag1,0.0019597196287077946
+United Republic of Tanzania,sorghum_volatility_lag1,0.0016844168314102748
+United Republic of Tanzania,wheat_production_lag1,0.0012965662675093084
+United Republic of Tanzania,wheat_area_lag1,0.006914159407776236
+United Republic of Tanzania,wheat_yield_lag1,0.0033623452082283487
+United Republic of Tanzania,wheat_volatility_lag1,0.0018919600931003103
+United Republic of Tanzania,yams_production_lag1,0.006306356327641133
+United Republic of Tanzania,yams_area_lag1,0.0030326390250480784
+United Republic of Tanzania,yams_yield_lag1,0.06583774968553531
+United Republic of Tanzania,yams_volatility_lag1,0.0007355516715720334
+United Republic of Tanzania,gdp_per_capita_lag2,0.028009520993374504
+United Republic of Tanzania,water_access_lag2,0.05470580036314827
+United Republic of Tanzania,sanitation_access_lag2,0.06149572369900757
+United Republic of Tanzania,political_stability_lag2,0.001143256451761291
+United Republic of Tanzania,temperature_lag2,0.0
+United Republic of Tanzania,precipitation_lag2,0.0
+United Republic of Tanzania,cassava_production_lag2,0.004308420807228315
+United Republic of Tanzania,cassava_area_lag2,0.0010330682679747627
+United Republic of Tanzania,cassava_yield_lag2,0.0004675076955916562
+United Republic of Tanzania,cassava_volatility_lag2,0.0012206958593117788
+United Republic of Tanzania,maize_production_lag2,0.005360280050324645
+United Republic of Tanzania,maize_area_lag2,0.012841831571156315
+United Republic of Tanzania,maize_yield_lag2,0.004339678696745566
+United Republic of Tanzania,maize_volatility_lag2,0.004055767949434286
+United Republic of Tanzania,rice_production_lag2,0.03596596646903641
+United Republic of Tanzania,rice_area_lag2,0.01624345567513774
+United Republic of Tanzania,rice_yield_lag2,0.013751714207782833
+United Republic of Tanzania,rice_volatility_lag2,0.05346077633649756
+United Republic of Tanzania,sorghum_production_lag2,0.005267092211994391
+United Republic of Tanzania,sorghum_area_lag2,0.002996513427820467
+United Republic of Tanzania,sorghum_yield_lag2,0.0008229558928792768
+United Republic of Tanzania,sorghum_volatility_lag2,0.003970637435242465
+United Republic of Tanzania,wheat_production_lag2,0.002025074670418428
+United Republic of Tanzania,wheat_area_lag2,0.002975702782263102
+United Republic of Tanzania,wheat_yield_lag2,0.009163742249185498
+United Republic of Tanzania,wheat_volatility_lag2,0.001102065360416061
+United Republic of Tanzania,yams_production_lag2,0.022735159091655927
+United Republic of Tanzania,yams_area_lag2,0.0021680228237843614
+United Republic of Tanzania,yams_yield_lag2,0.04469407368820795
+United Republic of Tanzania,yams_volatility_lag2,0.0007481346090607141
+Zambia,temperature,0.0008097405822693063
+Zambia,precipitation,0.0004867726603726135
+Zambia,gdp_per_capita,0.02538035692764178
+Zambia,water_access,0.02660159526109283
+Zambia,sanitation_access,0.023473824827877392
+Zambia,political_stability,0.024760718399601585
+Zambia,ccri_score,0.0
+Zambia,cassava_production,0.013434501084129882
+Zambia,cassava_area,0.00889198582771873
+Zambia,cassava_yield,0.028696573253430366
+Zambia,cassava_volatility,0.011770104790085443
+Zambia,maize_production,0.0014490588915139677
+Zambia,maize_area,0.005869284720326823
+Zambia,maize_yield,0.0021241530833746177
+Zambia,maize_volatility,0.0033711209779770895
+Zambia,rice_production,0.002447961777978568
+Zambia,rice_area,0.005233584376613348
+Zambia,rice_yield,0.0004016970589544023
+Zambia,rice_volatility,0.0012116536871845276
+Zambia,sorghum_production,0.008180388196377937
+Zambia,sorghum_area,0.00044715700238939755
+Zambia,sorghum_yield,0.001234784069299899
+Zambia,sorghum_volatility,0.0015236586331601636
+Zambia,wheat_production,0.0022360847733335705
+Zambia,wheat_area,0.000992092104520656
+Zambia,wheat_yield,0.00013387711558040751
+Zambia,wheat_volatility,0.0005423589750555789
+Zambia,yams_production,0.0
+Zambia,yams_area,0.0
+Zambia,yams_yield,0.0
+Zambia,yams_volatility,0.0
+Zambia,gdp_per_capita_lag1,0.02879385803556036
+Zambia,water_access_lag1,0.04737749353598822
+Zambia,sanitation_access_lag1,0.08097402765298824
+Zambia,political_stability_lag1,0.011924200704284375
+Zambia,temperature_lag1,0.0013470334675325568
+Zambia,precipitation_lag1,0.00031087646664541564
+Zambia,cassava_production_lag1,0.010162338747878679
+Zambia,cassava_area_lag1,0.014514768431465819
+Zambia,cassava_yield_lag1,0.06100514074741193
+Zambia,cassava_volatility_lag1,0.018365811507848016
+Zambia,maize_production_lag1,0.008374826311376224
+Zambia,maize_area_lag1,0.005041071822526798
+Zambia,maize_yield_lag1,0.009237670703931215
+Zambia,maize_volatility_lag1,0.005899732171108946
+Zambia,rice_production_lag1,0.012776520715935333
+Zambia,rice_area_lag1,0.006729103900208631
+Zambia,rice_yield_lag1,0.0019233305593920997
+Zambia,rice_volatility_lag1,0.0011446802027474485
+Zambia,sorghum_production_lag1,0.0010437156944006238
+Zambia,sorghum_area_lag1,0.0014611210228931922
+Zambia,sorghum_yield_lag1,0.0035775312201870445
+Zambia,sorghum_volatility_lag1,0.0012353798931101152
+Zambia,wheat_production_lag1,0.0017978031001787739
+Zambia,wheat_area_lag1,0.0013129720409928568
+Zambia,wheat_yield_lag1,0.0009073673887078806
+Zambia,wheat_volatility_lag1,0.00021639937993517093
+Zambia,yams_production_lag1,0.0
+Zambia,yams_area_lag1,0.0
+Zambia,yams_yield_lag1,0.0
+Zambia,yams_volatility_lag1,0.0
+Zambia,gdp_per_capita_lag2,0.04498234712294855
+Zambia,water_access_lag2,0.05739281456295933
+Zambia,sanitation_access_lag2,0.04095360245573757
+Zambia,political_stability_lag2,0.014213807367060087
+Zambia,temperature_lag2,0.0011109642892624765
+Zambia,precipitation_lag2,0.0006144549831242615
+Zambia,cassava_production_lag2,0.006340606894951148
+Zambia,cassava_area_lag2,0.06435982738778562
+Zambia,cassava_yield_lag2,0.050124206034333645
+Zambia,cassava_volatility_lag2,0.012024433067702612
+Zambia,maize_production_lag2,0.0665094243802303
+Zambia,maize_area_lag2,0.00031758177977849215
+Zambia,maize_yield_lag2,0.034238124948442354
+Zambia,maize_volatility_lag2,0.001563104991430715
+Zambia,rice_production_lag2,0.02475337272486684
+Zambia,rice_area_lag2,0.021885737162284417
+Zambia,rice_yield_lag2,0.001560089538301512
+Zambia,rice_volatility_lag2,0.0017720073145419965
+Zambia,sorghum_production_lag2,0.0007038643013733082
+Zambia,sorghum_area_lag2,0.0012033268832827573
+Zambia,sorghum_yield_lag2,0.007561486537969484
+Zambia,sorghum_volatility_lag2,0.0004961366985586363
+Zambia,wheat_production_lag2,0.0017496755817155857
+Zambia,wheat_area_lag2,0.0027289235048407845
+Zambia,wheat_yield_lag2,0.0010458352132104388
+Zambia,wheat_volatility_lag2,0.0006343797902101918
+Zambia,yams_production_lag2,0.0
+Zambia,yams_area_lag2,0.0
+Zambia,yams_yield_lag2,0.0
+Zambia,yams_volatility_lag2,0.0
+Zimbabwe,temperature,0.00018491789236248584
+Zimbabwe,precipitation,0.0017955478647502354
+Zimbabwe,gdp_per_capita,0.0005273712916187837
+Zimbabwe,water_access,0.04824569062232403
+Zimbabwe,sanitation_access,0.019714029049574307
+Zimbabwe,political_stability,0.010176176603394578
+Zimbabwe,ccri_score,0.0
+Zimbabwe,cassava_production,0.05493089329898074
+Zimbabwe,cassava_area,0.04701348498167599
+Zimbabwe,cassava_yield,0.025651993821153605
+Zimbabwe,cassava_volatility,0.0012847910993917433
+Zimbabwe,maize_production,0.0008112170385656625
+Zimbabwe,maize_area,0.07401865238909097
+Zimbabwe,maize_yield,0.0006437802518799576
+Zimbabwe,maize_volatility,0.003795588457411672
+Zimbabwe,rice_production,0.00206168849811852
+Zimbabwe,rice_area,0.0036641522005943896
+Zimbabwe,rice_yield,0.005663465508022302
+Zimbabwe,rice_volatility,0.0047821947820069505
+Zimbabwe,sorghum_production,0.001239607248652374
+Zimbabwe,sorghum_area,0.0002328608998521847
+Zimbabwe,sorghum_yield,0.0005942770412758172
+Zimbabwe,sorghum_volatility,0.0009194913367809864
+Zimbabwe,wheat_production,0.0018841440369529406
+Zimbabwe,wheat_area,0.0005255458152299193
+Zimbabwe,wheat_yield,0.003034386578955951
+Zimbabwe,wheat_volatility,0.0005782983461897329
+Zimbabwe,yams_production,0.0
+Zimbabwe,yams_area,0.0
+Zimbabwe,yams_yield,0.0
+Zimbabwe,yams_volatility,0.0
+Zimbabwe,gdp_per_capita_lag1,0.004897278676495423
+Zimbabwe,water_access_lag1,0.028909285975612393
+Zimbabwe,sanitation_access_lag1,0.05849122716034447
+Zimbabwe,political_stability_lag1,0.010989397599732876
+Zimbabwe,temperature_lag1,0.0009202944095171978
+Zimbabwe,precipitation_lag1,0.0008540830636486036
+Zimbabwe,cassava_production_lag1,0.07284124505686335
+Zimbabwe,cassava_area_lag1,0.055605424968263026
+Zimbabwe,cassava_yield_lag1,0.030469173841127302
+Zimbabwe,cassava_volatility_lag1,0.0024548830021199715
+Zimbabwe,maize_production_lag1,0.0012120957845534203
+Zimbabwe,maize_area_lag1,0.07046941787613198
+Zimbabwe,maize_yield_lag1,0.0012573274143089274
+Zimbabwe,maize_volatility_lag1,0.004308265705659096
+Zimbabwe,rice_production_lag1,0.005615855328397077
+Zimbabwe,rice_area_lag1,0.002592839230544494
+Zimbabwe,rice_yield_lag1,0.002651892306356308
+Zimbabwe,rice_volatility_lag1,0.009407644747323026
+Zimbabwe,sorghum_production_lag1,0.00032522017017715886
+Zimbabwe,sorghum_area_lag1,0.005974269682867334
+Zimbabwe,sorghum_yield_lag1,0.0004308021111724626
+Zimbabwe,sorghum_volatility_lag1,0.0010173943074230857
+Zimbabwe,wheat_production_lag1,0.0007909394346672688
+Zimbabwe,wheat_area_lag1,0.0003841308829866728
+Zimbabwe,wheat_yield_lag1,0.001010135907560863
+Zimbabwe,wheat_volatility_lag1,0.0011359016055535601
+Zimbabwe,yams_production_lag1,0.0
+Zimbabwe,yams_area_lag1,0.0
+Zimbabwe,yams_yield_lag1,0.0
+Zimbabwe,yams_volatility_lag1,0.0
+Zimbabwe,gdp_per_capita_lag2,0.0003836974977809339
+Zimbabwe,water_access_lag2,0.05628172070836888
+Zimbabwe,sanitation_access_lag2,0.04421870932700706
+Zimbabwe,political_stability_lag2,0.004315434773701214
+Zimbabwe,temperature_lag2,0.0005387803096903345
+Zimbabwe,precipitation_lag2,0.0002692317499720548
+Zimbabwe,cassava_production_lag2,0.041094986239699365
+Zimbabwe,cassava_area_lag2,0.041739898215003436
+Zimbabwe,cassava_yield_lag2,0.032905706801073104
+Zimbabwe,cassava_volatility_lag2,0.0027292497248831817
+Zimbabwe,maize_production_lag2,0.00034525458803195394
+Zimbabwe,maize_area_lag2,0.014694675127691554
+Zimbabwe,maize_yield_lag2,0.0004782839480001229
+Zimbabwe,maize_volatility_lag2,0.0025203466090717315
+Zimbabwe,rice_production_lag2,0.03299280159857049
+Zimbabwe,rice_area_lag2,0.014599116115801529
+Zimbabwe,rice_yield_lag2,0.011959859501298117
+Zimbabwe,rice_volatility_lag2,0.0004454629944986295
+Zimbabwe,sorghum_production_lag2,0.0009606997071748266
+Zimbabwe,sorghum_area_lag2,0.0013795914676287722
+Zimbabwe,sorghum_yield_lag2,0.0005681766947165002
+Zimbabwe,sorghum_volatility_lag2,0.0004079481553982112
+Zimbabwe,wheat_production_lag2,0.001435115164677376
+Zimbabwe,wheat_area_lag2,0.0005995778419310189
+Zimbabwe,wheat_yield_lag2,0.002055575941578239
+Zimbabwe,wheat_volatility_lag2,0.0010894259925371566
+Zimbabwe,yams_production_lag2,0.0
+Zimbabwe,yams_area_lag2,0.0
+Zimbabwe,yams_yield_lag2,0.0
+Zimbabwe,yams_volatility_lag2,0.0
