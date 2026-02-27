@@ -82,86 +82,16 @@ def train_global_model():
 
 @st.cache_data
 def compute_forecasts():
-    """
-    Recursive forecast: 2023 (actual) → predict 2024 → predict 2025 → predict 2026.
-    Uses lag features: lag1 = previous year, lag2 = two years prior.
-    Returns a dict: country → {'pred_2026': float, 'actual_2023': float, 'trend': float}
-    """
-    df = load_data()
-    rf, feature_cols = train_global_model()
-
-    # Identify which features are lag1, lag2, or current
-    lag1_feats = [f for f in feature_cols if '_lag1' in f]
-    lag2_feats = [f for f in feature_cols if '_lag2' in f]
-    base_feats  = [f for f in feature_cols if '_lag1' not in f and '_lag2' not in f]
-
+       df = pd.read_csv("data/predictions_2026.csv")
     results = {}
-
-    for country, grp in df.groupby('country'):
-        grp = grp.sort_values('year')
-
-        # Need at least 2022 and 2023
-        if 2022 not in grp['year'].values or 2023 not in grp['year'].values:
-            continue
-
-        row22 = grp[grp['year'] == 2022].iloc[0]
-        row23 = grp[grp['year'] == 2023].iloc[0]
-        actual_2023 = row23['stunting_rate']
-
-        def make_row(current_row, lag1_row, lag2_row):
-            """Build a feature row for prediction given three year-rows."""
-            feat_row = {}
-            for f in feature_cols:
-                if '_lag2' in f:
-                    base = f.replace('_lag2', '')
-                    feat_row[f] = lag2_row.get(base, lag2_row.get(f, np.nan))
-                elif '_lag1' in f:
-                    base = f.replace('_lag1', '')
-                    feat_row[f] = lag1_row.get(base, lag1_row.get(f, np.nan))
-                else:
-                    feat_row[f] = current_row.get(f, np.nan)
-            return feat_row
-
-        def row_to_dict(row):
-            return row.to_dict()
-
-        try:
-            r22 = row_to_dict(row22)
-            r23 = row_to_dict(row23)
-
-            # Predict 2024: current≈2023 trend, lag1=2023, lag2=2022
-            feat_2024 = make_row(r23, r23, r22)
-            X_2024 = pd.DataFrame([feat_2024])[feature_cols].fillna(
-                pd.Series({f: df[f].median() for f in feature_cols if f in df.columns})
-            )
-            pred_2024 = float(rf.predict(X_2024)[0])
-
-            # Predict 2025: lag1=pred_2024, lag2=2023
-            r24_synth = {**r23, 'stunting_rate': pred_2024}
-            feat_2025 = make_row(r24_synth, r24_synth, r23)
-            X_2025 = pd.DataFrame([feat_2025])[feature_cols].fillna(
-                pd.Series({f: df[f].median() for f in feature_cols if f in df.columns})
-            )
-            pred_2025 = float(rf.predict(X_2025)[0])
-
-            # Predict 2026: lag1=pred_2025, lag2=pred_2024
-            r25_synth = {**r23, 'stunting_rate': pred_2025}
-            feat_2026 = make_row(r25_synth, r25_synth, r24_synth)
-            X_2026 = pd.DataFrame([feat_2026])[feature_cols].fillna(
-                pd.Series({f: df[f].median() for f in feature_cols if f in df.columns})
-            )
-            pred_2026 = float(rf.predict(X_2026)[0])
-
-            results[country] = {
-                'pred_2026': round(pred_2026, 1),
-                'pred_2025': round(pred_2025, 1),
-                'pred_2024': round(pred_2024, 1),
-                'actual_2023': round(actual_2023, 1),
-                'trend': round(pred_2026 - actual_2023, 1),
-            }
-        except Exception:
-            continue
-
+    for _, row in df.iterrows():
+        results[row['country']] = {
+            'pred_2026': float(row['predicted_stunting_2026']),
+            'pred_2025': float(row['pred_2025']),
+            'pred_2024': float(row['pred_2024']),
+            'actual_2023': float(row['stunting_2023_actual']),
+            'trend': float(row['trend']),
+        }
     return results
 
 
