@@ -67,7 +67,7 @@ def get_feature_cols(cols):
 
 @st.cache_data
 def compute_forecasts():
-    df = pd.read_csv("data/predictions_2026.csv")
+    df = pd.read_csv("data/predictions_2026_final.csv")
     results = {}
     for _, row in df.iterrows():
         results[row['country']] = {
